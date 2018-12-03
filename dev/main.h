@@ -3,11 +3,17 @@
 #include <string.h>
 #include "..\lib\SMSlib.h"
 #include "..\lib\PSGlib.h"
-/*
+
 #include "defines.h"
-#include "Banks\fixedbank.h"
 #include "vars.h"
 #include "funcs.h"
+
+#include "General\mikgamesstage.h"
+
+/*
+#include "Banks\fixedbank.h"
+
+
 #include "General\timeredlabel.h"
 #include "General\map.h"
 #include "General\scroller.h"
@@ -70,7 +76,7 @@
 #include "General\rsgthing.h"
 #include "Enemies\enemy.h"
 #include "General\scripter.h"
-#include "General\mikgamesstage.h"
+//#include "General\mikgamesstage.h"
 #include "General\logostage.h"
 #include "General\jukeboxstage.h"
 #include "Intros\intro1stage.h"

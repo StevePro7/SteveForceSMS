@@ -2,10 +2,10 @@
 
 void main()
 {
-	//InitConsole();
+	InitConsole();
 
-	//gamelevel=0;
-	//gamestock=3;
+	gamelevel=0;
+	gamestock=3;
 	
 	while(1)
 	{
@@ -19,7 +19,7 @@ void main()
 		*/
 			
 		// Mikgames
-		//InitMikGamesStage();
+		InitMikGamesStage();
 		
 		// Game intro
 		//InitIntroStage(1);
@@ -58,4 +58,4 @@ void main()
 }
 
 SMS_EMBED_SEGA_ROM_HEADER(9999, 0);
-SMS_EMBED_SDSC_HEADER(1, 0, 2017, 9, 15, "StevePro Studios", "Astro Force", "Convert example as scalable SMS projec");
+SMS_EMBED_SDSC_HEADER(1, 0, 2018, 12, 15, "StevePro Studios", "Steve Force", "Convert example as scalable SMS projec");
