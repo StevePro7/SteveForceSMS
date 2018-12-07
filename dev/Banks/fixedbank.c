@@ -479,7 +479,7 @@ const unsigned char finishscript[]=
 
 unsigned char stagedatamarks[]={6,4,3,1,7,2,0,5};
 
-unsigned char *stageinitdata[]=
+const unsigned char *stageinitdata[]=
 {
 	stage1palette_bin,stage1palette_bin_bank,
 	stage1tilemap_l,stage1tilemap_l_size,stage1tilemap_m,

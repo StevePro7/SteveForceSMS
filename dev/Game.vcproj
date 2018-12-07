@@ -171,6 +171,62 @@
 			UniqueIdentifier="{4FC737F1-C7A5-4376-A066-2A32D752A2FF}"
 			>
 			<File
+				RelativePath=".\Banks\bank10.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank11.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank12.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank13.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank14.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank15.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank3.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank4.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank5.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank6.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank7.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank8.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank9.c"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\fixedbank.c"
+				>
+			</File>
+			<File
 				RelativePath=".\main.c"
 				>
 			</File>
@@ -189,7 +245,63 @@
 			UniqueIdentifier="{93995380-89BD-4b04-88EB-625FBE52EBFB}"
 			>
 			<File
+				RelativePath=".\Banks\bank10.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank11.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank12.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank13.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank14.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank15.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank3.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank4.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank5.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank6.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank7.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank8.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\bank9.h"
+				>
+			</File>
+			<File
 				RelativePath=".\defines.h"
+				>
+			</File>
+			<File
+				RelativePath=".\Banks\fixedbank.h"
 				>
 			</File>
 			<File
