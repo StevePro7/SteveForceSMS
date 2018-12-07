@@ -57,5 +57,5 @@ void main()
 	}
 }
 
-SMS_EMBED_SEGA_ROM_HEADER(9999, 0);
-SMS_EMBED_SDSC_HEADER(1, 0, 2018, 12, 15, "StevePro Studios", "Steve Force", "Convert example as scalable SMS projec");
+//SMS_EMBED_SEGA_ROM_HEADER(9999, 0);
+//SMS_EMBED_SDSC_HEADER(1, 0, 2018, 12, 15, "StevePro Studios", "Steve Force", "Convert example as scalable SMS projec");

@@ -72,5 +72,5 @@ void InitStage()
 	ClearTiles();
 
 	// The font
-	LoadFont();
+	//LoadFont();
 }
