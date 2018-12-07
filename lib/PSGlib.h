@@ -10,22 +10,22 @@
 #define SFX_CHANNEL3        #0x02
 #define SFX_CHANNELS2AND3   SFX_CHANNEL2|SFX_CHANNEL3
 
-void PSGPlay (void *song);
-void PSGCancelLoop (void);
-void PSGPlayNoRepeat (void *song);
-void PSGStop (void);
-void PSGResume (void);
-unsigned char PSGGetStatus (void);
-void PSGSetMusicVolumeAttenuation (unsigned char attenuation);
+void PSGPlay (void *song) {}
+void PSGCancelLoop (void) {}
+void PSGPlayNoRepeat (void *song) {}
+void PSGStop (void) {}
+void PSGResume (void) {}
+unsigned char PSGGetStatus (void) { return 1; }
+void PSGSetMusicVolumeAttenuation (unsigned char attenuation) {}
 
-void PSGSFXPlay (void *sfx, unsigned char channels);
-void PSGSFXPlayLoop (void *sfx, unsigned char channels);
-void PSGSFXCancelLoop (void);
-void PSGSFXStop (void);
-unsigned char PSGSFXGetStatus (void);
+void PSGSFXPlay (void *sfx, unsigned char channels) {}
+void PSGSFXPlayLoop (void *sfx, unsigned char channels) {}
+void PSGSFXCancelLoop (void) {}
+void PSGSFXStop (void) {}
+unsigned char PSGSFXGetStatus (void) { return 1; }
 
-void PSGSilenceChannels (void);
-void PSGRestoreVolumes (void);
+void PSGSilenceChannels (void) {}
+void PSGRestoreVolumes (void) {}
 
-void PSGFrame (void);
-void PSGSFXFrame (void);
+void PSGFrame (void) {}
+void PSGSFXFrame (void) {}
