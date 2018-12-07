@@ -50,3 +50,12 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+dev/Game.suo
+dev/Debug/Game.exe.embed.manifest
+dev/Game.vcproj.IDEV.StBoland.user
+dev/Game.ncb
+dev/Debug/mt.dep
+dev/Debug/Game.exe.intermediate.manifest
+dev/Debug/Game.exe.embed.manifest.res
+dev/Debug/Game.exe
+dev/Debug/BuildLog.htm
