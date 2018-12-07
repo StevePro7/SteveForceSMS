@@ -94,7 +94,7 @@ void SMS_crt0_RST18(unsigned int tile) {} //__z88dk_fastcall __preserves_regs(b,
 
 /* functions to load tiles into VRAM */
 void SMS_loadTiles (void *src, unsigned int tilefrom, unsigned int size) {}
-void SMS_loadPSGaidencompressedTiles (void *src, unsigned int tilefrom) {}
+void SMS_loadPSGaidencompressedTiles (const void *src, unsigned int tilefrom) {}
 
 /* functions for the tilemap */
 // turning SMS_loadTileMap into a define
