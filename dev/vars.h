@@ -11,3 +11,7 @@ unsigned char numinterrupts;
 
 unsigned char gamelevel;					// Dificultad del juego
 unsigned char gamestock;					// Número de jugadores por defecto
+
+
+// Bank changer
+unsigned char lastbank;

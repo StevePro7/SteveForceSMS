@@ -1,4 +1,14 @@
 
+// Change bank
+void changeBank(unsigned char b)
+{
+	if(b!=lastbank)
+	{
+		SMS_mapROMBank(b);
+		lastbank=b;
+	}
+}
+
 void InterruptHandler(void)
 {
 	numinterrupts++;
@@ -53,6 +63,16 @@ void ClearTiles()
 	SMS_VRAMmemset(0,0,32*256);
 }
 
+// Carga la fuente
+void LoadFont()
+{
+	// Rom bank
+	//changeBank(font_psgcompr_bank);
+	
+	// Font
+	//SMS_loadPSGaidencompressedTiles(font_psgcompr,192);
+}
+
 void InitStage()
 {
 	// Sonido quitado
@@ -72,5 +92,5 @@ void InitStage()
 	ClearTiles();
 
 	// The font
-	//LoadFont();
+	LoadFont();
 }

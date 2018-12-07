@@ -50,6 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+bin/*
+obj/*
 dev/Game.suo
 dev/Debug/Game.exe.embed.manifest
 dev/Game.vcproj.IDEV.StBoland.user

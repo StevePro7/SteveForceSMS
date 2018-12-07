@@ -18,8 +18,8 @@
 	<Configurations>
 		<Configuration
 			Name="Debug|Win32"
-			OutputDirectory="$(SolutionDir)$(ConfigurationName)"
-			IntermediateDirectory="$(ConfigurationName)"
+			OutputDirectory="$(SolutionDir)\..\bin\$(ConfigurationName)"
+			IntermediateDirectory="$(SolutionDir)\..\obj\$(ConfigurationName)"
 			ConfigurationType="1"
 			CharacterSet="1"
 			>
@@ -203,6 +203,10 @@
 					RelativePath=".\General\mikgamesstage.h"
 					>
 				</File>
+			</Filter>
+			<Filter
+				Name="Banks"
+				>
 			</Filter>
 		</Filter>
 		<Filter
