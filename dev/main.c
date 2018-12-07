@@ -22,26 +22,25 @@ void main()
 		InitMikGamesStage();
 		
 		// Game intro
-		//InitIntroStage(1);
-		//InitIntroStage(4);
-		//InitIntroStage(2);
+		InitIntroStage(1);
+		InitIntroStage(4);
+		InitIntroStage(2);
 		
 		// Logo
-		//InitLogoStage();		
+		InitLogoStage();		
 
 		// If we have jukebox before play
-		//if(dojukebox==1)
-		//	InitJukeboxStage();
+		if(dojukebox==1)
+			InitJukeboxStage();
 		
 		// Selector
-		//InitSelectorStage();
+		InitSelectorStage();
 		
 		// Init stage and players
-		//stagenum=1;
-		//numplayers=gamestock;
+		stagenum=1;
+		numplayers=gamestock;
 
 		// Stage looping
-		/*
 		while(stagenum<10)
 		{
 			if(stagenum==0)
@@ -53,9 +52,8 @@ void main()
 			}
 			else InitPlayStage();
 		}
-		*/
 	}
 }
 
 //SMS_EMBED_SEGA_ROM_HEADER(9999, 0);
-//SMS_EMBED_SDSC_HEADER(1, 0, 2018, 12, 15, "StevePro Studios", "Steve Force", "Convert example as scalable SMS projec");
+//SMS_EMBED_SDSC_HEADER(1, 0, 2017, 9, 15, "StevePro Studios", "Astro Force", "Convert example as scalable SMS projec");

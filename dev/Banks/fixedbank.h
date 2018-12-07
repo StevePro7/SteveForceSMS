@@ -1,8 +1,8 @@
 // Data bank
 #define FIXEDBANKSLOT 15
 
-extern signed char playershootspeedsx[];
-extern signed char playershootspeedsy[];
+extern const signed char playershootspeedsx[];
+extern const signed char playershootspeedsy[];
 
 extern const unsigned char selectorstatebasetiles[];
 extern const unsigned char *selectornamestage[];

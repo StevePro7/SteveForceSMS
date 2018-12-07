@@ -7,13 +7,6 @@
 #include "Banks\fixedbank.h"
 #include "vars.h"
 #include "funcs.h"
-
-#include "General\mikgamesstage.h"
-
-/*
-#include "Banks\fixedbank.h"
-
-
 #include "General\timeredlabel.h"
 #include "General\map.h"
 #include "General\scroller.h"
@@ -76,7 +69,7 @@
 #include "General\rsgthing.h"
 #include "Enemies\enemy.h"
 #include "General\scripter.h"
-//#include "General\mikgamesstage.h"
+#include "General\mikgamesstage.h"
 #include "General\logostage.h"
 #include "General\jukeboxstage.h"
 #include "Intros\intro1stage.h"
@@ -100,4 +93,3 @@
 #include "General\powerup.h"
 #include "Players\player.h"
 #include "Players\playstage.h"
-*/
