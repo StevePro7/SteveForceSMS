@@ -3,7 +3,6 @@
 #include <string.h>
 #include "..\lib\SMSlib.h"
 #include "..\lib\PSGlib.h"
-
 #include "defines.h"
 #include "vars.h"
 #include "funcs.h"

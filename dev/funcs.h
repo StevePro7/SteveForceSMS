@@ -67,10 +67,10 @@ void ClearTiles()
 void LoadFont()
 {
 	// Rom bank
-	//changeBank(font_psgcompr_bank);
+	changeBank(font_psgcompr_bank);
 	
 	// Font
-	//SMS_loadPSGaidencompressedTiles(font_psgcompr,192);
+	SMS_loadPSGaidencompressedTiles(font_psgcompr,192);
 }
 
 void InitStage()
