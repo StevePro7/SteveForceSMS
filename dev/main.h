@@ -93,3 +93,7 @@
 #include "General\powerup.h"
 #include "Players\player.h"
 #include "Players\playstage.h"
+//Additional includes
+#include "Stages\stage7endboss.h"
+#include "Stages\stage7middleboss.h"
+#include "Stages\stage7object.h"

@@ -1,5 +1,5 @@
 #include "..\defines.h"
-#include "fixedbank.h"
+//#include "fixedbank.h"
 #include "bank15.c"
 
 // Player shoots speeds
@@ -96,7 +96,7 @@ const unsigned char sinustable[]=
 const char *jukebox_songs[]=
 {
 	logo_psg,
-	intro1_psg,
+	//intro1_psg,
 	intro3_psg,
 	intro2_psg,
 	select_psg,
@@ -123,7 +123,7 @@ const unsigned char jukebox_repeat[]={0,1,0,0,1,1,1,1,1,1,1,1,0,1,1,1,0,1,1,0,0}
 const char jukebox_banks[]=
 {
 	logo_psg_bank,
-	intro1_psg_bank,
+	//intro1_psg_bank,
 	intro3_psg_bank,
 	intro2_psg_bank,
 	select_psg_bank,
