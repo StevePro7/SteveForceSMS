@@ -8,11 +8,6 @@ set /a _started=_hours*60*60*100+_min*60*100+_sec*100+_cs
 
 
 :: Compile
-cd banks
-::sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-size --constseg BANK15 fixedbank.c
-cd ..
-
-
 cd devkit
 ::sdcc -c -mz80 --opt-code-size --peep-file ..\peep-rules.txt --std-c99 _sms_manager.c
 ::sdcc -c -mz80 --opt-code-size --peep-file ..\peep-rules.txt --std-c99 _snd_manager.c
@@ -36,10 +31,7 @@ echo.
 :: Link
 sdcc -o output.ihx -mz80 --no-std-crt0 --data-loc 0xC000 ^
 ..\crt0\crt0_sms.rel main.rel ^
--Wl-b_BANK2=0x8000  -Wl-b_BANK3=0x8000  -Wl-b_BANK4=0x8000  -Wl-b_BANK5=0x8000 ^
--Wl-b_BANK6=0x8000  -Wl-b_BANK7=0x8000  -Wl-b_BANK8=0x8000  -Wl-b_BANK9=0x8000 ^
--Wl-b_BANK10=0x8000 -Wl-b_BANK11=0x8000 -Wl-b_BANK12=0x8000 -Wl-b_BANK13=0x8000 ^
--Wl-b_BANK14=0x8000 -Wl-b_BANK15=0x8000 ^
+devkit\_sms_manager.rel devkit\_snd_manager.rel ^
 ..\lib\SMSlib.lib ^
 ..\lib\PSGlib.rel
 
