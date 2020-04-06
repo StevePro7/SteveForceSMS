@@ -7,10 +7,10 @@
 #define verMaj		1
 #define verMin		0
 #define dateYear	2020
-#define dateMonth	3
-#define dateDay		27
+#define dateMonth	4
+#define dateDay		4
 #define author		"Steven Boland"
-#define name		"Candy Kid"
-#define descr		"Candy Kid game for the SMS Power! 2020 Competition"
+#define name		"AstroForce"
+#define descr		"Convert example as scalable SMS project"
 
 #endif//_GAME_H_
