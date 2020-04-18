@@ -1,13 +1,14 @@
 XL2
-H 9 areas 6 global symbols
+H 9 areas 7 global symbols
 M main
 O -mz80
+S _InitConsole Ref0000
 S _devkit_SMS_displayOn Ref0000
 S .__.ABS. Def0000
 S _devkit_SMS_displayOff Ref0000
 S _devkit_SMS_setSpritePaletteColor Ref0000
 S _devkit_SMS_waitForVBlank Ref0000
-A _CODE size 17 flags 0 addr 0
+A _CODE size 1A flags 0 addr 0
 S _main Def0000
 A _DATA size 0 flags 0 addr 0
 A _INITIALIZED size 0 flags 0 addr 0
@@ -19,11 +20,11 @@ A _INITIALIZER size 0 flags 0 addr 0
 A _CABS size 0 flags 8 addr 0
 T 00 00
 R 00 00 00 00
-T 00 00 CD 00 00 21 00 00 E5 26 03 E5 CD 00 00 F1
-R 00 00 00 00 02 03 02 00 02 0D 03 00
-T 0E 00 F1 CD 00 00
-R 00 00 00 00 02 04 00 00
-T 12 00
+T 00 00 CD 00 00 CD 00 00 21 00 00 E5 26 03 E5 CD
+R 00 00 00 00 02 03 00 00 02 06 03 00
+T 0E 00 00 00 F1 F1 CD 00 00
+R 00 00 00 00 02 02 04 00 02 07 01 00
+T 15 00
 R 00 00 00 00
-T 12 00 CD 00 00 18 FB
-R 00 00 00 00 02 03 04 00
+T 15 00 CD 00 00 18 FB
+R 00 00 00 00 02 03 05 00
