@@ -25,6 +25,12 @@
     <Filter Include="Header Files\banks">
       <UniqueIdentifier>{cd35fa49-36af-4506-89a2-1f6607628158}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Intros">
+      <UniqueIdentifier>{9d3b3203-044c-4ebf-8c91-ad2f0ab3b10b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Intros">
+      <UniqueIdentifier>{801ac14d-6057-4978-943f-40a4524b0891}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -88,6 +94,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="vars.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="funcs.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -158,6 +167,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="vars.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="funcs.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

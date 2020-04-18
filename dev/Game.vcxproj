@@ -40,6 +40,7 @@
     <ClInclude Include="defines.h" />
     <ClInclude Include="devkit\_sms_manager.h" />
     <ClInclude Include="devkit\_snd_manager.h" />
+    <ClInclude Include="funcs.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="vars.h" />
@@ -63,6 +64,7 @@
     <ClCompile Include="defines.c" />
     <ClCompile Include="devkit\_sms_manager.c" />
     <ClCompile Include="devkit\_snd_manager.c" />
+    <ClCompile Include="funcs.c" />
     <ClCompile Include="game.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="vars.c" />

@@ -992,6 +992,7 @@ banks\fixedbank.rel                       [ fixedbank ]
 devkit\_sms_manager.rel                   [ _sms_manager ]
 devkit\_snd_manager.rel                   [ _snd_manager ]
 defines.rel                               [ defines ]
+funcs.rel                                 [ funcs ]
 game.rel                                  [ game ]
 vars.rel                                  [ vars ]
 

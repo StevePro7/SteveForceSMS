@@ -20,32 +20,18 @@ void devkit_SMS_displayOff()
 {
 	SMS_displayOff();
 }
-void devkit_SMS_mapROMBank( unsigned char n )
-{
-	SMS_mapROMBank( n );
-}
 
-void devkit_SMS_enableSRAM()
+void devkit_SMS_setBGScrollX( unsigned char scrollX )
 {
-	SMS_enableSRAM();
+	SMS_setBGScrollX( scrollX );
 }
-void devkit_SMS_enableSRAMBank( unsigned char n )
+void devkit_SMS_setBGScrollY( unsigned char scrollY )
 {
-	SMS_enableSRAMBank( n );
+	SMS_setBGScrollY( scrollY );
 }
-void devkit_SMS_disableSRAM()
+void devkit_SMS_setBackdropColor( unsigned char entry )
 {
-	SMS_disableSRAM();
-}
-unsigned char* devkit_SMS_SRAM()
-{
-	return SMS_SRAM;
-}
-
-
-void devkit_SMS_setSpriteMode( unsigned char mode )
-{
-	SMS_setSpriteMode( mode );
+	SMS_setBackdropColor( entry );
 }
 void devkit_SMS_useFirstHalfTilesforSprites_False()
 {
@@ -55,9 +41,23 @@ void devkit_SMS_useFirstHalfTilesforSprites_True()
 {
 	SMS_useFirstHalfTilesforSprites( true );
 }
+void devkit_SMS_setSpriteMode( unsigned char mode )
+{
+	SMS_setSpriteMode( mode );
+}
+
+void devkit_SMS_mapROMBank( unsigned char n )
+{
+	SMS_mapROMBank( n );
+}
 void devkit_SMS_VDPturnOnFeature( unsigned int feature )
 {
 	SMS_VDPturnOnFeature( feature );
+}
+
+void devkit_SMS_loadTileMap( unsigned char x, unsigned char y, unsigned char* src, unsigned char size )
+{
+	SMS_loadTileMap( x, y, src, size );
 }
 
 void devkit_SMS_loadPSGaidencompressedTiles( void *src, unsigned int tilefrom )
@@ -87,58 +87,47 @@ void devkit_SMS_setNextTileatXY( unsigned char x, unsigned char y )
 {
 	SMS_setNextTileatXY( x, y );
 }
-void devkit_SMS_setTile( const unsigned int tile )
+void devkit_SMS_setTile( const unsigned char tile )
 {
 	SMS_setTile( tile );
 }
-void devkit_SMS_setTilePriority( const unsigned char tile )
-{
-	SMS_setTile( tile | TILE_PRIORITY | TILE_USE_SPRITE_PALETTE );
-}
 
-void devkit_SMS_addSprite( unsigned char x, unsigned char y, int tile )
+void devkit_SMS_addSprite( unsigned char x, unsigned char y, unsigned char tile )
 {
 	SMS_addSprite( x, y, tile );
 }
-//void devkit_SMS_addSprite_bulk4( unsigned char x, unsigned char y, int tile )
-//{
-//	devkit_SMS_addSprite( x + 0, y + 0, tile + 0 );
-//	devkit_SMS_addSprite( x + 8, y + 0, tile + 1 );
-//	devkit_SMS_addSprite( x + 0, y + 8, tile + 2 );
-//	devkit_SMS_addSprite( x + 8, y + 8, tile + 3 );
-//}
-//void devkit_SMS_addSprite_bulk8( unsigned char x, unsigned char y, int tile )
-//{
-//	devkit_SMS_addSprite( x + 0, y + 0, tile + 0 );
-//	devkit_SMS_addSprite( x + 8, y + 0, tile + 1 );
-//
-//	devkit_SMS_addSprite( x + 0, y + 8, tile + 2 );
-//	devkit_SMS_addSprite( x + 8, y + 8, tile + 3 );
-//
-//	devkit_SMS_addSprite( x + 0, y + 16, tile + 4 );
-//	devkit_SMS_addSprite( x + 8, y + 16, tile + 5 );
-//
-//	devkit_SMS_addSprite( x + 0, y + 24, tile + 6 );
-//	devkit_SMS_addSprite( x + 8, y + 24, tile + 7 );
-//}
-//void devkit_SMS_addSprite_bulk12( unsigned char x, unsigned char y, int tile )
-//{
-//	SMS_addSprite( x + 0, y + 0, tile + 0 );
-//	SMS_addSprite( x + 8, y + 0, tile + 1 );
-//	SMS_addSprite( x + 16, y + 0, tile + 2 );
-//
-//	SMS_addSprite( x + 0, y + 8, tile + 3 );
-//	SMS_addSprite( x + 8, y + 8, tile + 4 );
-//	SMS_addSprite( x + 16, y + 8, tile + 5 );
-//
-//	SMS_addSprite( x + 0, y + 16, tile + 6 );
-//	SMS_addSprite( x + 8, y + 16, tile + 7 );
-//	SMS_addSprite( x + 16, y + 16, tile + 8 );
-//
-//	SMS_addSprite( x + 0, y + 24, tile + 9 );
-//	SMS_addSprite( x + 8, y + 24, tile + 10 );
-//	SMS_addSprite( x + 16, y + 24, tile + 11 );
-//}
+void devkit_SMS_addSprite_bulk8( unsigned char x, unsigned char y, unsigned char tile )
+{
+	devkit_SMS_addSprite( x + 0, y + 0, tile + 0 );
+	devkit_SMS_addSprite( x + 8, y + 0, tile + 1 );
+
+	devkit_SMS_addSprite( x + 0, y + 8, tile + 2 );
+	devkit_SMS_addSprite( x + 8, y + 8, tile + 3 );
+
+	devkit_SMS_addSprite( x + 0, y + 16, tile + 4 );
+	devkit_SMS_addSprite( x + 8, y + 16, tile + 5 );
+
+	devkit_SMS_addSprite( x + 0, y + 24, tile + 6 );
+	devkit_SMS_addSprite( x + 8, y + 24, tile + 7 );
+}
+void devkit_SMS_addSprite_bulk12( unsigned char x, unsigned char y, unsigned char tile )
+{
+	SMS_addSprite( x + 0, y + 0, tile + 0 );
+	SMS_addSprite( x + 8, y + 0, tile + 1 );
+	SMS_addSprite( x + 16, y + 0, tile + 2 );
+
+	SMS_addSprite( x + 0, y + 8, tile + 3 );
+	SMS_addSprite( x + 8, y + 8, tile + 4 );
+	SMS_addSprite( x + 16, y + 8, tile + 5 );
+
+	SMS_addSprite( x + 0, y + 16, tile + 6 );
+	SMS_addSprite( x + 8, y + 16, tile + 7 );
+	SMS_addSprite( x + 16, y + 16, tile + 8 );
+
+	SMS_addSprite( x + 0, y + 24, tile + 9 );
+	SMS_addSprite( x + 8, y + 24, tile + 10 );
+	SMS_addSprite( x + 16, y + 24, tile + 11 );
+}
 
 void devkit_SMS_initSprites()
 {
@@ -170,34 +159,97 @@ void devkit_SMS_resetPauseRequest()
 	SMS_resetPauseRequest();
 }
 
-// collision
-unsigned char devkit_isCollisionDetected()
-{
-	return ( SMS_VDPFlags & VDPFLAG_SPRITECOLLISION );
-}
-
-// input
+// Input.
 unsigned int devkit_SMS_getKeysStatus()
 {
 	return SMS_getKeysStatus();
 }
+unsigned int devkit_SMS_getKeysPressed()
+{
+	return SMS_getKeysPressed();
+}
+unsigned int devkit_SMS_getKeysHeld()
+{
+	return SMS_getKeysHeld();
+}
+unsigned int devkit_SMS_getKeysReleased()
+{
+	return SMS_getKeysReleased();
+}
+
+unsigned int devkit_PORT_A_KEY_UP()
+{
+	return PORT_A_KEY_UP;
+}
+unsigned int devkit_PORT_A_KEY_DOWN()
+{
+	return PORT_A_KEY_DOWN;
+}
+unsigned int devkit_PORT_A_KEY_LEFT()
+{
+	return PORT_A_KEY_LEFT;
+}
+unsigned int devkit_PORT_A_KEY_RIGHT()
+{
+	return PORT_A_KEY_RIGHT;
+}
+unsigned int devkit_PORT_A_KEY_1()
+{
+	return PORT_A_KEY_1;
+}
+unsigned int devkit_PORT_A_KEY_2()
+{
+	return PORT_A_KEY_2;
+}
+
+/* low level functions */
+void devkit_SMS_VRAMmemcpy( unsigned int dst, void *src, unsigned int size )
+{
+	SMS_VRAMmemcpy( dst, src, size );
+}
+void devkit_SMS_VRAMmemcpy_brief( unsigned int dst, void *src, unsigned char size )
+{
+	SMS_VRAMmemcpy_brief( dst, src, size );
+}
+void devkit_SMS_VRAMmemset( unsigned int dst, unsigned char value, unsigned int size )
+{
+	SMS_VRAMmemset( dst, value, size );
+}
+void devkit_SMS_VRAMmemsetW( unsigned int dst, unsigned int value, unsigned int size )
+{
+	SMS_VRAMmemsetW( dst, value, size );
+}
+
+
+void devkit_SMS_setLineInterruptHandler( void( *theHandlerFunction )( void ) )
+{
+	SMS_setLineInterruptHandler( theHandlerFunction );
+}
+void devkit_SMS_setLineCounter( unsigned char count )
+{
+	SMS_setLineCounter( count );
+}
+void devkit_SMS_enableLineInterrupt()
+{
+	SMS_enableLineInterrupt();
+}
+void devkit_SMS_disableLineInterrupt()
+{
+	SMS_disableLineInterrupt();
+}
 
 // #defines
-unsigned char devkit_SPRITEMODE_NORMAL()
-{
-	return SPRITEMODE_NORMAL;
-}
 unsigned int devkit_VDPFEATURE_HIDEFIRSTCOL()
 {
 	return VDPFEATURE_HIDEFIRSTCOL;
 }
-unsigned int devkit_TILE_PRIORITY()
+unsigned int devkit_VDPFEATURE_LEFTCOLBLANK()
 {
-	return TILE_PRIORITY;
+	return VDPFEATURE_LEFTCOLBLANK;
 }
-unsigned int devkit_TILE_USE_SPRITE_PALETTE()
+unsigned char devkit_SPRITEMODE_NORMAL()
 {
-	return TILE_USE_SPRITE_PALETTE;
+	return SPRITEMODE_NORMAL;
 }
 
 // Sega header.
