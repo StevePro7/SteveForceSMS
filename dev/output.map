@@ -895,6 +895,7 @@ banks\bank14.rel                          [ bank14 ]
 banks\fixedbank.rel                       [ fixedbank ]
 devkit\_sms_manager.rel                   [ _sms_manager ]
 devkit\_snd_manager.rel                   [ _snd_manager ]
+defines.rel                               [ defines ]
 
 
 Libraries Linked                          [ object file ]

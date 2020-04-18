@@ -17,6 +17,10 @@ cd devkit
 cd ..
 
 
+::sdcc -c -mz80 --opt-code-size --peep-file peep-rules.txt --std-c99 funcs.c
+sdcc -c -mz80 --opt-code-size --peep-file peep-rules.txt --std-c99 defines.c
+::sdcc -c -mz80 --opt-code-size --peep-file peep-rules.txt --std-c99 game.c
+
 :: echo Build main
 sdcc -c -mz80 --opt-code-size --peep-file peep-rules.txt --std-c99 main.c
 
@@ -44,7 +48,8 @@ banks\bank2.rel  banks\bank3.rel  banks\bank4.rel  banks\bank5.rel ^
 banks\bank6.rel  banks\bank7.rel  banks\bank8.rel  banks\bank9.rel ^
 banks\bank10.rel banks\bank11.rel banks\bank12.rel banks\bank13.rel ^
 banks\bank14.rel banks\fixedbank.rel ^
-devkit\_sms_manager.rel devkit\_snd_manager.rel
+devkit\_sms_manager.rel devkit\_snd_manager.rel ^
+defines.rel
 
 
 :: Execute
