@@ -3,7 +3,7 @@
 void main()
 {
 	devkit_SMS_displayOff();
-	devkit_SMS_setSpritePaletteColor( 0, 3, 2, 3 );
+	devkit_SMS_setSpritePaletteColor( 0, 3, 0, 0 );
 	devkit_SMS_displayOn();
 	while(1)
 	{

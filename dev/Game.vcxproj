@@ -42,6 +42,7 @@
     <ClInclude Include="devkit\_snd_manager.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="vars.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="banks\bank10.c" />
@@ -64,6 +65,7 @@
     <ClCompile Include="devkit\_snd_manager.c" />
     <ClCompile Include="game.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="vars.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{1B06943A-5988-4DBA-A2D2-8F40F11EF7E6}</ProjectGuid>

@@ -41,11 +41,11 @@ Area                                    Addr        Size        Decimal Bytes (A
      00000010  l__CABS0                        
      00000010  l__CABS4                        
      00000033  l__CABS3                        
-     00000110  l__DATA                         
      0000012A  l__HEADER5                      
      00000200  s__CODE                         
      0000023C  l__INITIALIZED                  
      0000023C  l__INITIALIZER                  
+     00000251  l__DATA                         
      00000D2F  l__CODE                         
      00000F2F  s__HOME                         
      00000F2F  s__INITIALIZER                  
@@ -90,10 +90,10 @@ Area                                    Addr        Size        Decimal Bytes (A
      00008000  s__BANK8                        
      00008000  s__BANK9                        
      0000C000  s__DATA                         
-     0000C110  s__INITIALIZED                  
-     0000C34C  s__BSEG                         
-     0000C34C  s__BSS                          
-     0000C34C  s__HEAP                         
+     0000C251  s__INITIALIZED                  
+     0000C48D  s__BSEG                         
+     0000C48D  s__BSS                          
+     0000C48D  s__HEAP                         
      0000FFFC  _SRAM_bank_to_be_mapped_on_slot2   SMSlib_PSGaiden
      0000FFFF  _ROM_bank_to_be_mapped_on_slot2    SMSlib_PSGaiden
 
@@ -331,7 +331,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_DATA                               0000C000    00000110 =         272. bytes (REL,CON)
+_DATA                               0000C000    00000251 =         593. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -364,46 +364,142 @@ _DATA                               0000C000    00000110 =         272. bytes (R
      0000C021  _PSGSFXLoopFlag                    PSGlib
      0000C022  _PSGSFXSubstringLen                PSGlib
      0000C023  _PSGSFXSubstringRetAddr            PSGlib
-     0000C025  _VDPBlank                          SMSlib
-     0000C026  _SMS_VDPFlags                      SMSlib
-     0000C027  _PauseRequested                    SMSlib
-     0000C028  _VDPType                           SMSlib
-     0000C029  _KeysStatus                        SMSlib
-     0000C02B  _PreviousKeysStatus                SMSlib
-     0000C02D  _SMS_theLineInterruptHandler       SMSlib
-     0000C02F  _SpriteTableY                      SMSlib_sprite
-     0000C06F  _SpriteTableXN                     SMSlib_sprite
-     0000C0EF  _SpriteNextFree                    SMSlib_sprite
-     0000C0F0  _decompBuffer                      SMSlib_PSGaiden
-
+     0000C025  _keystatus                         vars
+     0000C027  _stageframe                        vars
+     0000C029  _stageframe2mod                    vars
+     0000C02A  _stageframe4mod                    vars
+     0000C02B  _sprite82anim                      vars
+     0000C02C  _sprite164anim                     vars
+     0000C02D  _basestage                         vars
+     0000C02E  _playstage                         vars
+     0000C02F  _updateplaystage                   vars
+     0000C030  _stagenum                          vars
+     0000C031  _laststagenum                      vars
+     0000C032  _numplayers                        vars
+     0000C033  _exitplaystage                     vars
+     0000C034  _gamelevel                         vars
+     0000C035  _gamestock                         vars
+     0000C036  _gamepause                         vars
+     0000C037  _playerx                           vars
+     0000C038  _playery                           vars
+     0000C039  _playertype                        vars
+     0000C03A  _playercounter                     vars
+     0000C03B  _playershootcounter                vars
 ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_INITIALIZED                        0000C110    0000023C =         572. bytes (REL,CON)
+_DATA                               0000C000    00000251 =         593. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     0000C110  _jukebox_songs                     fixedbank
-     0000C13A  _jukebox_names                     fixedbank
-     0000C164  _selectornamestage                 fixedbank
-     0000C16E  _intro1labels                      fixedbank
-     0000C17A  _intro3labels                      fixedbank
-     0000C190  _finishlabels                      fixedbank
-     0000C1B8  _stagedatamarks                    fixedbank
-     0000C1C0  _stageinitdata                     fixedbank
-     0000C240  _ww2plane_patterns                 fixedbank
-     0000C24C  _spawners                          fixedbank
-     0000C278  _imagepointers                     fixedbank
-     0000C324  _monsterheadshootdirecionsx        fixedbank
-     0000C334  _monsterheadshootdirecionsy        fixedbank
-     0000C344  _difficultlabels                   fixedbank
-     0000C348  _VDPReg                            SMSlib
-     0000C34A  _spritesHeight                     SMSlib
-     0000C34B  _spritesWidth                      SMSlib
-
+     0000C03C  _playerside                        vars
+     0000C03D  _playerspeed                       vars
+     0000C03E  _playershootlevel                  vars
+     0000C03F  _playershootmax                    vars
+     0000C040  _numplayershoots                   vars
+     0000C041  _playershoots                      vars
+     0000C050  _shootcount                        vars
+     0000C051  _numenemyshoots                    vars
+     0000C052  _enemyshoots                       vars
+     0000C084  _playstageshootspeed               vars
+     0000C085  _numexplosions                     vars
+     0000C086  _explosions                        vars
+     0000C0AE  _numenemies                        vars
+     0000C0AF  _enemies                           vars
+     0000C109  _maplines                          vars
+     0000C10B  _maplineslength                    vars
+     0000C10D  _maptiles                          vars
+     0000C10F  _mappositionx                      vars
+     0000C111  _mappositiony                      vars
+     0000C113  _oldmappositiony                   vars
+     0000C115  _lastbank                          vars
+     0000C116  _mapstatics                        vars
+     0000C118  _mapstaticscount                   vars
+     0000C11A  _mapstaticsbank                    vars
+     0000C11B  _musicbank                         vars
+     0000C11C  _mapbank                           vars
+     0000C11D  _playstagebank                     vars
+     0000C11E  _numscrolls                        vars
+     0000C11F  _scrollactspeedy                   vars
+     0000C120  _scrollactspeedx                   vars
+     0000C121  _scrollact                         vars
+     0000C122  _scrolltimes                       vars
+     0000C124  _disablescroll                     vars
+     0000C125  _scrolls                           vars
+     0000C127  _numscripts                        vars
+     0000C128  _scripts                           vars
+     0000C148  _numtimeredlabels                  vars
+     0000C149  _timeredlabels                     vars
+     0000C14F  _introstageposx                    vars
+     0000C151  _introstagevelx                    vars
+     0000C153  _dojukebox                         vars
+     0000C154  _spawnedexplosionposx              vars
+     0000C155  _spawnedexplosionposy              vars
+     0000C156  _spawnedexplosionwidth             vars
+     0000C157  _spawnedexplosionheight            vars
+     0000C158  _spawnedexplosiontime              vars
+     0000C159  _stage4playrays                    vars
+     0000C15A  _numinterrupts                     vars
+     0000C15B  _powerupx                          vars
+     0000C15C  _powerupy                          vars
+     0000C15D  _powerupt                          vars
 ASxxxx Linker V03.00 + NoICE + sdld,  page 17.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_DATA                               0000C000    00000251 =         593. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000C15E  _powerupv                          vars
+     0000C15F  _powerupcounter                    vars
+     0000C161  _lastplayedmusic                   vars
+     0000C163  _lastplayedmusicbank               vars
+     0000C164  _lastplayedmusiclooped             vars
+     0000C165  _stage8phase                       vars
+     0000C166  _VDPBlank                          SMSlib
+     0000C167  _SMS_VDPFlags                      SMSlib
+     0000C168  _PauseRequested                    SMSlib
+     0000C169  _VDPType                           SMSlib
+     0000C16A  _KeysStatus                        SMSlib
+     0000C16C  _PreviousKeysStatus                SMSlib
+     0000C16E  _SMS_theLineInterruptHandler       SMSlib
+     0000C170  _SpriteTableY                      SMSlib_sprite
+     0000C1B0  _SpriteTableXN                     SMSlib_sprite
+     0000C230  _SpriteNextFree                    SMSlib_sprite
+     0000C231  _decompBuffer                      SMSlib_PSGaiden
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+Hexadecimal  [32-Bits]
+
+Area                                    Addr        Size        Decimal Bytes (Attributes)
+--------------------------------        ----        ----        ------- ----- ------------
+_INITIALIZED                        0000C251    0000023C =         572. bytes (REL,CON)
+
+      Value  Global                              Global Defined In Module
+      -----  --------------------------------   ------------------------
+     0000C251  _jukebox_songs                     fixedbank
+     0000C27B  _jukebox_names                     fixedbank
+     0000C2A5  _selectornamestage                 fixedbank
+     0000C2AF  _intro1labels                      fixedbank
+     0000C2BB  _intro3labels                      fixedbank
+     0000C2D1  _finishlabels                      fixedbank
+     0000C2F9  _stagedatamarks                    fixedbank
+     0000C301  _stageinitdata                     fixedbank
+     0000C381  _ww2plane_patterns                 fixedbank
+     0000C38D  _spawners                          fixedbank
+     0000C3B9  _imagepointers                     fixedbank
+     0000C465  _monsterheadshootdirecionsx        fixedbank
+     0000C475  _monsterheadshootdirecionsy        fixedbank
+     0000C485  _difficultlabels                   fixedbank
+     0000C489  _VDPReg                            SMSlib
+     0000C48B  _spritesHeight                     SMSlib
+     0000C48C  _spritesWidth                      SMSlib
+
+ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -432,7 +528,7 @@ _BANK2                              00008000    00003FB5 =       16309. bytes (R
      0000B8C2  _selectortiles_psgcompr            bank2
      0000BF84  _silence_psg                       bank2
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -453,7 +549,7 @@ _BANK3                              00008000    00003FED =       16365. bytes (R
      0000B538  _stage2tiles_psgcompr              bank3
      0000BF8D  _ww2ship_psgcompr                  bank3
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 19.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -482,7 +578,7 @@ _BANK4                              00008000    00003FBD =       16317. bytes (R
      0000BE1B  _warning_psgcompr                  bank4
      0000BE9C  _waveship_psgcompr                 bank4
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 20.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -503,7 +599,7 @@ _BANK5                              00008000    00003FDB =       16347. bytes (R
      0000BED7  _vulcanvulcan_psgcompr             bank5
      0000BEFC  _ww2zeppelin_psgcompr              bank5
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 21.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -527,7 +623,7 @@ _BANK6                              00008000    00003FB1 =       16305. bytes (R
      0000BD16  _turnship_psgcompr                 bank6
      0000BE74  _watertiles_bin                    bank6
      0000BF74  _ww2cloud_psgcompr                 bank6
-ASxxxx Linker V03.00 + NoICE + sdld,  page 22.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 24.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -553,7 +649,7 @@ _BANK7                              00008000    00003FD0 =       16336. bytes (R
      0000BB60  _ww2plane_psgcompr                 bank7
      0000BE7E  _ww2tank_psgcompr                  bank7
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 25.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -571,7 +667,7 @@ _BANK8                              00008000    00003FA9 =       16297. bytes (R
      00009271  _stage4_psg                        bank8
      0000B9D0  _stage7a_psg                       bank8
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 24.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 26.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -592,7 +688,7 @@ _BANK9                              00008000    00003F7E =       16254. bytes (R
      00009655  _stage7tilemap_l                   bank9
      00009835  _stage7tilemap_m                   bank9
      0000BAF5  _stage7tiles_psgcompr              bank9
-ASxxxx Linker V03.00 + NoICE + sdld,  page 25.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 27.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -618,7 +714,7 @@ _BANK10                             00008000    00003FE2 =       16354. bytes (R
      0000BD04  _stage3endboss_psgcompr            bank10
      0000BEE0  _stage8lateral_psgcompr            bank10
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 26.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 28.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -630,7 +726,7 @@ _BANK11                             00008000    00003C2B =       15403. bytes (R
      00008000  _spaceshooter_psgcompr             bank11
      00008144  _stage5_psg                        bank11
      00009E0B  _stage7_psg                        bank11
-ASxxxx Linker V03.00 + NoICE + sdld,  page 27.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 29.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -645,7 +741,7 @@ _BANK12                             00008000    00003F51 =       16209. bytes (R
      0000B99E  _introstage3tilemap_bin            bank12
      0000BC9E  _introstage3tiles_psgcompr         bank12
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 28.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 30.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -663,7 +759,7 @@ _BANK13                             00008000    00003FEA =       16362. bytes (R
      0000B88C  _stage8bossb_psgcompr              bank13
      0000BECA  _stage8bossc_psgcompr              bank13
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 29.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 31.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -680,7 +776,7 @@ _BANK14                             00008000    00003FB3 =       16307. bytes (R
      0000B766  _stage8tiles_psgcompr              bank14
      0000BD91  _vulcanstation_psgcompr            bank14
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 30.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 32.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -739,7 +835,7 @@ _BANK15                             00008000    00002D92 =       11666. bytes (R
      000086A4  _ww2plane_pattern_e                fixedbank
      000086C2  _ww2plane_pattern_f                fixedbank
      000086E0  _span_waveship80_script            fixedbank
-ASxxxx Linker V03.00 + NoICE + sdld,  page 31.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 33.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -799,7 +895,7 @@ _BANK15                             00008000    00002D92 =       11666. bytes (R
      0000A191  _stage8bosscshootspeedx            fixedbank
      0000A1A1  _stage8bosscshootspeedy            fixedbank
      0000A1B0  _stage8bossbshootspeedx            fixedbank
-ASxxxx Linker V03.00 + NoICE + sdld,  page 32.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 34.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -817,7 +913,7 @@ _BANK15                             00008000    00002D92 =       11666. bytes (R
      0000A87F  _enemiesheight                     fixedbank
      0000A8D5  _enemiesenergy                     fixedbank
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 33.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 35.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -828,7 +924,7 @@ _CABS0                              00000000    00000010 =          16. bytes (A
       -----  --------------------------------   ------------------------
      00007FF0  ___SMS__SEGA_signature             _sms_manager
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 34.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 36.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -839,7 +935,7 @@ _CABS1                              00000000    0000000E =          14. bytes (A
       -----  --------------------------------   ------------------------
      00007FD2  ___SMS__SDSC_author                _sms_manager
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 35.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 37.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -850,7 +946,7 @@ _CABS2                              00000000    0000000A =          10. bytes (A
       -----  --------------------------------   ------------------------
      00007FC8  ___SMS__SDSC_name                  _sms_manager
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 36.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 38.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -861,7 +957,7 @@ _CABS3                              00000000    00000033 =          51. bytes (A
       -----  --------------------------------   ------------------------
      00007F95  ___SMS__SDSC_descr                 _sms_manager
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 37.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 39.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
@@ -872,7 +968,7 @@ _CABS4                              00000000    00000010 =          16. bytes (A
       -----  --------------------------------   ------------------------
      00007FE0  ___SMS__SDSC_signature             _sms_manager
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 38.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 40.
 
 Files Linked                              [ module(s) ]
 
@@ -896,6 +992,8 @@ banks\fixedbank.rel                       [ fixedbank ]
 devkit\_sms_manager.rel                   [ _sms_manager ]
 devkit\_snd_manager.rel                   [ _snd_manager ]
 defines.rel                               [ defines ]
+game.rel                                  [ game ]
+vars.rel                                  [ vars ]
 
 
 Libraries Linked                          [ object file ]
@@ -910,7 +1008,7 @@ C:\Program Files\SDCC\bin\..\lib\z80/z80.lib
 C:\Program Files\SDCC\bin\..\lib\z80/z80.lib
                                           [ crtenter.rel ]
 
-ASxxxx Linker V03.00 + NoICE + sdld,  page 39.
+ASxxxx Linker V03.00 + NoICE + sdld,  page 41.
 
 User Base Address Definitions
 
