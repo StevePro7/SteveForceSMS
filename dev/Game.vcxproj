@@ -59,6 +59,7 @@
     <ClCompile Include="banks\bank8.c" />
     <ClCompile Include="banks\bank9.c" />
     <ClCompile Include="banks\fixedbank.c" />
+    <ClCompile Include="defines.c" />
     <ClCompile Include="devkit\_sms_manager.c" />
     <ClCompile Include="devkit\_snd_manager.c" />
     <ClCompile Include="game.c" />
