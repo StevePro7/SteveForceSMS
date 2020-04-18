@@ -6,6 +6,7 @@
 
 // LIBRARIES.
 #include "funcs.h"
+#include "vars.h"
 #include "devkit\_sms_manager.h"
 #include "devkit\_snd_manager.h"
 
