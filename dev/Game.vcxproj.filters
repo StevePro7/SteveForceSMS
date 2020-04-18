@@ -28,8 +28,8 @@
     <Filter Include="Header Files\Intros">
       <UniqueIdentifier>{9d3b3203-044c-4ebf-8c91-ad2f0ab3b10b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\Intros">
-      <UniqueIdentifier>{801ac14d-6057-4978-943f-40a4524b0891}</UniqueIdentifier>
+    <Filter Include="Header Files\General">
+      <UniqueIdentifier>{da24e3c9-579b-4617-96f4-86215953d47d}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +162,9 @@
     </ClInclude>
     <ClInclude Include="funcs.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="General\mikgamesstage.h">
+      <Filter>Header Files\General</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

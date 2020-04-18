@@ -13,7 +13,7 @@ sdcc -c --no-std-crt0 -mz80 --Werror --opt-code-size --constseg BANK15 fixedbank
 cd ..
 cd devkit
 sdcc -c -mz80 --opt-code-size --peep-file ..\peep-rules.txt --std-c99 _sms_manager.c
-::sdcc -c -mz80 --opt-code-size --peep-file ..\peep-rules.txt --std-c99 _snd_manager.c
+sdcc -c -mz80 --opt-code-size --peep-file ..\peep-rules.txt --std-c99 _snd_manager.c
 cd ..
 
 

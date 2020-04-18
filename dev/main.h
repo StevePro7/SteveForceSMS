@@ -9,5 +9,6 @@
 #include "vars.h"
 #include "devkit\_sms_manager.h"
 #include "devkit\_snd_manager.h"
+#include "General\mikgamesstage.h"
 
 #endif//__MAIN__
