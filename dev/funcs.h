@@ -33,6 +33,16 @@ void changeBank( unsigned char b )
 }
 
 
+// Carga paleta de fondo
+void LoadBGPalette( char *p, char b )
+{
+	// Rom bank
+	changeBank( b );
+
+	// Palette
+	devkit_SMS_loadBGPalette( p );
+}
+
 
 // Carga paleta por defecto
 void LoadSpritePalette()
