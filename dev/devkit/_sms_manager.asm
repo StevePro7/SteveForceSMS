@@ -13,7 +13,6 @@
 	.globl ___SMS__SDSC_name
 	.globl ___SMS__SDSC_author
 	.globl ___SMS__SEGA_signature
-	.globl _devkit_VDPFEATURE_LEFTCOLBLANK
 	.globl _UNSAFE_SMS_copySpritestoSAT
 	.globl _SMS_VRAMmemsetW
 	.globl _SMS_VRAMmemset
@@ -97,6 +96,7 @@
 	.globl _devkit_SMS_enableLineInterrupt
 	.globl _devkit_SMS_disableLineInterrupt
 	.globl _devkit_VDPFEATURE_HIDEFIRSTCOL
+	.globl _devkit_VDPFEATURE_LEFTCOLBLANK
 	.globl _devkit_SPRITEMODE_NORMAL
 ;--------------------------------------------------------
 ; special function registers

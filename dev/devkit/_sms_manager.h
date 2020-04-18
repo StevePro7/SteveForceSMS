@@ -66,7 +66,8 @@ void devkit_SMS_enableLineInterrupt();
 void devkit_SMS_disableLineInterrupt();
 
 // #defines
-unsigned char devkit_SPRITEMODE_NORMAL();
 unsigned int devkit_VDPFEATURE_HIDEFIRSTCOL();
+unsigned int devkit_VDPFEATURE_LEFTCOLBLANK();
+unsigned char devkit_SPRITEMODE_NORMAL();
 
 #endif//_SMS_MANAGER_H_
