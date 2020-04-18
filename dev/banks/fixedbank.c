@@ -1,5 +1,11 @@
 #include "..\defines.h"
 
+#ifdef _CONSOLE
+#pragma warning(disable: 4047)
+#else
+#endif
+
+
 #include "bank2.h"
 #include "bank3.h"
 #include "bank4.h"

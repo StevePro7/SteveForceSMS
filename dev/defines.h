@@ -1,3 +1,5 @@
+#ifndef _DEFINES_H_
+#define _DEFINES_H_
 
 //#include "Banks\bank2.h"
 //#include "Banks\bank3.h"
@@ -317,3 +319,4 @@ typedef unsigned char( *MyCheckCollisionFunction )( unsigned char, unsigned char
 #define STAGE8BOSSCBASE 410+12
 #define STAGE8LATERALBASE 410+12+16
 
+#endif//_DEFINES_H_
