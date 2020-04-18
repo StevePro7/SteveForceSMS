@@ -1,0 +1,1165 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : free open source ANSI-C Compiler
+                              3 ; Version 3.6.9 #9960 (MINGW64)
+                              4 ;--------------------------------------------------------
+                              5 	.module _sms_manager
+                              6 	.optsdcc -mz80
+                              7 	
+                              8 ;--------------------------------------------------------
+                              9 ; Public variables in this module
+                             10 ;--------------------------------------------------------
+                             11 	.globl ___SMS__SDSC_signature
+                             12 	.globl ___SMS__SDSC_descr
+                             13 	.globl ___SMS__SDSC_name
+                             14 	.globl ___SMS__SDSC_author
+                             15 	.globl ___SMS__SEGA_signature
+                             16 	.globl _devkit_VDPFEATURE_LEFTCOLBLANK
+                             17 	.globl _UNSAFE_SMS_copySpritestoSAT
+                             18 	.globl _SMS_VRAMmemsetW
+                             19 	.globl _SMS_VRAMmemset
+                             20 	.globl _SMS_VRAMmemcpy_brief
+                             21 	.globl _SMS_VRAMmemcpy
+                             22 	.globl _SMS_setLineCounter
+                             23 	.globl _SMS_setLineInterruptHandler
+                             24 	.globl _SMS_resetPauseRequest
+                             25 	.globl _SMS_queryPauseRequested
+                             26 	.globl _SMS_getKeysReleased
+                             27 	.globl _SMS_getKeysHeld
+                             28 	.globl _SMS_getKeysPressed
+                             29 	.globl _SMS_getKeysStatus
+                             30 	.globl _SMS_loadSpritePalette
+                             31 	.globl _SMS_loadBGPalette
+                             32 	.globl _SMS_setSpritePaletteColor
+                             33 	.globl _SMS_finalizeSprites
+                             34 	.globl _SMS_addSprite
+                             35 	.globl _SMS_initSprites
+                             36 	.globl _SMS_loadSTMcompressedTileMapArea
+                             37 	.globl _SMS_loadPSGaidencompressedTiles
+                             38 	.globl _SMS_crt0_RST18
+                             39 	.globl _SMS_crt0_RST08
+                             40 	.globl _SMS_waitForVBlank
+                             41 	.globl _SMS_setSpriteMode
+                             42 	.globl _SMS_useFirstHalfTilesforSprites
+                             43 	.globl _SMS_setBackdropColor
+                             44 	.globl _SMS_setBGScrollY
+                             45 	.globl _SMS_setBGScrollX
+                             46 	.globl _SMS_VDPturnOffFeature
+                             47 	.globl _SMS_VDPturnOnFeature
+                             48 	.globl _SMS_init
+                             49 	.globl _SMS_SRAM
+                             50 	.globl _SRAM_bank_to_be_mapped_on_slot2
+                             51 	.globl _ROM_bank_to_be_mapped_on_slot2
+                             52 	.globl _devkit_SMS_init
+                             53 	.globl _devkit_SMS_displayOn
+                             54 	.globl _devkit_SMS_displayOff
+                             55 	.globl _devkit_SMS_setBGScrollX
+                             56 	.globl _devkit_SMS_setBGScrollY
+                             57 	.globl _devkit_SMS_setBackdropColor
+                             58 	.globl _devkit_SMS_useFirstHalfTilesforSprites_False
+                             59 	.globl _devkit_SMS_useFirstHalfTilesforSprites_True
+                             60 	.globl _devkit_SMS_setSpriteMode
+                             61 	.globl _devkit_SMS_mapROMBank
+                             62 	.globl _devkit_SMS_VDPturnOnFeature
+                             63 	.globl _devkit_SMS_loadTileMap
+                             64 	.globl _devkit_SMS_loadPSGaidencompressedTiles
+                             65 	.globl _devkit_SMS_loadSTMcompressedTileMap
+                             66 	.globl _devkit_SMS_loadBGPalette
+                             67 	.globl _devkit_SMS_loadSpritePalette
+                             68 	.globl _devkit_SMS_setSpritePaletteColor
+                             69 	.globl _devkit_SMS_setNextTileatXY
+                             70 	.globl _devkit_SMS_setTile
+                             71 	.globl _devkit_SMS_addSprite
+                             72 	.globl _devkit_SMS_addSprite_bulk8
+                             73 	.globl _devkit_SMS_addSprite_bulk12
+                             74 	.globl _devkit_SMS_initSprites
+                             75 	.globl _devkit_SMS_finalizeSprites
+                             76 	.globl _devkit_SMS_waitForVBlank
+                             77 	.globl _devkit_SMS_copySpritestoSAT
+                             78 	.globl _devkit_UNSAFE_SMS_copySpritestoSAT
+                             79 	.globl _devkit_SMS_queryPauseRequested
+                             80 	.globl _devkit_SMS_resetPauseRequest
+                             81 	.globl _devkit_SMS_getKeysStatus
+                             82 	.globl _devkit_SMS_getKeysPressed
+                             83 	.globl _devkit_SMS_getKeysHeld
+                             84 	.globl _devkit_SMS_getKeysReleased
+                             85 	.globl _devkit_PORT_A_KEY_UP
+                             86 	.globl _devkit_PORT_A_KEY_DOWN
+                             87 	.globl _devkit_PORT_A_KEY_LEFT
+                             88 	.globl _devkit_PORT_A_KEY_RIGHT
+                             89 	.globl _devkit_PORT_A_KEY_1
+                             90 	.globl _devkit_PORT_A_KEY_2
+                             91 	.globl _devkit_SMS_VRAMmemcpy
+                             92 	.globl _devkit_SMS_VRAMmemcpy_brief
+                             93 	.globl _devkit_SMS_VRAMmemset
+                             94 	.globl _devkit_SMS_VRAMmemsetW
+                             95 	.globl _devkit_SMS_setLineInterruptHandler
+                             96 	.globl _devkit_SMS_setLineCounter
+                             97 	.globl _devkit_SMS_enableLineInterrupt
+                             98 	.globl _devkit_SMS_disableLineInterrupt
+                             99 	.globl _devkit_VDPFEATURE_HIDEFIRSTCOL
+                            100 	.globl _devkit_SPRITEMODE_NORMAL
+                            101 ;--------------------------------------------------------
+                            102 ; special function registers
+                            103 ;--------------------------------------------------------
+                            104 ;--------------------------------------------------------
+                            105 ; ram data
+                            106 ;--------------------------------------------------------
+                            107 	.area _DATA
+                     FFFF   108 _ROM_bank_to_be_mapped_on_slot2	=	0xffff
+                     FFFC   109 _SRAM_bank_to_be_mapped_on_slot2	=	0xfffc
+                     8000   110 _SMS_SRAM	=	0x8000
+                            111 ;--------------------------------------------------------
+                            112 ; ram data
+                            113 ;--------------------------------------------------------
+                            114 	.area _INITIALIZED
+                            115 ;--------------------------------------------------------
+                            116 ; absolute external ram data
+                            117 ;--------------------------------------------------------
+                            118 	.area _DABS (ABS)
+                            119 ;--------------------------------------------------------
+                            120 ; global & static initialisations
+                            121 ;--------------------------------------------------------
+                            122 	.area _HOME
+                            123 	.area _GSINIT
+                            124 	.area _GSFINAL
+                            125 	.area _GSINIT
+                            126 ;--------------------------------------------------------
+                            127 ; Home
+                            128 ;--------------------------------------------------------
+                            129 	.area _HOME
+                            130 	.area _HOME
+                            131 ;--------------------------------------------------------
+                            132 ; code
+                            133 ;--------------------------------------------------------
+                            134 	.area _CODE
+                            135 ;_sms_manager.c:11: void devkit_SMS_init()
+                            136 ;	---------------------------------
+                            137 ; Function devkit_SMS_init
+                            138 ; ---------------------------------
+   0000                     139 _devkit_SMS_init::
+                            140 ;_sms_manager.c:13: SMS_init();
+   0000 C3r00r00      [10]  141 	jp  _SMS_init
+                            142 ;_sms_manager.c:15: void devkit_SMS_displayOn()
+                            143 ;	---------------------------------
+                            144 ; Function devkit_SMS_displayOn
+                            145 ; ---------------------------------
+   0003                     146 _devkit_SMS_displayOn::
+                            147 ;_sms_manager.c:17: SMS_displayOn();
+   0003 21 40 01      [10]  148 	ld	hl, #0x0140
+   0006 C3r00r00      [10]  149 	jp  _SMS_VDPturnOnFeature
+                            150 ;_sms_manager.c:19: void devkit_SMS_displayOff()
+                            151 ;	---------------------------------
+                            152 ; Function devkit_SMS_displayOff
+                            153 ; ---------------------------------
+   0009                     154 _devkit_SMS_displayOff::
+                            155 ;_sms_manager.c:21: SMS_displayOff();
+   0009 21 40 01      [10]  156 	ld	hl, #0x0140
+   000C C3r00r00      [10]  157 	jp  _SMS_VDPturnOffFeature
+                            158 ;_sms_manager.c:24: void devkit_SMS_setBGScrollX( unsigned char scrollX )
+                            159 ;	---------------------------------
+                            160 ; Function devkit_SMS_setBGScrollX
+                            161 ; ---------------------------------
+   000F                     162 _devkit_SMS_setBGScrollX::
+                            163 ;_sms_manager.c:26: SMS_setBGScrollX( scrollX );
+   000F FD 21 02 00   [14]  164 	ld	iy, #2
+   0013 FD 39         [15]  165 	add	iy, sp
+   0015 FD 6E 00      [19]  166 	ld	l, 0 (iy)
+   0018 C3r00r00      [10]  167 	jp  _SMS_setBGScrollX
+                            168 ;_sms_manager.c:28: void devkit_SMS_setBGScrollY( unsigned char scrollY )
+                            169 ;	---------------------------------
+                            170 ; Function devkit_SMS_setBGScrollY
+                            171 ; ---------------------------------
+   001B                     172 _devkit_SMS_setBGScrollY::
+                            173 ;_sms_manager.c:30: SMS_setBGScrollY( scrollY );
+   001B FD 21 02 00   [14]  174 	ld	iy, #2
+   001F FD 39         [15]  175 	add	iy, sp
+   0021 FD 6E 00      [19]  176 	ld	l, 0 (iy)
+   0024 C3r00r00      [10]  177 	jp  _SMS_setBGScrollY
+                            178 ;_sms_manager.c:32: void devkit_SMS_setBackdropColor( unsigned char entry )
+                            179 ;	---------------------------------
+                            180 ; Function devkit_SMS_setBackdropColor
+                            181 ; ---------------------------------
+   0027                     182 _devkit_SMS_setBackdropColor::
+                            183 ;_sms_manager.c:34: SMS_setBackdropColor( entry );
+   0027 FD 21 02 00   [14]  184 	ld	iy, #2
+   002B FD 39         [15]  185 	add	iy, sp
+   002D FD 6E 00      [19]  186 	ld	l, 0 (iy)
+   0030 C3r00r00      [10]  187 	jp  _SMS_setBackdropColor
+                            188 ;_sms_manager.c:36: void devkit_SMS_useFirstHalfTilesforSprites_False()
+                            189 ;	---------------------------------
+                            190 ; Function devkit_SMS_useFirstHalfTilesforSprites_False
+                            191 ; ---------------------------------
+   0033                     192 _devkit_SMS_useFirstHalfTilesforSprites_False::
+                            193 ;_sms_manager.c:38: SMS_useFirstHalfTilesforSprites( false );
+   0033 2E 00         [ 7]  194 	ld	l, #0x00
+   0035 C3r00r00      [10]  195 	jp  _SMS_useFirstHalfTilesforSprites
+                            196 ;_sms_manager.c:40: void devkit_SMS_useFirstHalfTilesforSprites_True()
+                            197 ;	---------------------------------
+                            198 ; Function devkit_SMS_useFirstHalfTilesforSprites_True
+                            199 ; ---------------------------------
+   0038                     200 _devkit_SMS_useFirstHalfTilesforSprites_True::
+                            201 ;_sms_manager.c:42: SMS_useFirstHalfTilesforSprites( true );
+   0038 2E 01         [ 7]  202 	ld	l, #0x01
+   003A C3r00r00      [10]  203 	jp  _SMS_useFirstHalfTilesforSprites
+                            204 ;_sms_manager.c:44: void devkit_SMS_setSpriteMode( unsigned char mode )
+                            205 ;	---------------------------------
+                            206 ; Function devkit_SMS_setSpriteMode
+                            207 ; ---------------------------------
+   003D                     208 _devkit_SMS_setSpriteMode::
+                            209 ;_sms_manager.c:46: SMS_setSpriteMode( mode );
+   003D FD 21 02 00   [14]  210 	ld	iy, #2
+   0041 FD 39         [15]  211 	add	iy, sp
+   0043 FD 6E 00      [19]  212 	ld	l, 0 (iy)
+   0046 C3r00r00      [10]  213 	jp  _SMS_setSpriteMode
+                            214 ;_sms_manager.c:49: void devkit_SMS_mapROMBank( unsigned char n )
+                            215 ;	---------------------------------
+                            216 ; Function devkit_SMS_mapROMBank
+                            217 ; ---------------------------------
+   0049                     218 _devkit_SMS_mapROMBank::
+                            219 ;_sms_manager.c:51: SMS_mapROMBank( n );
+   0049 21 02 00      [10]  220 	ld	hl, #2+0
+   004C 39            [11]  221 	add	hl, sp
+   004D 7E            [ 7]  222 	ld	a, (hl)
+   004E 32 FF FF      [13]  223 	ld	(#_ROM_bank_to_be_mapped_on_slot2 + 0),a
+   0051 C9            [10]  224 	ret
+                            225 ;_sms_manager.c:53: void devkit_SMS_VDPturnOnFeature( unsigned int feature )
+                            226 ;	---------------------------------
+                            227 ; Function devkit_SMS_VDPturnOnFeature
+                            228 ; ---------------------------------
+   0052                     229 _devkit_SMS_VDPturnOnFeature::
+                            230 ;_sms_manager.c:55: SMS_VDPturnOnFeature( feature );
+   0052 C1            [10]  231 	pop	bc
+   0053 E1            [10]  232 	pop	hl
+   0054 E5            [11]  233 	push	hl
+   0055 C5            [11]  234 	push	bc
+   0056 C3r00r00      [10]  235 	jp  _SMS_VDPturnOnFeature
+                            236 ;_sms_manager.c:58: void devkit_SMS_loadTileMap( unsigned char x, unsigned char y, unsigned char* src, unsigned char size )
+                            237 ;	---------------------------------
+                            238 ; Function devkit_SMS_loadTileMap
+                            239 ; ---------------------------------
+   0059                     240 _devkit_SMS_loadTileMap::
+   0059 CDr00r00      [17]  241 	call	___sdcc_enter_ix
+   005C F5            [11]  242 	push	af
+                            243 ;_sms_manager.c:60: SMS_loadTileMap( x, y, src, size );
+   005D DD 5E 08      [19]  244 	ld	e, 8 (ix)
+   0060 16 00         [ 7]  245 	ld	d, #0x00
+   0062 DD 4E 06      [19]  246 	ld	c,6 (ix)
+   0065 DD 46 07      [19]  247 	ld	b,7 (ix)
+   0068 DD 6E 05      [19]  248 	ld	l, 5 (ix)
+   006B 26 00         [ 7]  249 	ld	h, #0x00
+   006D 29            [11]  250 	add	hl, hl
+   006E 29            [11]  251 	add	hl, hl
+   006F 29            [11]  252 	add	hl, hl
+   0070 29            [11]  253 	add	hl, hl
+   0071 29            [11]  254 	add	hl, hl
+   0072 29            [11]  255 	add	hl, hl
+   0073 DD 75 FE      [19]  256 	ld	-2 (ix), l
+   0076 7C            [ 4]  257 	ld	a, h
+   0077 F6 78         [ 7]  258 	or	a, #0x78
+   0079 DD 77 FF      [19]  259 	ld	-1 (ix), a
+   007C DD 6E 04      [19]  260 	ld	l, 4 (ix)
+   007F 26 00         [ 7]  261 	ld	h, #0x00
+   0081 29            [11]  262 	add	hl, hl
+   0082 7D            [ 4]  263 	ld	a, l
+   0083 DD B6 FE      [19]  264 	or	a, -2 (ix)
+   0086 6F            [ 4]  265 	ld	l, a
+   0087 7C            [ 4]  266 	ld	a, h
+   0088 DD B6 FF      [19]  267 	or	a, -1 (ix)
+   008B 67            [ 4]  268 	ld	h, a
+   008C D5            [11]  269 	push	de
+   008D C5            [11]  270 	push	bc
+   008E E5            [11]  271 	push	hl
+   008F CDr00r00      [17]  272 	call	_SMS_VRAMmemcpy
+   0092 F1            [10]  273 	pop	af
+   0093 F1            [10]  274 	pop	af
+   0094 F1            [10]  275 	pop	af
+   0095 F1            [10]  276 	pop	af
+   0096 DD E1         [14]  277 	pop	ix
+   0098 C9            [10]  278 	ret
+                            279 ;_sms_manager.c:63: void devkit_SMS_loadPSGaidencompressedTiles( void *src, unsigned int tilefrom )
+                            280 ;	---------------------------------
+                            281 ; Function devkit_SMS_loadPSGaidencompressedTiles
+                            282 ; ---------------------------------
+   0099                     283 _devkit_SMS_loadPSGaidencompressedTiles::
+                            284 ;_sms_manager.c:65: SMS_loadPSGaidencompressedTiles( src, tilefrom );
+   0099 21 04 00      [10]  285 	ld	hl, #4
+   009C 39            [11]  286 	add	hl, sp
+   009D 4E            [ 7]  287 	ld	c, (hl)
+   009E 23            [ 6]  288 	inc	hl
+   009F 46            [ 7]  289 	ld	b, (hl)
+   00A0 C5            [11]  290 	push	bc
+   00A1 21 04 00      [10]  291 	ld	hl, #4
+   00A4 39            [11]  292 	add	hl, sp
+   00A5 4E            [ 7]  293 	ld	c, (hl)
+   00A6 23            [ 6]  294 	inc	hl
+   00A7 46            [ 7]  295 	ld	b, (hl)
+   00A8 C5            [11]  296 	push	bc
+   00A9 CDr00r00      [17]  297 	call	_SMS_loadPSGaidencompressedTiles
+   00AC F1            [10]  298 	pop	af
+   00AD F1            [10]  299 	pop	af
+   00AE C9            [10]  300 	ret
+                            301 ;_sms_manager.c:67: void devkit_SMS_loadSTMcompressedTileMap( unsigned char x, unsigned char y, unsigned char *src )
+                            302 ;	---------------------------------
+                            303 ; Function devkit_SMS_loadSTMcompressedTileMap
+                            304 ; ---------------------------------
+   00AF                     305 _devkit_SMS_loadSTMcompressedTileMap::
+                            306 ;_sms_manager.c:69: SMS_loadSTMcompressedTileMap( x, y, src );
+   00AF 3E 20         [ 7]  307 	ld	a, #0x20
+   00B1 F5            [11]  308 	push	af
+   00B2 33            [ 6]  309 	inc	sp
+   00B3 21 05 00      [10]  310 	ld	hl, #5
+   00B6 39            [11]  311 	add	hl, sp
+   00B7 4E            [ 7]  312 	ld	c, (hl)
+   00B8 23            [ 6]  313 	inc	hl
+   00B9 46            [ 7]  314 	ld	b, (hl)
+   00BA C5            [11]  315 	push	bc
+   00BB 21 06 00      [10]  316 	ld	hl, #6+0
+   00BE 39            [11]  317 	add	hl, sp
+   00BF 7E            [ 7]  318 	ld	a, (hl)
+   00C0 F5            [11]  319 	push	af
+   00C1 33            [ 6]  320 	inc	sp
+   00C2 21 06 00      [10]  321 	ld	hl, #6+0
+   00C5 39            [11]  322 	add	hl, sp
+   00C6 7E            [ 7]  323 	ld	a, (hl)
+   00C7 F5            [11]  324 	push	af
+   00C8 33            [ 6]  325 	inc	sp
+   00C9 CDr00r00      [17]  326 	call	_SMS_loadSTMcompressedTileMapArea
+   00CC F1            [10]  327 	pop	af
+   00CD F1            [10]  328 	pop	af
+   00CE 33            [ 6]  329 	inc	sp
+   00CF C9            [10]  330 	ret
+                            331 ;_sms_manager.c:72: void devkit_SMS_loadBGPalette( void *palette )
+                            332 ;	---------------------------------
+                            333 ; Function devkit_SMS_loadBGPalette
+                            334 ; ---------------------------------
+   00D0                     335 _devkit_SMS_loadBGPalette::
+                            336 ;_sms_manager.c:74: SMS_loadBGPalette( palette );
+   00D0 C1            [10]  337 	pop	bc
+   00D1 E1            [10]  338 	pop	hl
+   00D2 E5            [11]  339 	push	hl
+   00D3 C5            [11]  340 	push	bc
+   00D4 C3r00r00      [10]  341 	jp  _SMS_loadBGPalette
+                            342 ;_sms_manager.c:76: void devkit_SMS_loadSpritePalette( void *palette )
+                            343 ;	---------------------------------
+                            344 ; Function devkit_SMS_loadSpritePalette
+                            345 ; ---------------------------------
+   00D7                     346 _devkit_SMS_loadSpritePalette::
+                            347 ;_sms_manager.c:78: SMS_loadSpritePalette( palette );
+   00D7 C1            [10]  348 	pop	bc
+   00D8 E1            [10]  349 	pop	hl
+   00D9 E5            [11]  350 	push	hl
+   00DA C5            [11]  351 	push	bc
+   00DB C3r00r00      [10]  352 	jp  _SMS_loadSpritePalette
+                            353 ;_sms_manager.c:80: void devkit_SMS_setSpritePaletteColor( const unsigned char entry, const unsigned char r, const unsigned char g, const unsigned char b )
+                            354 ;	---------------------------------
+                            355 ; Function devkit_SMS_setSpritePaletteColor
+                            356 ; ---------------------------------
+   00DE                     357 _devkit_SMS_setSpritePaletteColor::
+                            358 ;_sms_manager.c:82: const unsigned char color = RGB( r, g, b );
+   00DE 21 04 00      [10]  359 	ld	hl, #4+0
+   00E1 39            [11]  360 	add	hl, sp
+   00E2 7E            [ 7]  361 	ld	a, (hl)
+   00E3 87            [ 4]  362 	add	a, a
+   00E4 87            [ 4]  363 	add	a, a
+   00E5 21 03 00      [10]  364 	ld	hl, #3+0
+   00E8 39            [11]  365 	add	hl, sp
+   00E9 B6            [ 7]  366 	or	a, (hl)
+   00EA 4F            [ 4]  367 	ld	c, a
+   00EB 21 05 00      [10]  368 	ld	hl, #5+0
+   00EE 39            [11]  369 	add	hl, sp
+   00EF 7E            [ 7]  370 	ld	a, (hl)
+   00F0 07            [ 4]  371 	rlca
+   00F1 07            [ 4]  372 	rlca
+   00F2 07            [ 4]  373 	rlca
+   00F3 07            [ 4]  374 	rlca
+   00F4 E6 F0         [ 7]  375 	and	a, #0xf0
+   00F6 B1            [ 4]  376 	or	a, c
+   00F7 47            [ 4]  377 	ld	b, a
+                            378 ;_sms_manager.c:83: SMS_setSpritePaletteColor( entry, color );
+   00F8 C5            [11]  379 	push	bc
+   00F9 33            [ 6]  380 	inc	sp
+   00FA 21 03 00      [10]  381 	ld	hl, #3+0
+   00FD 39            [11]  382 	add	hl, sp
+   00FE 7E            [ 7]  383 	ld	a, (hl)
+   00FF F5            [11]  384 	push	af
+   0100 33            [ 6]  385 	inc	sp
+   0101 CDr00r00      [17]  386 	call	_SMS_setSpritePaletteColor
+   0104 F1            [10]  387 	pop	af
+   0105 C9            [10]  388 	ret
+                            389 ;_sms_manager.c:86: void devkit_SMS_setNextTileatXY( unsigned char x, unsigned char y )
+                            390 ;	---------------------------------
+                            391 ; Function devkit_SMS_setNextTileatXY
+                            392 ; ---------------------------------
+   0106                     393 _devkit_SMS_setNextTileatXY::
+   0106 CDr00r00      [17]  394 	call	___sdcc_enter_ix
+                            395 ;_sms_manager.c:88: SMS_setNextTileatXY( x, y );
+   0109 DD 6E 05      [19]  396 	ld	l, 5 (ix)
+   010C 26 00         [ 7]  397 	ld	h, #0x00
+   010E 29            [11]  398 	add	hl, hl
+   010F 29            [11]  399 	add	hl, hl
+   0110 29            [11]  400 	add	hl, hl
+   0111 29            [11]  401 	add	hl, hl
+   0112 29            [11]  402 	add	hl, hl
+   0113 29            [11]  403 	add	hl, hl
+   0114 4D            [ 4]  404 	ld	c, l
+   0115 7C            [ 4]  405 	ld	a, h
+   0116 F6 78         [ 7]  406 	or	a, #0x78
+   0118 47            [ 4]  407 	ld	b, a
+   0119 DD 6E 04      [19]  408 	ld	l, 4 (ix)
+   011C 26 00         [ 7]  409 	ld	h, #0x00
+   011E 29            [11]  410 	add	hl, hl
+   011F 7D            [ 4]  411 	ld	a, l
+   0120 B1            [ 4]  412 	or	a, c
+   0121 6F            [ 4]  413 	ld	l, a
+   0122 7C            [ 4]  414 	ld	a, h
+   0123 B0            [ 4]  415 	or	a, b
+   0124 67            [ 4]  416 	ld	h, a
+   0125 DD E1         [14]  417 	pop	ix
+   0127 C3r00r00      [10]  418 	jp	_SMS_crt0_RST08
+                            419 ;_sms_manager.c:90: void devkit_SMS_setTile( const unsigned char tile )
+                            420 ;	---------------------------------
+                            421 ; Function devkit_SMS_setTile
+                            422 ; ---------------------------------
+   012A                     423 _devkit_SMS_setTile::
+                            424 ;_sms_manager.c:92: SMS_setTile( tile );
+   012A FD 21 02 00   [14]  425 	ld	iy, #2
+   012E FD 39         [15]  426 	add	iy, sp
+   0130 FD 6E 00      [19]  427 	ld	l, 0 (iy)
+   0133 26 00         [ 7]  428 	ld	h, #0x00
+   0135 C3r00r00      [10]  429 	jp  _SMS_crt0_RST18
+                            430 ;_sms_manager.c:95: void devkit_SMS_addSprite( unsigned char x, unsigned char y, unsigned char tile )
+                            431 ;	---------------------------------
+                            432 ; Function devkit_SMS_addSprite
+                            433 ; ---------------------------------
+   0138                     434 _devkit_SMS_addSprite::
+                            435 ;_sms_manager.c:97: SMS_addSprite( x, y, tile );
+   0138 21 04 00      [10]  436 	ld	hl, #4+0
+   013B 39            [11]  437 	add	hl, sp
+   013C 7E            [ 7]  438 	ld	a, (hl)
+   013D F5            [11]  439 	push	af
+   013E 33            [ 6]  440 	inc	sp
+   013F 21 04 00      [10]  441 	ld	hl, #4+0
+   0142 39            [11]  442 	add	hl, sp
+   0143 7E            [ 7]  443 	ld	a, (hl)
+   0144 F5            [11]  444 	push	af
+   0145 33            [ 6]  445 	inc	sp
+   0146 21 04 00      [10]  446 	ld	hl, #4+0
+   0149 39            [11]  447 	add	hl, sp
+   014A 7E            [ 7]  448 	ld	a, (hl)
+   014B F5            [11]  449 	push	af
+   014C 33            [ 6]  450 	inc	sp
+   014D CDr00r00      [17]  451 	call	_SMS_addSprite
+   0150 F1            [10]  452 	pop	af
+   0151 33            [ 6]  453 	inc	sp
+   0152 C9            [10]  454 	ret
+                            455 ;_sms_manager.c:99: void devkit_SMS_addSprite_bulk8( unsigned char x, unsigned char y, unsigned char tile )
+                            456 ;	---------------------------------
+                            457 ; Function devkit_SMS_addSprite_bulk8
+                            458 ; ---------------------------------
+   0153                     459 _devkit_SMS_addSprite_bulk8::
+   0153 CDr00r00      [17]  460 	call	___sdcc_enter_ix
+                            461 ;_sms_manager.c:101: devkit_SMS_addSprite( x + 0, y + 0, tile + 0 );
+   0156 DD 66 06      [19]  462 	ld	h, 6 (ix)
+   0159 DD 6E 05      [19]  463 	ld	l, 5 (ix)
+   015C E5            [11]  464 	push	hl
+   015D DD 7E 04      [19]  465 	ld	a, 4 (ix)
+   0160 F5            [11]  466 	push	af
+   0161 33            [ 6]  467 	inc	sp
+   0162 CDr38r01      [17]  468 	call	_devkit_SMS_addSprite
+   0165 F1            [10]  469 	pop	af
+   0166 33            [ 6]  470 	inc	sp
+                            471 ;_sms_manager.c:102: devkit_SMS_addSprite( x + 8, y + 0, tile + 1 );
+   0167 DD 56 06      [19]  472 	ld	d, 6 (ix)
+   016A 14            [ 4]  473 	inc	d
+   016B DD 7E 04      [19]  474 	ld	a, 4 (ix)
+   016E C6 08         [ 7]  475 	add	a, #0x08
+   0170 47            [ 4]  476 	ld	b, a
+   0171 C5            [11]  477 	push	bc
+   0172 D5            [11]  478 	push	de
+   0173 33            [ 6]  479 	inc	sp
+   0174 DD 7E 05      [19]  480 	ld	a, 5 (ix)
+   0177 F5            [11]  481 	push	af
+   0178 33            [ 6]  482 	inc	sp
+   0179 C5            [11]  483 	push	bc
+   017A 33            [ 6]  484 	inc	sp
+   017B CDr38r01      [17]  485 	call	_devkit_SMS_addSprite
+   017E F1            [10]  486 	pop	af
+   017F 33            [ 6]  487 	inc	sp
+   0180 C1            [10]  488 	pop	bc
+                            489 ;_sms_manager.c:104: devkit_SMS_addSprite( x + 0, y + 8, tile + 2 );
+   0181 DD 66 06      [19]  490 	ld	h, 6 (ix)
+   0184 24            [ 4]  491 	inc	h
+   0185 24            [ 4]  492 	inc	h
+   0186 DD 7E 05      [19]  493 	ld	a, 5 (ix)
+   0189 C6 08         [ 7]  494 	add	a, #0x08
+   018B 57            [ 4]  495 	ld	d, a
+   018C C5            [11]  496 	push	bc
+   018D D5            [11]  497 	push	de
+   018E 6A            [ 4]  498 	ld	l, d
+   018F E5            [11]  499 	push	hl
+   0190 DD 7E 04      [19]  500 	ld	a, 4 (ix)
+   0193 F5            [11]  501 	push	af
+   0194 33            [ 6]  502 	inc	sp
+   0195 CDr38r01      [17]  503 	call	_devkit_SMS_addSprite
+   0198 F1            [10]  504 	pop	af
+   0199 33            [ 6]  505 	inc	sp
+   019A D1            [10]  506 	pop	de
+   019B C1            [10]  507 	pop	bc
+                            508 ;_sms_manager.c:105: devkit_SMS_addSprite( x + 8, y + 8, tile + 3 );
+   019C DD 66 06      [19]  509 	ld	h, 6 (ix)
+   019F 24            [ 4]  510 	inc	h
+   01A0 24            [ 4]  511 	inc	h
+   01A1 24            [ 4]  512 	inc	h
+   01A2 C5            [11]  513 	push	bc
+   01A3 6A            [ 4]  514 	ld	l, d
+   01A4 E5            [11]  515 	push	hl
+   01A5 C5            [11]  516 	push	bc
+   01A6 33            [ 6]  517 	inc	sp
+   01A7 CDr38r01      [17]  518 	call	_devkit_SMS_addSprite
+   01AA F1            [10]  519 	pop	af
+   01AB 33            [ 6]  520 	inc	sp
+   01AC C1            [10]  521 	pop	bc
+                            522 ;_sms_manager.c:107: devkit_SMS_addSprite( x + 0, y + 16, tile + 4 );
+   01AD DD 66 06      [19]  523 	ld	h, 6 (ix)
+   01B0 24            [ 4]  524 	inc	h
+   01B1 24            [ 4]  525 	inc	h
+   01B2 24            [ 4]  526 	inc	h
+   01B3 24            [ 4]  527 	inc	h
+   01B4 DD 7E 05      [19]  528 	ld	a, 5 (ix)
+   01B7 C6 10         [ 7]  529 	add	a, #0x10
+   01B9 57            [ 4]  530 	ld	d, a
+   01BA C5            [11]  531 	push	bc
+   01BB D5            [11]  532 	push	de
+   01BC 6A            [ 4]  533 	ld	l, d
+   01BD E5            [11]  534 	push	hl
+   01BE DD 7E 04      [19]  535 	ld	a, 4 (ix)
+   01C1 F5            [11]  536 	push	af
+   01C2 33            [ 6]  537 	inc	sp
+   01C3 CDr38r01      [17]  538 	call	_devkit_SMS_addSprite
+   01C6 F1            [10]  539 	pop	af
+   01C7 33            [ 6]  540 	inc	sp
+   01C8 D1            [10]  541 	pop	de
+   01C9 C1            [10]  542 	pop	bc
+                            543 ;_sms_manager.c:108: devkit_SMS_addSprite( x + 8, y + 16, tile + 5 );
+   01CA DD 7E 06      [19]  544 	ld	a, 6 (ix)
+   01CD C6 05         [ 7]  545 	add	a, #0x05
+   01CF 67            [ 4]  546 	ld	h, a
+   01D0 C5            [11]  547 	push	bc
+   01D1 6A            [ 4]  548 	ld	l, d
+   01D2 E5            [11]  549 	push	hl
+   01D3 C5            [11]  550 	push	bc
+   01D4 33            [ 6]  551 	inc	sp
+   01D5 CDr38r01      [17]  552 	call	_devkit_SMS_addSprite
+   01D8 F1            [10]  553 	pop	af
+   01D9 33            [ 6]  554 	inc	sp
+   01DA C1            [10]  555 	pop	bc
+                            556 ;_sms_manager.c:110: devkit_SMS_addSprite( x + 0, y + 24, tile + 6 );
+   01DB DD 7E 06      [19]  557 	ld	a, 6 (ix)
+   01DE C6 06         [ 7]  558 	add	a, #0x06
+   01E0 67            [ 4]  559 	ld	h, a
+   01E1 DD 7E 05      [19]  560 	ld	a, 5 (ix)
+   01E4 C6 18         [ 7]  561 	add	a, #0x18
+   01E6 57            [ 4]  562 	ld	d, a
+   01E7 C5            [11]  563 	push	bc
+   01E8 D5            [11]  564 	push	de
+   01E9 6A            [ 4]  565 	ld	l, d
+   01EA E5            [11]  566 	push	hl
+   01EB DD 7E 04      [19]  567 	ld	a, 4 (ix)
+   01EE F5            [11]  568 	push	af
+   01EF 33            [ 6]  569 	inc	sp
+   01F0 CDr38r01      [17]  570 	call	_devkit_SMS_addSprite
+   01F3 F1            [10]  571 	pop	af
+   01F4 33            [ 6]  572 	inc	sp
+   01F5 D1            [10]  573 	pop	de
+   01F6 C1            [10]  574 	pop	bc
+                            575 ;_sms_manager.c:111: devkit_SMS_addSprite( x + 8, y + 24, tile + 7 );
+   01F7 DD 7E 06      [19]  576 	ld	a, 6 (ix)
+   01FA C6 07         [ 7]  577 	add	a, #0x07
+   01FC 67            [ 4]  578 	ld	h, a
+   01FD 6A            [ 4]  579 	ld	l, d
+   01FE E5            [11]  580 	push	hl
+   01FF C5            [11]  581 	push	bc
+   0200 33            [ 6]  582 	inc	sp
+   0201 CDr38r01      [17]  583 	call	_devkit_SMS_addSprite
+   0204 F1            [10]  584 	pop	af
+   0205 33            [ 6]  585 	inc	sp
+   0206 DD E1         [14]  586 	pop	ix
+   0208 C9            [10]  587 	ret
+                            588 ;_sms_manager.c:113: void devkit_SMS_addSprite_bulk12( unsigned char x, unsigned char y, unsigned char tile )
+                            589 ;	---------------------------------
+                            590 ; Function devkit_SMS_addSprite_bulk12
+                            591 ; ---------------------------------
+   0209                     592 _devkit_SMS_addSprite_bulk12::
+   0209 CDr00r00      [17]  593 	call	___sdcc_enter_ix
+                            594 ;_sms_manager.c:115: SMS_addSprite( x + 0, y + 0, tile + 0 );
+   020C DD 66 06      [19]  595 	ld	h, 6 (ix)
+   020F DD 6E 05      [19]  596 	ld	l, 5 (ix)
+   0212 E5            [11]  597 	push	hl
+   0213 DD 7E 04      [19]  598 	ld	a, 4 (ix)
+   0216 F5            [11]  599 	push	af
+   0217 33            [ 6]  600 	inc	sp
+   0218 CDr00r00      [17]  601 	call	_SMS_addSprite
+   021B F1            [10]  602 	pop	af
+   021C 33            [ 6]  603 	inc	sp
+                            604 ;_sms_manager.c:116: SMS_addSprite( x + 8, y + 0, tile + 1 );
+   021D DD 56 06      [19]  605 	ld	d, 6 (ix)
+   0220 14            [ 4]  606 	inc	d
+   0221 DD 7E 04      [19]  607 	ld	a, 4 (ix)
+   0224 C6 08         [ 7]  608 	add	a, #0x08
+   0226 47            [ 4]  609 	ld	b, a
+   0227 C5            [11]  610 	push	bc
+   0228 D5            [11]  611 	push	de
+   0229 33            [ 6]  612 	inc	sp
+   022A DD 7E 05      [19]  613 	ld	a, 5 (ix)
+   022D F5            [11]  614 	push	af
+   022E 33            [ 6]  615 	inc	sp
+   022F C5            [11]  616 	push	bc
+   0230 33            [ 6]  617 	inc	sp
+   0231 CDr00r00      [17]  618 	call	_SMS_addSprite
+   0234 F1            [10]  619 	pop	af
+   0235 33            [ 6]  620 	inc	sp
+   0236 C1            [10]  621 	pop	bc
+                            622 ;_sms_manager.c:117: SMS_addSprite( x + 16, y + 0, tile + 2 );
+   0237 DD 56 06      [19]  623 	ld	d, 6 (ix)
+   023A 14            [ 4]  624 	inc	d
+   023B 14            [ 4]  625 	inc	d
+   023C DD 7E 04      [19]  626 	ld	a, 4 (ix)
+   023F C6 10         [ 7]  627 	add	a, #0x10
+   0241 4F            [ 4]  628 	ld	c, a
+   0242 C5            [11]  629 	push	bc
+   0243 D5            [11]  630 	push	de
+   0244 33            [ 6]  631 	inc	sp
+   0245 DD 46 05      [19]  632 	ld	b, 5 (ix)
+   0248 C5            [11]  633 	push	bc
+   0249 CDr00r00      [17]  634 	call	_SMS_addSprite
+   024C F1            [10]  635 	pop	af
+   024D 33            [ 6]  636 	inc	sp
+   024E C1            [10]  637 	pop	bc
+                            638 ;_sms_manager.c:119: SMS_addSprite( x + 0, y + 8, tile + 3 );
+   024F DD 66 06      [19]  639 	ld	h, 6 (ix)
+   0252 24            [ 4]  640 	inc	h
+   0253 24            [ 4]  641 	inc	h
+   0254 24            [ 4]  642 	inc	h
+   0255 DD 7E 05      [19]  643 	ld	a, 5 (ix)
+   0258 C6 08         [ 7]  644 	add	a, #0x08
+   025A 57            [ 4]  645 	ld	d, a
+   025B C5            [11]  646 	push	bc
+   025C D5            [11]  647 	push	de
+   025D 6A            [ 4]  648 	ld	l, d
+   025E E5            [11]  649 	push	hl
+   025F DD 7E 04      [19]  650 	ld	a, 4 (ix)
+   0262 F5            [11]  651 	push	af
+   0263 33            [ 6]  652 	inc	sp
+   0264 CDr00r00      [17]  653 	call	_SMS_addSprite
+   0267 F1            [10]  654 	pop	af
+   0268 33            [ 6]  655 	inc	sp
+   0269 D1            [10]  656 	pop	de
+   026A C1            [10]  657 	pop	bc
+                            658 ;_sms_manager.c:120: SMS_addSprite( x + 8, y + 8, tile + 4 );
+   026B DD 7E 06      [19]  659 	ld	a, 6 (ix)
+   026E C6 04         [ 7]  660 	add	a, #0x04
+   0270 C5            [11]  661 	push	bc
+   0271 D5            [11]  662 	push	de
+   0272 F5            [11]  663 	push	af
+   0273 33            [ 6]  664 	inc	sp
+   0274 58            [ 4]  665 	ld	e, b
+   0275 D5            [11]  666 	push	de
+   0276 CDr00r00      [17]  667 	call	_SMS_addSprite
+   0279 F1            [10]  668 	pop	af
+   027A 33            [ 6]  669 	inc	sp
+   027B D1            [10]  670 	pop	de
+   027C C1            [10]  671 	pop	bc
+                            672 ;_sms_manager.c:121: SMS_addSprite( x + 16, y + 8, tile + 5 );
+   027D DD 7E 06      [19]  673 	ld	a, 6 (ix)
+   0280 C6 05         [ 7]  674 	add	a, #0x05
+   0282 67            [ 4]  675 	ld	h, a
+   0283 C5            [11]  676 	push	bc
+   0284 6A            [ 4]  677 	ld	l, d
+   0285 E5            [11]  678 	push	hl
+   0286 79            [ 4]  679 	ld	a, c
+   0287 F5            [11]  680 	push	af
+   0288 33            [ 6]  681 	inc	sp
+   0289 CDr00r00      [17]  682 	call	_SMS_addSprite
+   028C F1            [10]  683 	pop	af
+   028D 33            [ 6]  684 	inc	sp
+   028E C1            [10]  685 	pop	bc
+                            686 ;_sms_manager.c:123: SMS_addSprite( x + 0, y + 16, tile + 6 );
+   028F DD 7E 06      [19]  687 	ld	a, 6 (ix)
+   0292 C6 06         [ 7]  688 	add	a, #0x06
+   0294 67            [ 4]  689 	ld	h, a
+   0295 DD 7E 05      [19]  690 	ld	a, 5 (ix)
+   0298 C6 10         [ 7]  691 	add	a, #0x10
+   029A 57            [ 4]  692 	ld	d, a
+   029B C5            [11]  693 	push	bc
+   029C D5            [11]  694 	push	de
+   029D 6A            [ 4]  695 	ld	l, d
+   029E E5            [11]  696 	push	hl
+   029F DD 7E 04      [19]  697 	ld	a, 4 (ix)
+   02A2 F5            [11]  698 	push	af
+   02A3 33            [ 6]  699 	inc	sp
+   02A4 CDr00r00      [17]  700 	call	_SMS_addSprite
+   02A7 F1            [10]  701 	pop	af
+   02A8 33            [ 6]  702 	inc	sp
+   02A9 D1            [10]  703 	pop	de
+   02AA C1            [10]  704 	pop	bc
+                            705 ;_sms_manager.c:124: SMS_addSprite( x + 8, y + 16, tile + 7 );
+   02AB DD 7E 06      [19]  706 	ld	a, 6 (ix)
+   02AE C6 07         [ 7]  707 	add	a, #0x07
+   02B0 67            [ 4]  708 	ld	h, a
+   02B1 C5            [11]  709 	push	bc
+   02B2 D5            [11]  710 	push	de
+   02B3 6A            [ 4]  711 	ld	l, d
+   02B4 E5            [11]  712 	push	hl
+   02B5 C5            [11]  713 	push	bc
+   02B6 33            [ 6]  714 	inc	sp
+   02B7 CDr00r00      [17]  715 	call	_SMS_addSprite
+   02BA F1            [10]  716 	pop	af
+   02BB 33            [ 6]  717 	inc	sp
+   02BC D1            [10]  718 	pop	de
+   02BD C1            [10]  719 	pop	bc
+                            720 ;_sms_manager.c:125: SMS_addSprite( x + 16, y + 16, tile + 8 );
+   02BE DD 7E 06      [19]  721 	ld	a, 6 (ix)
+   02C1 C6 08         [ 7]  722 	add	a, #0x08
+   02C3 67            [ 4]  723 	ld	h, a
+   02C4 C5            [11]  724 	push	bc
+   02C5 6A            [ 4]  725 	ld	l, d
+   02C6 E5            [11]  726 	push	hl
+   02C7 79            [ 4]  727 	ld	a, c
+   02C8 F5            [11]  728 	push	af
+   02C9 33            [ 6]  729 	inc	sp
+   02CA CDr00r00      [17]  730 	call	_SMS_addSprite
+   02CD F1            [10]  731 	pop	af
+   02CE 33            [ 6]  732 	inc	sp
+   02CF C1            [10]  733 	pop	bc
+                            734 ;_sms_manager.c:127: SMS_addSprite( x + 0, y + 24, tile + 9 );
+   02D0 DD 7E 06      [19]  735 	ld	a, 6 (ix)
+   02D3 C6 09         [ 7]  736 	add	a, #0x09
+   02D5 67            [ 4]  737 	ld	h, a
+   02D6 DD 7E 05      [19]  738 	ld	a, 5 (ix)
+   02D9 C6 18         [ 7]  739 	add	a, #0x18
+   02DB 57            [ 4]  740 	ld	d, a
+   02DC C5            [11]  741 	push	bc
+   02DD D5            [11]  742 	push	de
+   02DE 6A            [ 4]  743 	ld	l, d
+   02DF E5            [11]  744 	push	hl
+   02E0 DD 7E 04      [19]  745 	ld	a, 4 (ix)
+   02E3 F5            [11]  746 	push	af
+   02E4 33            [ 6]  747 	inc	sp
+   02E5 CDr00r00      [17]  748 	call	_SMS_addSprite
+   02E8 F1            [10]  749 	pop	af
+   02E9 33            [ 6]  750 	inc	sp
+   02EA D1            [10]  751 	pop	de
+   02EB C1            [10]  752 	pop	bc
+                            753 ;_sms_manager.c:128: SMS_addSprite( x + 8, y + 24, tile + 10 );
+   02EC DD 7E 06      [19]  754 	ld	a, 6 (ix)
+   02EF C6 0A         [ 7]  755 	add	a, #0x0a
+   02F1 67            [ 4]  756 	ld	h, a
+   02F2 C5            [11]  757 	push	bc
+   02F3 D5            [11]  758 	push	de
+   02F4 6A            [ 4]  759 	ld	l, d
+   02F5 E5            [11]  760 	push	hl
+   02F6 C5            [11]  761 	push	bc
+   02F7 33            [ 6]  762 	inc	sp
+   02F8 CDr00r00      [17]  763 	call	_SMS_addSprite
+   02FB F1            [10]  764 	pop	af
+   02FC 33            [ 6]  765 	inc	sp
+   02FD D1            [10]  766 	pop	de
+   02FE C1            [10]  767 	pop	bc
+                            768 ;_sms_manager.c:129: SMS_addSprite( x + 16, y + 24, tile + 11 );
+   02FF DD 7E 06      [19]  769 	ld	a, 6 (ix)
+   0302 C6 0B         [ 7]  770 	add	a, #0x0b
+   0304 47            [ 4]  771 	ld	b, a
+   0305 C5            [11]  772 	push	bc
+   0306 33            [ 6]  773 	inc	sp
+   0307 59            [ 4]  774 	ld	e, c
+   0308 D5            [11]  775 	push	de
+   0309 CDr00r00      [17]  776 	call	_SMS_addSprite
+   030C F1            [10]  777 	pop	af
+   030D 33            [ 6]  778 	inc	sp
+   030E DD E1         [14]  779 	pop	ix
+   0310 C9            [10]  780 	ret
+                            781 ;_sms_manager.c:132: void devkit_SMS_initSprites()
+                            782 ;	---------------------------------
+                            783 ; Function devkit_SMS_initSprites
+                            784 ; ---------------------------------
+   0311                     785 _devkit_SMS_initSprites::
+                            786 ;_sms_manager.c:134: SMS_initSprites();
+   0311 C3r00r00      [10]  787 	jp  _SMS_initSprites
+                            788 ;_sms_manager.c:136: void devkit_SMS_finalizeSprites()
+                            789 ;	---------------------------------
+                            790 ; Function devkit_SMS_finalizeSprites
+                            791 ; ---------------------------------
+   0314                     792 _devkit_SMS_finalizeSprites::
+                            793 ;_sms_manager.c:138: SMS_finalizeSprites();
+   0314 C3r00r00      [10]  794 	jp  _SMS_finalizeSprites
+                            795 ;_sms_manager.c:140: void devkit_SMS_waitForVBlank()
+                            796 ;	---------------------------------
+                            797 ; Function devkit_SMS_waitForVBlank
+                            798 ; ---------------------------------
+   0317                     799 _devkit_SMS_waitForVBlank::
+                            800 ;_sms_manager.c:142: SMS_waitForVBlank();
+   0317 C3r00r00      [10]  801 	jp  _SMS_waitForVBlank
+                            802 ;_sms_manager.c:144: void devkit_SMS_copySpritestoSAT()
+                            803 ;	---------------------------------
+                            804 ; Function devkit_SMS_copySpritestoSAT
+                            805 ; ---------------------------------
+   031A                     806 _devkit_SMS_copySpritestoSAT::
+                            807 ;_sms_manager.c:146: UNSAFE_SMS_copySpritestoSAT();
+   031A C3r00r00      [10]  808 	jp  _UNSAFE_SMS_copySpritestoSAT
+                            809 ;_sms_manager.c:148: void devkit_UNSAFE_SMS_copySpritestoSAT()
+                            810 ;	---------------------------------
+                            811 ; Function devkit_UNSAFE_SMS_copySpritestoSAT
+                            812 ; ---------------------------------
+   031D                     813 _devkit_UNSAFE_SMS_copySpritestoSAT::
+                            814 ;_sms_manager.c:150: UNSAFE_SMS_copySpritestoSAT();
+   031D C3r00r00      [10]  815 	jp  _UNSAFE_SMS_copySpritestoSAT
+                            816 ;_sms_manager.c:153: unsigned char devkit_SMS_queryPauseRequested()
+                            817 ;	---------------------------------
+                            818 ; Function devkit_SMS_queryPauseRequested
+                            819 ; ---------------------------------
+   0320                     820 _devkit_SMS_queryPauseRequested::
+                            821 ;_sms_manager.c:155: return SMS_queryPauseRequested();
+   0320 C3r00r00      [10]  822 	jp  _SMS_queryPauseRequested
+                            823 ;_sms_manager.c:157: void devkit_SMS_resetPauseRequest()
+                            824 ;	---------------------------------
+                            825 ; Function devkit_SMS_resetPauseRequest
+                            826 ; ---------------------------------
+   0323                     827 _devkit_SMS_resetPauseRequest::
+                            828 ;_sms_manager.c:159: SMS_resetPauseRequest();
+   0323 C3r00r00      [10]  829 	jp  _SMS_resetPauseRequest
+                            830 ;_sms_manager.c:163: unsigned int devkit_SMS_getKeysStatus()
+                            831 ;	---------------------------------
+                            832 ; Function devkit_SMS_getKeysStatus
+                            833 ; ---------------------------------
+   0326                     834 _devkit_SMS_getKeysStatus::
+                            835 ;_sms_manager.c:165: return SMS_getKeysStatus();
+   0326 C3r00r00      [10]  836 	jp  _SMS_getKeysStatus
+                            837 ;_sms_manager.c:167: unsigned int devkit_SMS_getKeysPressed()
+                            838 ;	---------------------------------
+                            839 ; Function devkit_SMS_getKeysPressed
+                            840 ; ---------------------------------
+   0329                     841 _devkit_SMS_getKeysPressed::
+                            842 ;_sms_manager.c:169: return SMS_getKeysPressed();
+   0329 C3r00r00      [10]  843 	jp  _SMS_getKeysPressed
+                            844 ;_sms_manager.c:171: unsigned int devkit_SMS_getKeysHeld()
+                            845 ;	---------------------------------
+                            846 ; Function devkit_SMS_getKeysHeld
+                            847 ; ---------------------------------
+   032C                     848 _devkit_SMS_getKeysHeld::
+                            849 ;_sms_manager.c:173: return SMS_getKeysHeld();
+   032C C3r00r00      [10]  850 	jp  _SMS_getKeysHeld
+                            851 ;_sms_manager.c:175: unsigned int devkit_SMS_getKeysReleased()
+                            852 ;	---------------------------------
+                            853 ; Function devkit_SMS_getKeysReleased
+                            854 ; ---------------------------------
+   032F                     855 _devkit_SMS_getKeysReleased::
+                            856 ;_sms_manager.c:177: return SMS_getKeysReleased();
+   032F C3r00r00      [10]  857 	jp  _SMS_getKeysReleased
+                            858 ;_sms_manager.c:180: unsigned int devkit_PORT_A_KEY_UP()
+                            859 ;	---------------------------------
+                            860 ; Function devkit_PORT_A_KEY_UP
+                            861 ; ---------------------------------
+   0332                     862 _devkit_PORT_A_KEY_UP::
+                            863 ;_sms_manager.c:182: return PORT_A_KEY_UP;
+   0332 21 01 00      [10]  864 	ld	hl, #0x0001
+   0335 C9            [10]  865 	ret
+                            866 ;_sms_manager.c:184: unsigned int devkit_PORT_A_KEY_DOWN()
+                            867 ;	---------------------------------
+                            868 ; Function devkit_PORT_A_KEY_DOWN
+                            869 ; ---------------------------------
+   0336                     870 _devkit_PORT_A_KEY_DOWN::
+                            871 ;_sms_manager.c:186: return PORT_A_KEY_DOWN;
+   0336 21 02 00      [10]  872 	ld	hl, #0x0002
+   0339 C9            [10]  873 	ret
+                            874 ;_sms_manager.c:188: unsigned int devkit_PORT_A_KEY_LEFT()
+                            875 ;	---------------------------------
+                            876 ; Function devkit_PORT_A_KEY_LEFT
+                            877 ; ---------------------------------
+   033A                     878 _devkit_PORT_A_KEY_LEFT::
+                            879 ;_sms_manager.c:190: return PORT_A_KEY_LEFT;
+   033A 21 04 00      [10]  880 	ld	hl, #0x0004
+   033D C9            [10]  881 	ret
+                            882 ;_sms_manager.c:192: unsigned int devkit_PORT_A_KEY_RIGHT()
+                            883 ;	---------------------------------
+                            884 ; Function devkit_PORT_A_KEY_RIGHT
+                            885 ; ---------------------------------
+   033E                     886 _devkit_PORT_A_KEY_RIGHT::
+                            887 ;_sms_manager.c:194: return PORT_A_KEY_RIGHT;
+   033E 21 08 00      [10]  888 	ld	hl, #0x0008
+   0341 C9            [10]  889 	ret
+                            890 ;_sms_manager.c:196: unsigned int devkit_PORT_A_KEY_1()
+                            891 ;	---------------------------------
+                            892 ; Function devkit_PORT_A_KEY_1
+                            893 ; ---------------------------------
+   0342                     894 _devkit_PORT_A_KEY_1::
+                            895 ;_sms_manager.c:198: return PORT_A_KEY_1;
+   0342 21 10 00      [10]  896 	ld	hl, #0x0010
+   0345 C9            [10]  897 	ret
+                            898 ;_sms_manager.c:200: unsigned int devkit_PORT_A_KEY_2()
+                            899 ;	---------------------------------
+                            900 ; Function devkit_PORT_A_KEY_2
+                            901 ; ---------------------------------
+   0346                     902 _devkit_PORT_A_KEY_2::
+                            903 ;_sms_manager.c:202: return PORT_A_KEY_2;
+   0346 21 20 00      [10]  904 	ld	hl, #0x0020
+   0349 C9            [10]  905 	ret
+                            906 ;_sms_manager.c:206: void devkit_SMS_VRAMmemcpy( unsigned int dst, void *src, unsigned int size )
+                            907 ;	---------------------------------
+                            908 ; Function devkit_SMS_VRAMmemcpy
+                            909 ; ---------------------------------
+   034A                     910 _devkit_SMS_VRAMmemcpy::
+                            911 ;_sms_manager.c:208: SMS_VRAMmemcpy( dst, src, size );
+   034A 21 06 00      [10]  912 	ld	hl, #6
+   034D 39            [11]  913 	add	hl, sp
+   034E 4E            [ 7]  914 	ld	c, (hl)
+   034F 23            [ 6]  915 	inc	hl
+   0350 46            [ 7]  916 	ld	b, (hl)
+   0351 C5            [11]  917 	push	bc
+   0352 21 06 00      [10]  918 	ld	hl, #6
+   0355 39            [11]  919 	add	hl, sp
+   0356 4E            [ 7]  920 	ld	c, (hl)
+   0357 23            [ 6]  921 	inc	hl
+   0358 46            [ 7]  922 	ld	b, (hl)
+   0359 C5            [11]  923 	push	bc
+   035A 21 06 00      [10]  924 	ld	hl, #6
+   035D 39            [11]  925 	add	hl, sp
+   035E 4E            [ 7]  926 	ld	c, (hl)
+   035F 23            [ 6]  927 	inc	hl
+   0360 46            [ 7]  928 	ld	b, (hl)
+   0361 C5            [11]  929 	push	bc
+   0362 CDr00r00      [17]  930 	call	_SMS_VRAMmemcpy
+   0365 F1            [10]  931 	pop	af
+   0366 F1            [10]  932 	pop	af
+   0367 F1            [10]  933 	pop	af
+   0368 C9            [10]  934 	ret
+                            935 ;_sms_manager.c:210: void devkit_SMS_VRAMmemcpy_brief( unsigned int dst, void *src, unsigned char size )
+                            936 ;	---------------------------------
+                            937 ; Function devkit_SMS_VRAMmemcpy_brief
+                            938 ; ---------------------------------
+   0369                     939 _devkit_SMS_VRAMmemcpy_brief::
+                            940 ;_sms_manager.c:212: SMS_VRAMmemcpy_brief( dst, src, size );
+   0369 21 06 00      [10]  941 	ld	hl, #6+0
+   036C 39            [11]  942 	add	hl, sp
+   036D 7E            [ 7]  943 	ld	a, (hl)
+   036E F5            [11]  944 	push	af
+   036F 33            [ 6]  945 	inc	sp
+   0370 21 05 00      [10]  946 	ld	hl, #5
+   0373 39            [11]  947 	add	hl, sp
+   0374 4E            [ 7]  948 	ld	c, (hl)
+   0375 23            [ 6]  949 	inc	hl
+   0376 46            [ 7]  950 	ld	b, (hl)
+   0377 C5            [11]  951 	push	bc
+   0378 21 05 00      [10]  952 	ld	hl, #5
+   037B 39            [11]  953 	add	hl, sp
+   037C 4E            [ 7]  954 	ld	c, (hl)
+   037D 23            [ 6]  955 	inc	hl
+   037E 46            [ 7]  956 	ld	b, (hl)
+   037F C5            [11]  957 	push	bc
+   0380 CDr00r00      [17]  958 	call	_SMS_VRAMmemcpy_brief
+   0383 F1            [10]  959 	pop	af
+   0384 F1            [10]  960 	pop	af
+   0385 33            [ 6]  961 	inc	sp
+   0386 C9            [10]  962 	ret
+                            963 ;_sms_manager.c:214: void devkit_SMS_VRAMmemset( unsigned int dst, unsigned char value, unsigned int size )
+                            964 ;	---------------------------------
+                            965 ; Function devkit_SMS_VRAMmemset
+                            966 ; ---------------------------------
+   0387                     967 _devkit_SMS_VRAMmemset::
+                            968 ;_sms_manager.c:216: SMS_VRAMmemset( dst, value, size );
+   0387 21 05 00      [10]  969 	ld	hl, #5
+   038A 39            [11]  970 	add	hl, sp
+   038B 4E            [ 7]  971 	ld	c, (hl)
+   038C 23            [ 6]  972 	inc	hl
+   038D 46            [ 7]  973 	ld	b, (hl)
+   038E C5            [11]  974 	push	bc
+   038F 21 06 00      [10]  975 	ld	hl, #6+0
+   0392 39            [11]  976 	add	hl, sp
+   0393 7E            [ 7]  977 	ld	a, (hl)
+   0394 F5            [11]  978 	push	af
+   0395 33            [ 6]  979 	inc	sp
+   0396 21 05 00      [10]  980 	ld	hl, #5
+   0399 39            [11]  981 	add	hl, sp
+   039A 4E            [ 7]  982 	ld	c, (hl)
+   039B 23            [ 6]  983 	inc	hl
+   039C 46            [ 7]  984 	ld	b, (hl)
+   039D C5            [11]  985 	push	bc
+   039E CDr00r00      [17]  986 	call	_SMS_VRAMmemset
+   03A1 F1            [10]  987 	pop	af
+   03A2 F1            [10]  988 	pop	af
+   03A3 33            [ 6]  989 	inc	sp
+   03A4 C9            [10]  990 	ret
+                            991 ;_sms_manager.c:218: void devkit_SMS_VRAMmemsetW( unsigned int dst, unsigned int value, unsigned int size )
+                            992 ;	---------------------------------
+                            993 ; Function devkit_SMS_VRAMmemsetW
+                            994 ; ---------------------------------
+   03A5                     995 _devkit_SMS_VRAMmemsetW::
+                            996 ;_sms_manager.c:220: SMS_VRAMmemsetW( dst, value, size );
+   03A5 21 06 00      [10]  997 	ld	hl, #6
+   03A8 39            [11]  998 	add	hl, sp
+   03A9 4E            [ 7]  999 	ld	c, (hl)
+   03AA 23            [ 6] 1000 	inc	hl
+   03AB 46            [ 7] 1001 	ld	b, (hl)
+   03AC C5            [11] 1002 	push	bc
+   03AD 21 06 00      [10] 1003 	ld	hl, #6
+   03B0 39            [11] 1004 	add	hl, sp
+   03B1 4E            [ 7] 1005 	ld	c, (hl)
+   03B2 23            [ 6] 1006 	inc	hl
+   03B3 46            [ 7] 1007 	ld	b, (hl)
+   03B4 C5            [11] 1008 	push	bc
+   03B5 21 06 00      [10] 1009 	ld	hl, #6
+   03B8 39            [11] 1010 	add	hl, sp
+   03B9 4E            [ 7] 1011 	ld	c, (hl)
+   03BA 23            [ 6] 1012 	inc	hl
+   03BB 46            [ 7] 1013 	ld	b, (hl)
+   03BC C5            [11] 1014 	push	bc
+   03BD CDr00r00      [17] 1015 	call	_SMS_VRAMmemsetW
+   03C0 F1            [10] 1016 	pop	af
+   03C1 F1            [10] 1017 	pop	af
+   03C2 F1            [10] 1018 	pop	af
+   03C3 C9            [10] 1019 	ret
+                           1020 ;_sms_manager.c:224: void devkit_SMS_setLineInterruptHandler( void( *theHandlerFunction )( void ) )
+                           1021 ;	---------------------------------
+                           1022 ; Function devkit_SMS_setLineInterruptHandler
+                           1023 ; ---------------------------------
+   03C4                    1024 _devkit_SMS_setLineInterruptHandler::
+                           1025 ;_sms_manager.c:226: SMS_setLineInterruptHandler( theHandlerFunction );
+   03C4 D1            [10] 1026 	pop	de
+   03C5 C1            [10] 1027 	pop	bc
+   03C6 C5            [11] 1028 	push	bc
+   03C7 D5            [11] 1029 	push	de
+   03C8 C5            [11] 1030 	push	bc
+   03C9 CDr00r00      [17] 1031 	call	_SMS_setLineInterruptHandler
+   03CC F1            [10] 1032 	pop	af
+   03CD C9            [10] 1033 	ret
+                           1034 ;_sms_manager.c:228: void devkit_SMS_setLineCounter( unsigned char count )
+                           1035 ;	---------------------------------
+                           1036 ; Function devkit_SMS_setLineCounter
+                           1037 ; ---------------------------------
+   03CE                    1038 _devkit_SMS_setLineCounter::
+                           1039 ;_sms_manager.c:230: SMS_setLineCounter( count );
+   03CE 21 02 00      [10] 1040 	ld	hl, #2+0
+   03D1 39            [11] 1041 	add	hl, sp
+   03D2 7E            [ 7] 1042 	ld	a, (hl)
+   03D3 F5            [11] 1043 	push	af
+   03D4 33            [ 6] 1044 	inc	sp
+   03D5 CDr00r00      [17] 1045 	call	_SMS_setLineCounter
+   03D8 33            [ 6] 1046 	inc	sp
+   03D9 C9            [10] 1047 	ret
+                           1048 ;_sms_manager.c:232: void devkit_SMS_enableLineInterrupt()
+                           1049 ;	---------------------------------
+                           1050 ; Function devkit_SMS_enableLineInterrupt
+                           1051 ; ---------------------------------
+   03DA                    1052 _devkit_SMS_enableLineInterrupt::
+                           1053 ;_sms_manager.c:234: SMS_enableLineInterrupt();
+   03DA 21 10 00      [10] 1054 	ld	hl, #0x0010
+   03DD C3r00r00      [10] 1055 	jp  _SMS_VDPturnOnFeature
+                           1056 ;_sms_manager.c:236: void devkit_SMS_disableLineInterrupt()
+                           1057 ;	---------------------------------
+                           1058 ; Function devkit_SMS_disableLineInterrupt
+                           1059 ; ---------------------------------
+   03E0                    1060 _devkit_SMS_disableLineInterrupt::
+                           1061 ;_sms_manager.c:238: SMS_disableLineInterrupt();
+   03E0 21 10 00      [10] 1062 	ld	hl, #0x0010
+   03E3 C3r00r00      [10] 1063 	jp  _SMS_VDPturnOffFeature
+                           1064 ;_sms_manager.c:242: unsigned int devkit_VDPFEATURE_HIDEFIRSTCOL()
+                           1065 ;	---------------------------------
+                           1066 ; Function devkit_VDPFEATURE_HIDEFIRSTCOL
+                           1067 ; ---------------------------------
+   03E6                    1068 _devkit_VDPFEATURE_HIDEFIRSTCOL::
+                           1069 ;_sms_manager.c:244: return VDPFEATURE_HIDEFIRSTCOL;
+   03E6 21 20 00      [10] 1070 	ld	hl, #0x0020
+   03E9 C9            [10] 1071 	ret
+                           1072 ;_sms_manager.c:246: unsigned int devkit_VDPFEATURE_LEFTCOLBLANK()
+                           1073 ;	---------------------------------
+                           1074 ; Function devkit_VDPFEATURE_LEFTCOLBLANK
+                           1075 ; ---------------------------------
+   03EA                    1076 _devkit_VDPFEATURE_LEFTCOLBLANK::
+                           1077 ;_sms_manager.c:248: return VDPFEATURE_LEFTCOLBLANK;
+   03EA 21 20 00      [10] 1078 	ld	hl, #0x0020
+   03ED C9            [10] 1079 	ret
+                           1080 ;_sms_manager.c:250: unsigned char devkit_SPRITEMODE_NORMAL()
+                           1081 ;	---------------------------------
+                           1082 ; Function devkit_SPRITEMODE_NORMAL
+                           1083 ; ---------------------------------
+   03EE                    1084 _devkit_SPRITEMODE_NORMAL::
+                           1085 ;_sms_manager.c:252: return SPRITEMODE_NORMAL;
+   03EE 2E 00         [ 7] 1086 	ld	l, #0x00
+   03F0 C9            [10] 1087 	ret
+                           1088 	.area _CODE
+   03F1                    1089 __str_0:
+   03F1 53 74 65 76 65 6E  1090 	.ascii "Steven Boland"
+        20 42 6F 6C 61 6E
+        64
+   03FE 00                 1091 	.db 0x00
+   03FF                    1092 __str_1:
+   03FF 41 73 74 72 6F 46  1093 	.ascii "AstroForce"
+        6F 72 63 65
+   0409 00                 1094 	.db 0x00
+   040A                    1095 __str_2:
+   040A 43 6F 6E 76 65 72  1096 	.ascii "Convert example as scalable SMS project"
+        74 20 65 78 61 6D
+        70 6C 65 20 61 73
+        20 73 63 61 6C 61
+        62 6C 65 20 53 4D
+        53 20 70 72 6F 6A
+        65 63 74
+   0431 00                 1097 	.db 0x00
+                           1098 	.area _INITIALIZER
+                           1099 	.area _CABS (ABS)
+   7FF0                    1100 	.org 0x7FF0
+   7FF0                    1101 ___SMS__SEGA_signature:
+   7FF0 54                 1102 	.db #0x54	; 84	'T'
+   7FF1 4D                 1103 	.db #0x4d	; 77	'M'
+   7FF2 52                 1104 	.db #0x52	; 82	'R'
+   7FF3 20                 1105 	.db #0x20	; 32
+   7FF4 53                 1106 	.db #0x53	; 83	'S'
+   7FF5 45                 1107 	.db #0x45	; 69	'E'
+   7FF6 47                 1108 	.db #0x47	; 71	'G'
+   7FF7 41                 1109 	.db #0x41	; 65	'A'
+   7FF8 FF                 1110 	.db #0xff	; 255
+   7FF9 FF                 1111 	.db #0xff	; 255
+   7FFA FF                 1112 	.db #0xff	; 255
+   7FFB FF                 1113 	.db #0xff	; 255
+   7FFC 99                 1114 	.db #0x99	; 153
+   7FFD 99                 1115 	.db #0x99	; 153
+   7FFE 00                 1116 	.db #0x00	; 0
+   7FFF 4C                 1117 	.db #0x4c	; 76	'L'
+   7FD2                    1118 	.org 0x7FD2
+   7FD2                    1119 ___SMS__SDSC_author:
+   7FD2 53 74 65 76 65 6E  1120 	.ascii "Steven Boland"
+        20 42 6F 6C 61 6E
+        64
+   7FDF 00                 1121 	.db 0x00
+   7FC7                    1122 	.org 0x7FC7
+   7FC7                    1123 ___SMS__SDSC_name:
+   7FC7 41 73 74 72 6F 46  1124 	.ascii "AstroForce"
+        6F 72 63 65
+   7FD1 00                 1125 	.db 0x00
+   7F9F                    1126 	.org 0x7F9F
+   7F9F                    1127 ___SMS__SDSC_descr:
+   7F9F 43 6F 6E 76 65 72  1128 	.ascii "Convert example as scalable SMS project"
+        74 20 65 78 61 6D
+        70 6C 65 20 61 73
+        20 73 63 61 6C 61
+        62 6C 65 20 53 4D
+        53 20 70 72 6F 6A
+        65 63 74
+   7FC6 00                 1129 	.db 0x00
+   7FE0                    1130 	.org 0x7FE0
+   7FE0                    1131 ___SMS__SDSC_signature:
+   7FE0 53                 1132 	.db #0x53	; 83	'S'
+   7FE1 44                 1133 	.db #0x44	; 68	'D'
+   7FE2 53                 1134 	.db #0x53	; 83	'S'
+   7FE3 43                 1135 	.db #0x43	; 67	'C'
+   7FE4 01                 1136 	.db #0x01	; 1
+   7FE5 00                 1137 	.db #0x00	; 0
+   7FE6 04                 1138 	.db #0x04	; 4
+   7FE7 04                 1139 	.db #0x04	; 4
+   7FE8 20                 1140 	.db #0x20	; 32
+   7FE9 20                 1141 	.db #0x20	; 32
+   7FEA D2                 1142 	.db #0xd2	; 210
+   7FEB 7F                 1143 	.db #0x7f	; 127
+   7FEC C7                 1144 	.db #0xc7	; 199
+   7FED 7F                 1145 	.db #0x7f	; 127
+   7FEE 9F                 1146 	.db #0x9f	; 159
+   7FEF 7F                 1147 	.db #0x7f	; 127
