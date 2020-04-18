@@ -31,9 +31,18 @@ echo.
 :: Link
 sdcc -o output.ihx -mz80 --no-std-crt0 --data-loc 0xC000 ^
 ..\crt0\crt0_sms.rel main.rel ^
-devkit\_sms_manager.rel devkit\_snd_manager.rel ^
+-Wl-b_BANK2=0x8000  -Wl-b_BANK3=0x8000  -Wl-b_BANK4=0x8000  -Wl-b_BANK5=0x8000 ^
+-Wl-b_BANK6=0x8000  -Wl-b_BANK7=0x8000  -Wl-b_BANK8=0x8000  -Wl-b_BANK9=0x8000 ^
+-Wl-b_BANK10=0x8000 -Wl-b_BANK11=0x8000 -Wl-b_BANK12=0x8000 -Wl-b_BANK13=0x8000 ^
+-Wl-b_BANK14=0x8000 -Wl-b_BANK15=0x8000 ^
 ..\lib\SMSlib.lib ^
-..\lib\PSGlib.rel
+..\lib\PSGlib.rel ^
+banks\bank2.rel  banks\bank3.rel  banks\bank4.rel  banks\bank5.rel ^
+banks\bank6.rel  banks\bank7.rel  banks\bank8.rel  banks\bank9.rel ^
+banks\bank10.rel banks\bank11.rel banks\bank12.rel banks\bank13.rel ^
+banks\bank14.rel banks\fixedbank.rel ^
+devkit\_sms_manager.rel devkit\_snd_manager.rel
+
 
 :: Execute
 ihx2sms output.ihx output.sms
