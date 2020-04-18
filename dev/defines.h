@@ -40,6 +40,11 @@ typedef struct enemy
 	unsigned char enemywidth;
 	unsigned char enemyheight;
 }enemy;
+
+//#define MAXENEMIES 10
+//unsigned char numenemies;
+//enemy enemies[ MAXENEMIES ];
+
 typedef void( *MyInitEnemyFunction )( enemy * );
 typedef unsigned char( *MyUpdateEnemyFunction )( enemy * );
 typedef void( *MyKillEnemyFunction )( void );

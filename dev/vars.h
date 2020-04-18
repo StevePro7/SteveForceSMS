@@ -1,3 +1,5 @@
+#pragma once
+
 #ifndef _VARS_H_
 #define _VARS_H_
 
@@ -92,7 +94,7 @@ explosion explosions[MAXEXPLOSIONS];
 
 #define MAXENEMIES 10
 unsigned char numenemies;
-enemy enemies[MAXENEMIES];
+enemy enemies[ MAXENEMIES ];
 
 // The tilemap
 unsigned char *maplines;				// Lineas de un tilemap

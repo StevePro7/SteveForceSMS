@@ -20,7 +20,7 @@ cd ..
 sdcc -c -mz80 --opt-code-size --peep-file peep-rules.txt --std-c99 funcs.c
 sdcc -c -mz80 --opt-code-size --peep-file peep-rules.txt --std-c99 defines.c
 ::sdcc -c -mz80 --opt-code-size --peep-file peep-rules.txt --std-c99 game.c
-::sdcc -c -mz80 --opt-code-size --peep-file peep-rules.txt --std-c99 vars.c
+sdcc -c -mz80 --opt-code-size --peep-file peep-rules.txt --std-c99 vars.c
 
 :: echo Build main
 sdcc -c -mz80 --opt-code-size --peep-file peep-rules.txt --std-c99 main.c
