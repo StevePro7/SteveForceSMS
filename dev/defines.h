@@ -28,6 +28,9 @@
 #define DEFAULTENEMYSHOOTSPEED 5
 #define DEFAULTENEMYSHOOTLASERSPEED 7
 
+// Black magic
+extern unsigned char numinterrupts;
+
 typedef struct enemy
 {
 	unsigned char enemyposx;

@@ -1,1 +1,3 @@
-#include "defines.h"
+//#include "defines.h"
+//
+//unsigned char numinterrupts;

@@ -1,10 +1,10 @@
 #include "funcs.h"
-//#include "vars.h"
+#include "vars.h"
 #include "devkit\_sms_manager.h"
 
 void InterruptHandler( void )
 {
-	//numinterrupts++;
+	numinterrupts++;
 }
 
 // Inicia la consola
