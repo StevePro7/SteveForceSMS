@@ -1,0 +1,130 @@
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 1.
+Hexadecimal [16-Bits]
+
+Symbol Table
+
+    .__.$$$.                                                    =  2710 L
+    .__.ABS.                                                    =  0000 G
+    .__.CPU.                                                    =  0000 L
+    .__.H$L.                                                    =  0000 L
+    _ROM_bank_to_be_mapped_on_slot2                             =  FFFF G
+    _SMS_SRAM                                                   =  8000 G
+    _SMS_VDPturnOffFeature                                         **** GX
+    _SMS_VDPturnOnFeature                                          **** GX
+    _SMS_VRAMmemcpy                                                **** GX
+    _SMS_VRAMmemcpy_brief                                          **** GX
+    _SMS_VRAMmemset                                                **** GX
+    _SMS_VRAMmemsetW                                               **** GX
+    _SMS_addSprite                                                 **** GX
+    _SMS_crt0_RST08                                                **** GX
+    _SMS_crt0_RST18                                                **** GX
+    _SMS_finalizeSprites                                           **** GX
+    _SMS_getKeysHeld                                               **** GX
+    _SMS_getKeysPressed                                            **** GX
+    _SMS_getKeysReleased                                           **** GX
+    _SMS_getKeysStatus                                             **** GX
+    _SMS_init                                                      **** GX
+    _SMS_initSprites                                               **** GX
+    _SMS_loadBGPalette                                             **** GX
+    _SMS_loadPSGaidencompressedTiles                               **** GX
+    _SMS_loadSTMcompressedTileMapArea                              **** GX
+    _SMS_loadSpritePalette                                         **** GX
+    _SMS_queryPauseRequested                                       **** GX
+    _SMS_resetPauseRequest                                         **** GX
+    _SMS_setBGScrollX                                              **** GX
+    _SMS_setBGScrollY                                              **** GX
+    _SMS_setBackdropColor                                          **** GX
+    _SMS_setLineCounter                                            **** GX
+    _SMS_setLineInterruptHandler                                   **** GX
+    _SMS_setSpriteMode                                             **** GX
+    _SMS_setSpritePaletteColor                                     **** GX
+    _SMS_useFirstHalfTilesforSprites                               **** GX
+    _SMS_waitForVBlank                                             **** GX
+    _SRAM_bank_to_be_mapped_on_slot2                            =  FFFC G
+    _UNSAFE_SMS_copySpritestoSAT                                   **** GX
+  A ___SMS__SDSC_author                                            7FD2 GR
+  C ___SMS__SDSC_descr                                             7F9F GR
+  B ___SMS__SDSC_name                                              7FC7 GR
+  D ___SMS__SDSC_signature                                         7FE0 GR
+  9 ___SMS__SEGA_signature                                         7FF0 GR
+    ___sdcc_enter_ix                                               **** GX
+  0 __str_0                                                        03F1 R
+  0 __str_1                                                        03FF R
+  0 __str_2                                                        040A R
+  0 _devkit_PORT_A_KEY_1                                           0342 GR
+  0 _devkit_PORT_A_KEY_2                                           0346 GR
+  0 _devkit_PORT_A_KEY_DOWN                                        0336 GR
+  0 _devkit_PORT_A_KEY_LEFT                                        033A GR
+  0 _devkit_PORT_A_KEY_RIGHT                                       033E GR
+  0 _devkit_PORT_A_KEY_UP                                          0332 GR
+  0 _devkit_SMS_VDPturnOnFeature                                   0052 GR
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 2.
+Hexadecimal [16-Bits]
+
+Symbol Table
+
+  0 _devkit_SMS_VRAMmemcpy                                         034A GR
+  0 _devkit_SMS_VRAMmemcpy_brief                                   0369 GR
+  0 _devkit_SMS_VRAMmemset                                         0387 GR
+  0 _devkit_SMS_VRAMmemsetW                                        03A5 GR
+  0 _devkit_SMS_addSprite                                          0138 GR
+  0 _devkit_SMS_addSprite_bulk12                                   0209 GR
+  0 _devkit_SMS_addSprite_bulk8                                    0153 GR
+  0 _devkit_SMS_copySpritestoSAT                                   031A GR
+  0 _devkit_SMS_disableLineInterrupt                               03E0 GR
+  0 _devkit_SMS_displayOff                                         0009 GR
+  0 _devkit_SMS_displayOn                                          0003 GR
+  0 _devkit_SMS_enableLineInterrupt                                03DA GR
+  0 _devkit_SMS_finalizeSprites                                    0314 GR
+  0 _devkit_SMS_getKeysHeld                                        032C GR
+  0 _devkit_SMS_getKeysPressed                                     0329 GR
+  0 _devkit_SMS_getKeysReleased                                    032F GR
+  0 _devkit_SMS_getKeysStatus                                      0326 GR
+  0 _devkit_SMS_init                                               0000 GR
+  0 _devkit_SMS_initSprites                                        0311 GR
+  0 _devkit_SMS_loadBGPalette                                      00D0 GR
+  0 _devkit_SMS_loadPSGaidencompressedTiles                        0099 GR
+  0 _devkit_SMS_loadSTMcompressedTileMap                           00AF GR
+  0 _devkit_SMS_loadSpritePalette                                  00D7 GR
+  0 _devkit_SMS_loadTileMap                                        0059 GR
+  0 _devkit_SMS_mapROMBank                                         0049 GR
+  0 _devkit_SMS_queryPauseRequested                                0320 GR
+  0 _devkit_SMS_resetPauseRequest                                  0323 GR
+  0 _devkit_SMS_setBGScrollX                                       000F GR
+  0 _devkit_SMS_setBGScrollY                                       001B GR
+  0 _devkit_SMS_setBackdropColor                                   0027 GR
+  0 _devkit_SMS_setLineCounter                                     03CE GR
+  0 _devkit_SMS_setLineInterruptHandler                            03C4 GR
+  0 _devkit_SMS_setNextTileatXY                                    0106 GR
+  0 _devkit_SMS_setSpriteMode                                      003D GR
+  0 _devkit_SMS_setSpritePaletteColor                              00DE GR
+  0 _devkit_SMS_setTile                                            012A GR
+  0 _devkit_SMS_useFirstHalfTilesforSprites_False                  0033 GR
+  0 _devkit_SMS_useFirstHalfTilesforSprites_True                   0038 GR
+  0 _devkit_SMS_waitForVBlank                                      0317 GR
+  0 _devkit_SPRITEMODE_NORMAL                                      03EE GR
+  0 _devkit_UNSAFE_SMS_copySpritestoSAT                            031D GR
+  0 _devkit_VDPFEATURE_HIDEFIRSTCOL                                03E6 GR
+  0 _devkit_VDPFEATURE_LEFTCOLBLANK                                03EA GR
+
+
+ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 3.
+Hexadecimal [16-Bits]
+
+Area Table
+
+   0 _CODE                                      size  432   flags    0
+   1 _DATA                                      size    0   flags    0
+   2 _INITIALIZED                               size    0   flags    0
+   3 _DABS                                      size    0   flags    8
+   4 _HOME                                      size    0   flags    0
+   5 _GSINIT                                    size    0   flags    0
+   6 _GSFINAL                                   size    0   flags    0
+   7 _INITIALIZER                               size    0   flags    0
+   8 _CABS                                      size    0   flags    8
+   9 _CABS0                                     size   10   flags    8
+   A _CABS1                                     size    E   flags    8
+   B _CABS2                                     size    B   flags    8
+   C _CABS3                                     size   28   flags    8
+   D _CABS4                                     size   10   flags    8
+
