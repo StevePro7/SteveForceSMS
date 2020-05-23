@@ -182,4 +182,69 @@ void InitStage()
 	numinterrupts = 0;
 }
 
+// Update stage and frames
+void UpdateStage()
+{
+	// Increase frames
+	stageframe++;
+
+	// Caching calcs
+	stageframe2mod = stageframe % 2;
+	stageframe4mod = stageframe % 4;
+
+	// Chaching b
+	sprite82anim = ( stageframe >> 1 ) % 2;
+	sprite164anim = ( ( stageframe >> 3 ) % 4 ) << 2;
+	if( sprite164anim == 12 )sprite164anim = 4;
+
+	// Finally the most simple... better
+	if( stageframe2mod == 0 )
+	{
+		// Wait
+		devkit_SMS_waitForVBlank();
+
+		// Reset
+		numinterrupts = 0;
+
+		// Los sprites
+		devkit_SMS_finalizeSprites();
+
+		// Copy sprites
+		devkit_UNSAFE_SMS_copySpritestoSAT();
+
+		// Los sprites
+		devkit_SMS_initSprites();
+
+		// Update play stage???
+		//if( updateplaystage == 1 )		// TODO
+			//UpdatePlayStage();			// TODO
+	}
+	else
+	{
+		// Interrupts
+		if( numinterrupts == 0 )
+			devkit_SMS_waitForVBlank();
+	}
+	// Keyboard... always
+	keystatus = devkit_SMS_getKeysStatus();
+}
+
+// Update sound
+void UpdatePSG()
+{
+	// Update music
+	if( musicbank != 0 )
+	{
+		changeBank( musicbank );
+		devkit_PSGFrame();
+	}
+
+	// Update sounds
+	if( devkit_PSGSFXGetStatus() )
+	{
+		changeBank( SOUNDBANK );
+		devkit_PSGSFXFrame();
+	}
+}
+
 #endif//_FUNCS_H_
