@@ -13,7 +13,10 @@ void InitMikGamesStage()
 	devkit_SMS_displayOff();
 
 	// Load palette
-	LoadBGPalette( (unsigned char *)logopalette_bin, logopalette_bin_bank );
+	LoadBGPalette( ( unsigned char * ) logopalette_bin, logopalette_bin_bank );
+
+	// Cargamos los graficos a la pantalla
+	LoadGraphics( ( unsigned char * ) mikgamestiles_psgcompr, ( unsigned char * ) mikgamestilemap_bin, mikgamestilemap_bin_size, mikgamestiles_psgcompr_bank );
 }
 
 #endif//_MIKGAMESSTAGE_H_

@@ -32,6 +32,25 @@ void changeBank( unsigned char b )
 	}
 }
 
+// Carga tiles
+void LoadTiles( unsigned char *psg, char b )
+{
+	// Rom bank
+	changeBank( b );
+
+	// The graphics
+	devkit_SMS_loadPSGaidencompressedTiles( psg, 0 );
+}
+
+// Carga graficos background
+void LoadGraphics( char *psg, char *bin, int size, char b )
+{
+	// The tiles
+	LoadTiles( psg, b );
+
+	// The graphics
+	devkit_SMS_loadTileMap( 0, 0, bin, size );
+}
 
 // Carga paleta de fondo
 void LoadBGPalette( char *p, char b )
@@ -128,7 +147,6 @@ void UpdateScroll( signed int sx, signed int sy )
 // Inicia una stage
 void InitStage()
 {
-
 	// Sonido quitado
 	devkit_PSGStop();
 	devkit_PSGSFXStop();
