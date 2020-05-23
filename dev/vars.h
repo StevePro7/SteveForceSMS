@@ -1,7 +1,7 @@
-#ifndef _VARS_H_
-#define _VARS_H_
-
-#include "defines.h"
+//#ifndef _VARS_H_
+//#define _VARS_H_
+//
+//#include "defines.h"
 
 // Keyboard
 unsigned int keystatus;  		// Estado del teclado
@@ -199,4 +199,4 @@ unsigned char lastplayedmusiclooped;
 // Needed in stage 8
 unsigned char stage8phase;
 
-#endif//_VARS_H_
+//#endif//_VARS_H_

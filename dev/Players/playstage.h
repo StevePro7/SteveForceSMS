@@ -1,7 +1,7 @@
-#ifndef _PLAYSTAGE_H_
-#define _PLAYSTAGE_H_
+//#ifndef _PLAYSTAGE_H_
+//#define _PLAYSTAGE_H_
 
-#include "..\funcs.h"
+//#include "..\funcs.h"
 
 void UpdatePlayStage()
 {
@@ -12,4 +12,4 @@ void UpdatePlayStage()
 	//( *( updatestagefunctions[ playstage ] ) )( );
 }
 
-#endif//_PLAYSTAGE_H_
+//#endif//_PLAYSTAGE_H_

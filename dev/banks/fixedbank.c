@@ -1,25 +1,27 @@
 #include "..\defines.h"
-
-#ifdef _CONSOLE
-#pragma warning(disable: 4047)
-#else
-#endif
+#include "bank15.c"
 
 
-#include "bank2.h"
-#include "bank3.h"
-#include "bank4.h"
-#include "bank5.h"
-#include "bank6.h"
-#include "bank7.h"
-#include "bank8.h"
-#include "bank9.h"
-#include "bank10.h"
-#include "bank11.h"
-#include "bank12.h"
-#include "bank13.h"
-#include "bank14.h"
-//#include "bank15.h"
+//#ifdef _CONSOLE
+//#pragma warning(disable: 4047)
+//#else
+//#endif
+
+
+//#include "bank2.h"
+//#include "bank3.h"
+//#include "bank4.h"
+//#include "bank5.h"
+//#include "bank6.h"
+//#include "bank7.h"
+//#include "bank8.h"
+//#include "bank9.h"
+//#include "bank10.h"
+//#include "bank11.h"
+//#include "bank12.h"
+//#include "bank13.h"
+//#include "bank14.h"
+////#include "bank15.h"
 
 
 // Player shoots speeds

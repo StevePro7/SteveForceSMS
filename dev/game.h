@@ -1,5 +1,5 @@
-#ifndef _GAME_H_
-#define _GAME_H_
+//#ifndef _GAME_H_
+//#define _GAME_H_
 
 #define productCode	9999
 #define revision	0
@@ -13,4 +13,4 @@
 #define name		"AstroForce"
 #define descr		"Convert example as scalable SMS project"
 
-#endif//_GAME_H_
+//#endif//_GAME_H_

@@ -1,8 +1,8 @@
-#ifndef _MIKGAMESSTAGE_H_
-#define _MIKGAMESSTAGE_H_
+//#ifndef _MIKGAMESSTAGE_H_
+//#define _MIKGAMESSTAGE_H_
 
-#include "..\funcs.h"
-#include "..\banks\bank3.h"
+//#include "..\funcs.h"
+//#include "..\banks\bank3.h"
 
 void InitMikGamesStage()
 {
@@ -46,4 +46,4 @@ void InitMikGamesStage()
 	}
 }
 
-#endif//_MIKGAMESSTAGE_H_
+//#endif//_MIKGAMESSTAGE_H_
