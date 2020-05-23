@@ -1,29 +1,6 @@
 #include "..\defines.h"
 #include "bank15.c"
 
-
-//#ifdef _CONSOLE
-//#pragma warning(disable: 4047)
-//#else
-//#endif
-
-
-//#include "bank2.h"
-//#include "bank3.h"
-//#include "bank4.h"
-//#include "bank5.h"
-//#include "bank6.h"
-//#include "bank7.h"
-//#include "bank8.h"
-//#include "bank9.h"
-//#include "bank10.h"
-//#include "bank11.h"
-//#include "bank12.h"
-//#include "bank13.h"
-//#include "bank14.h"
-////#include "bank15.h"
-
-
 // Player shoots speeds
 const signed char playershootspeedsx[]={-SPEEDPLAYERSHOOT_SIDE,0,0,SPEEDPLAYERSHOOT_SIDE};
 const signed char playershootspeedsy[]={SPEEDPLAYERSHOOT_SIDE_VERTICAL,SPEEDPLAYERSHOOT_NORMAL,0,SPEEDPLAYERSHOOT_SIDE_VERTICAL};

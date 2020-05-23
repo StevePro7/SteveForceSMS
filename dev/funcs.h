@@ -1,13 +1,3 @@
-//#ifndef _FUNCS_H_
-//#define _FUNCS_H_
-//
-//#include "vars.h"
-//#include "devkit\_sms_manager.h"
-//#include "devkit\_snd_manager.h"
-//#include "banks\bank2.h"
-//#include "banks\fixedbank.h"
-//#include "Players\playstage.h"
-
 // Eah que no existen en la libreria
 #define max(x, y) (((x) > (y)) ? (x) : (y))
 #define min(x, y) (((x) < (y)) ? (x) : (y))

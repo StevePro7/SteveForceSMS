@@ -1,6 +1,3 @@
-//#ifndef __MAIN__
-//#define __MAIN__
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -15,5 +12,3 @@
 #include "funcs.h"
 #include "General\mikgamesstage.h"
 #include "Players\playstage.h"
-
-//#endif//__MAIN__
