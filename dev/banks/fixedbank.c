@@ -1,6 +1,11 @@
 #include "..\defines.h"
 #include "bank15.c"
 
+#ifdef _CONSOLE
+#pragma warning(disable: 4047)
+#else
+#endif
+
 // Player shoots speeds
 const signed char playershootspeedsx[]={-SPEEDPLAYERSHOOT_SIDE,0,0,SPEEDPLAYERSHOOT_SIDE};
 const signed char playershootspeedsy[]={SPEEDPLAYERSHOOT_SIDE_VERTICAL,SPEEDPLAYERSHOOT_NORMAL,0,SPEEDPLAYERSHOOT_SIDE_VERTICAL};
@@ -2236,10 +2241,11 @@ const unsigned char *spawners[]=
 //extern void UpdateStage6();
 //extern void UpdateStage7();
 //extern void UpdateStage8();
-//
-//const MyKillEnemyFunction updatestagefunctions[]=
-//{
-//	0,
+
+// TODO - implment update stage functions
+const MyKillEnemyFunction updatestagefunctions[]=
+{
+	0,
 //	UpdateStage7,
 //	UpdateStage5,
 //	UpdateStage4,
@@ -2248,7 +2254,7 @@ const unsigned char *spawners[]=
 //	UpdateStage3,
 //	UpdateStage1,
 //	UpdateStage6
-//};
+};
 //
 //extern void InitStage7();
 //extern void InitStage5();

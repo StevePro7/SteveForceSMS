@@ -4,5 +4,5 @@ void UpdatePlayStage()
 	changeBank( FIXEDBANKSLOT );
 
 	// Custom Update
-	//( *( updatestagefunctions[ playstage ] ) )( );
+	( *( updatestagefunctions[ playstage ] ) )( );
 }
