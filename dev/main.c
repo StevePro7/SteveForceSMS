@@ -8,10 +8,10 @@ void main()
 	gamestock = 3;
 
 	// Mikgames
-	InitMikGamesStage();
+	//InitMikGamesStage();
 
 	// Game intro
-	//InitIntroStage( 1 );
+	InitIntroStage( 1 );
 
 	/*devkit_SMS_displayOff();
 	devkit_SMS_setSpritePaletteColor( 0, 2, 1, 3 );

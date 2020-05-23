@@ -11,4 +11,5 @@
 #include "vars.h"
 #include "funcs.h"
 #include "General\mikgamesstage.h"
+#include "Intros\introstage.h"
 #include "Players\playstage.h"

@@ -172,5 +172,8 @@
     <ClInclude Include="Players\playstage.h">
       <Filter>Header Files\Players</Filter>
     </ClInclude>
+    <ClInclude Include="Intros\introstage.h">
+      <Filter>Header Files\Intros</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
