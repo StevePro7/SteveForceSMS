@@ -44,6 +44,7 @@
     <ClInclude Include="game.h" />
     <ClInclude Include="General\mikgamesstage.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="Players\playstage.h" />
     <ClInclude Include="vars.h" />
   </ItemGroup>
   <ItemGroup>

@@ -31,6 +31,9 @@
     <Filter Include="Source Files\banks">
       <UniqueIdentifier>{f77f968a-b2de-4ea3-96b5-0203a57775a3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Players">
+      <UniqueIdentifier>{4e8b57b3-c217-437d-818f-8d63410ec183}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -165,6 +168,9 @@
     </ClInclude>
     <ClInclude Include="General\mikgamesstage.h">
       <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="Players\playstage.h">
+      <Filter>Header Files\Players</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

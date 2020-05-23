@@ -10,5 +10,6 @@
 #include "devkit\_sms_manager.h"
 #include "devkit\_snd_manager.h"
 #include "General\mikgamesstage.h"
+#include "Players\playstage.h"
 
 #endif//__MAIN__

@@ -6,12 +6,17 @@
 #include "devkit\_snd_manager.h"
 #include "banks\bank2.h"
 #include "banks\fixedbank.h"
+#include "Players\playstage.h"
 
 // Eah que no existen en la libreria
 #define max(x, y) (((x) > (y)) ? (x) : (y))
 #define min(x, y) (((x) < (y)) ? (x) : (y))
 #define sign(x) (x > 0) ? 1 : ((x < 0) ? -1 : 0)
 #define sinus(x) (sinustable[(x)%256]-128)
+
+
+// Declarations needed
+void UpdatePlayStage();
 
 
 // Fast random package
@@ -216,8 +221,10 @@ void UpdateStage()
 		devkit_SMS_initSprites();
 
 		// Update play stage???
-		//if( updateplaystage == 1 )		// TODO
-			//UpdatePlayStage();			// TODO
+		if( updateplaystage == 1 )
+		{
+			UpdatePlayStage();
+		}
 	}
 	else
 	{
