@@ -45,10 +45,10 @@ sdcc -o output.ihx -mz80 --no-std-crt0 --data-loc 0xC000 ^
 -Wl-b_BANK14=0x8000 -Wl-b_BANK15=0x8000 ^
 ..\lib\SMSlib.lib ^
 ..\lib\PSGlib.rel ^
-banks\bank2.rel  banks\bank3.rel  banks\bank4.rel  banks\bank5.rel ^
-banks\bank6.rel  banks\bank7.rel  banks\bank8.rel  banks\bank9.rel ^
-banks\bank10.rel banks\bank11.rel banks\bank12.rel banks\bank13.rel ^
-banks\bank14.rel banks\fixedbank.rel ^
+Banks\bank2.rel  Banks\bank3.rel  Banks\bank4.rel  Banks\bank5.rel ^
+Banks\bank6.rel  Banks\bank7.rel  Banks\bank8.rel  Banks\bank9.rel ^
+Banks\bank10.rel Banks\bank11.rel Banks\bank12.rel Banks\bank13.rel ^
+Banks\bank14.rel Banks\fixedbank.rel ^
 devkit\_sms_manager.rel ^
 devkit\_snd_manager.rel
 

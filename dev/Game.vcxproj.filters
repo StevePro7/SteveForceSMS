@@ -19,17 +19,17 @@
     <Filter Include="Source Files\devkit">
       <UniqueIdentifier>{4e80b205-f605-4774-8dd3-de0555a711ab}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\banks">
-      <UniqueIdentifier>{f77f968a-b2de-4ea3-96b5-0203a57775a3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\banks">
-      <UniqueIdentifier>{cd35fa49-36af-4506-89a2-1f6607628158}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Intros">
       <UniqueIdentifier>{9d3b3203-044c-4ebf-8c91-ad2f0ab3b10b}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\General">
       <UniqueIdentifier>{da24e3c9-579b-4617-96f4-86215953d47d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Banks">
+      <UniqueIdentifier>{cd35fa49-36af-4506-89a2-1f6607628158}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Banks">
+      <UniqueIdentifier>{f77f968a-b2de-4ea3-96b5-0203a57775a3}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -46,49 +46,49 @@
       <Filter>Source Files\devkit</Filter>
     </ClCompile>
     <ClCompile Include="banks\fixedbank.c">
-      <Filter>Source Files\banks</Filter>
+      <Filter>Source Files\Banks</Filter>
     </ClCompile>
     <ClCompile Include="banks\bank2.c">
-      <Filter>Source Files\banks</Filter>
+      <Filter>Source Files\Banks</Filter>
     </ClCompile>
     <ClCompile Include="banks\bank3.c">
-      <Filter>Source Files\banks</Filter>
+      <Filter>Source Files\Banks</Filter>
     </ClCompile>
     <ClCompile Include="banks\bank4.c">
-      <Filter>Source Files\banks</Filter>
+      <Filter>Source Files\Banks</Filter>
     </ClCompile>
     <ClCompile Include="banks\bank5.c">
-      <Filter>Source Files\banks</Filter>
+      <Filter>Source Files\Banks</Filter>
     </ClCompile>
     <ClCompile Include="banks\bank6.c">
-      <Filter>Source Files\banks</Filter>
+      <Filter>Source Files\Banks</Filter>
     </ClCompile>
     <ClCompile Include="banks\bank7.c">
-      <Filter>Source Files\banks</Filter>
+      <Filter>Source Files\Banks</Filter>
     </ClCompile>
     <ClCompile Include="banks\bank8.c">
-      <Filter>Source Files\banks</Filter>
+      <Filter>Source Files\Banks</Filter>
     </ClCompile>
     <ClCompile Include="banks\bank9.c">
-      <Filter>Source Files\banks</Filter>
+      <Filter>Source Files\Banks</Filter>
     </ClCompile>
     <ClCompile Include="banks\bank10.c">
-      <Filter>Source Files\banks</Filter>
+      <Filter>Source Files\Banks</Filter>
     </ClCompile>
     <ClCompile Include="banks\bank11.c">
-      <Filter>Source Files\banks</Filter>
+      <Filter>Source Files\Banks</Filter>
     </ClCompile>
     <ClCompile Include="banks\bank12.c">
-      <Filter>Source Files\banks</Filter>
+      <Filter>Source Files\Banks</Filter>
     </ClCompile>
     <ClCompile Include="banks\bank13.c">
-      <Filter>Source Files\banks</Filter>
+      <Filter>Source Files\Banks</Filter>
     </ClCompile>
     <ClCompile Include="banks\bank14.c">
-      <Filter>Source Files\banks</Filter>
+      <Filter>Source Files\Banks</Filter>
     </ClCompile>
     <ClCompile Include="banks\bank15.c">
-      <Filter>Source Files\banks</Filter>
+      <Filter>Source Files\Banks</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -110,49 +110,49 @@
       <Filter>Header Files\devkit</Filter>
     </ClInclude>
     <ClInclude Include="banks\bank2.h">
-      <Filter>Header Files\banks</Filter>
+      <Filter>Header Files\Banks</Filter>
     </ClInclude>
     <ClInclude Include="banks\bank3.h">
-      <Filter>Header Files\banks</Filter>
+      <Filter>Header Files\Banks</Filter>
     </ClInclude>
     <ClInclude Include="banks\bank4.h">
-      <Filter>Header Files\banks</Filter>
+      <Filter>Header Files\Banks</Filter>
     </ClInclude>
     <ClInclude Include="banks\bank5.h">
-      <Filter>Header Files\banks</Filter>
+      <Filter>Header Files\Banks</Filter>
     </ClInclude>
     <ClInclude Include="banks\bank6.h">
-      <Filter>Header Files\banks</Filter>
+      <Filter>Header Files\Banks</Filter>
     </ClInclude>
     <ClInclude Include="banks\bank7.h">
-      <Filter>Header Files\banks</Filter>
+      <Filter>Header Files\Banks</Filter>
     </ClInclude>
     <ClInclude Include="banks\bank8.h">
-      <Filter>Header Files\banks</Filter>
+      <Filter>Header Files\Banks</Filter>
     </ClInclude>
     <ClInclude Include="banks\bank9.h">
-      <Filter>Header Files\banks</Filter>
+      <Filter>Header Files\Banks</Filter>
     </ClInclude>
     <ClInclude Include="banks\bank10.h">
-      <Filter>Header Files\banks</Filter>
+      <Filter>Header Files\Banks</Filter>
     </ClInclude>
     <ClInclude Include="banks\bank11.h">
-      <Filter>Header Files\banks</Filter>
+      <Filter>Header Files\Banks</Filter>
     </ClInclude>
     <ClInclude Include="banks\bank12.h">
-      <Filter>Header Files\banks</Filter>
+      <Filter>Header Files\Banks</Filter>
     </ClInclude>
     <ClInclude Include="banks\bank13.h">
-      <Filter>Header Files\banks</Filter>
+      <Filter>Header Files\Banks</Filter>
     </ClInclude>
     <ClInclude Include="banks\bank14.h">
-      <Filter>Header Files\banks</Filter>
+      <Filter>Header Files\Banks</Filter>
     </ClInclude>
     <ClInclude Include="banks\bank15.h">
-      <Filter>Header Files\banks</Filter>
+      <Filter>Header Files\Banks</Filter>
     </ClInclude>
     <ClInclude Include="banks\fixedbank.h">
-      <Filter>Header Files\banks</Filter>
+      <Filter>Header Files\Banks</Filter>
     </ClInclude>
     <ClInclude Include="defines.h">
       <Filter>Header Files</Filter>
