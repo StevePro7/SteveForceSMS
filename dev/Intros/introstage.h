@@ -40,9 +40,18 @@ void InitIntroStage( unsigned char intronum )
 	switch( intronum )
 	{
 	case 1:InitIntro1Stage(); break;
-	//case 2:InitIntro2Stage(); break;
-	//case 3:InitFinishStage(); break;
-	//case 4:InitIntro3Stage(); break;
-	//case 5:InitIntro4Stage(); break;
+	case 2:InitIntro2Stage(); break;
+	case 3:InitFinishStage(); break;
+	case 4:InitIntro3Stage(); break;
+	case 5:InitIntro4Stage(); break;
+	}
+
+	while( 1 )
+	{
+		// The stage
+		UpdateStage();
+
+		// Update psg
+		UpdatePSG();
 	}
 }

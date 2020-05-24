@@ -20,5 +20,6 @@
 #include "Intros\intro2stage.h"
 #include "Intros\intro3stage.h"
 #include "Intros\intro4stage.h"
+#include "General\finishstage.h"
 #include "Intros\introstage.h"
 #include "Players\playstage.h"

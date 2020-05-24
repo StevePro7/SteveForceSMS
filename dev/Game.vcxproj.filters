@@ -202,5 +202,8 @@
     <ClInclude Include="Intros\intro4stage.h">
       <Filter>Header Files\Intros</Filter>
     </ClInclude>
+    <ClInclude Include="General\finishstage.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

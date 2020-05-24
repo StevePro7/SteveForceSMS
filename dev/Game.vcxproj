@@ -44,6 +44,7 @@
     <ClInclude Include="funcs.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="General\explosion.h" />
+    <ClInclude Include="General\finishstage.h" />
     <ClInclude Include="General\mikgamesstage.h" />
     <ClInclude Include="General\scripter.h" />
     <ClInclude Include="General\timeredlabel.h" />

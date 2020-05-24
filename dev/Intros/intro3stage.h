@@ -1,1 +1,3 @@
-#pragma once
+void InitIntro3Stage()
+{
+}
