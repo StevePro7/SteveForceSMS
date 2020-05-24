@@ -190,5 +190,17 @@
     <ClInclude Include="General\timeredlabel.h">
       <Filter>Header Files\General</Filter>
     </ClInclude>
+    <ClInclude Include="Intros\intro1stage.h">
+      <Filter>Header Files\Intros</Filter>
+    </ClInclude>
+    <ClInclude Include="Intros\intro2stage.h">
+      <Filter>Header Files\Intros</Filter>
+    </ClInclude>
+    <ClInclude Include="Intros\intro3stage.h">
+      <Filter>Header Files\Intros</Filter>
+    </ClInclude>
+    <ClInclude Include="Intros\intro4stage.h">
+      <Filter>Header Files\Intros</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

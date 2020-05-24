@@ -47,6 +47,10 @@
     <ClInclude Include="General\mikgamesstage.h" />
     <ClInclude Include="General\scripter.h" />
     <ClInclude Include="General\timeredlabel.h" />
+    <ClInclude Include="Intros\intro1stage.h" />
+    <ClInclude Include="Intros\intro2stage.h" />
+    <ClInclude Include="Intros\intro3stage.h" />
+    <ClInclude Include="Intros\intro4stage.h" />
     <ClInclude Include="Intros\introstage.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Players\playstage.h" />

@@ -237,6 +237,33 @@ void UpdateStage()
 	keystatus = devkit_SMS_getKeysStatus();
 }
 
+// Prepare stage for music!!!
+void PlayMusic( char *music, unsigned char mbank, unsigned char looped )
+{
+	// Save banks
+	musicbank = mbank;
+
+	// Init Music
+	changeBank( musicbank );
+
+	// Loop???
+	if( looped == 1 )
+		devkit_PSGPlay( music );
+	else
+		devkit_PSGPlayNoRepeat( music );
+
+	if( ( music != pause_psg ) && ( mbank != pause_psg_bank ) )
+	{
+		lastplayedmusic = music;
+		lastplayedmusicbank = mbank;
+		lastplayedmusiclooped = looped;
+	}
+
+
+	// Back to routine
+	changeBank( FIXEDBANKSLOT );
+}
+
 // Update sound
 void UpdatePSG()
 {

@@ -35,4 +35,14 @@ void InitIntroStage( unsigned char intronum )
 
 	// Too big here
 	setIntroStageGraphics();
+
+	// Too big here
+	switch( intronum )
+	{
+	case 1:InitIntro1Stage(); break;
+	//case 2:InitIntro2Stage(); break;
+	//case 3:InitFinishStage(); break;
+	//case 4:InitIntro3Stage(); break;
+	//case 5:InitIntro4Stage(); break;
+	}
 }
