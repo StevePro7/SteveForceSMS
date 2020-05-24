@@ -26,3 +26,7 @@ extern const unsigned char	vulcanstation_psgcompr[];
 #define				vulcanstation_psgcompr_size 546
 #define				vulcanstation_psgcompr_bank 14
 
+
+extern const unsigned char	intro1_psg[];
+#define				intro1_psg_size 2369
+#define				intro1_psg_bank 15
