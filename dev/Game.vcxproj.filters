@@ -208,5 +208,11 @@
     <ClInclude Include="General\barrom.h">
       <Filter>Header Files\General</Filter>
     </ClInclude>
+    <ClInclude Include="General\warning.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="Intros\introovni.h">
+      <Filter>Header Files\Intros</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

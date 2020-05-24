@@ -16,6 +16,8 @@
 #include "General\scroller.h"
 #include "General\barrom.h"
 #include "General\explosion.h"
+#include "General\warning.h"
+#include "Intros\introovni.h"
 #include "Enemies\enemy.h"
 #include "General\scripter.h"
 #include "General\mikgamesstage.h"

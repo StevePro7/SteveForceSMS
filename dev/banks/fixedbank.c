@@ -1,5 +1,5 @@
 #include "..\defines.h"
-#include "bank15.c"
+//#include "bank15.c"
 
 #ifdef _CONSOLE
 #pragma warning(disable: 4047)
@@ -1956,7 +1956,7 @@ const unsigned char *spawners[]=
 
 // Function pointers
 
-//extern void InitWarning(enemy *en);
+extern void InitWarning(enemy *en);
 //extern void InitIntroSidePlayer(enemy *en);
 //extern void InitIntroStar(enemy *en);
 //extern void InitWaveShip(enemy *en);
@@ -1995,9 +1995,9 @@ const unsigned char *spawners[]=
 const MyInitEnemyFunction initenemyfunctions[]=
 {
 	0,
-//	InitWarning,
-//	0,
-//	0,
+	InitWarning,
+	0,
+	0,
 //	InitIntroSidePlayer,
 //	InitIntroStar,
 //	InitWaveShip,
@@ -2081,10 +2081,10 @@ const MyInitEnemyFunction initenemyfunctions[]=
 //	0,
 //	InitStage8Lateral,
 };
-//
-//extern unsigned char UpdateWarning(enemy *en);
+
+extern unsigned char UpdateWarning(enemy *en);
 //extern unsigned char UpdateIntroSidePlayer(enemy *en);
-//extern unsigned char UpdateIntroOvni(enemy *en);
+extern unsigned char UpdateIntroOvni(enemy *en);
 //extern unsigned char UpdateIntroStar(enemy *en);
 //extern unsigned char UpdateWaveShip(enemy *en);
 //extern unsigned char UpdateRectShip(enemy *en);
@@ -2148,9 +2148,9 @@ const MyInitEnemyFunction initenemyfunctions[]=
 const MyUpdateEnemyFunction updateenemyfunctions[]=
 {
 	0,
-//	UpdateWarning,
-//	UpdateIntroOvni,
-//	UpdateIntroOvni,
+	UpdateWarning,
+	UpdateIntroOvni,
+	UpdateIntroOvni,
 //	UpdateIntroSidePlayer,
 //	UpdateIntroStar,
 //	UpdateWaveShip,
