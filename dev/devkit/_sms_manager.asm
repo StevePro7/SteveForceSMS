@@ -235,18 +235,15 @@ _devkit_SMS_VDPturnOnFeature::
 	push	hl
 	push	bc
 	jp  _SMS_VDPturnOnFeature
-;_sms_manager.c:58: void devkit_SMS_loadTileMap( unsigned char x, unsigned char y, unsigned char* src, unsigned char size )
+;_sms_manager.c:58: void devkit_SMS_loadTileMap( unsigned char x, unsigned char y, unsigned char* src, unsigned int size )
 ;	---------------------------------
 ; Function devkit_SMS_loadTileMap
 ; ---------------------------------
 _devkit_SMS_loadTileMap::
 	call	___sdcc_enter_ix
-	push	af
 ;_sms_manager.c:60: SMS_loadTileMap( x, y, src, size );
-	ld	e, 8 (ix)
-	ld	d, #0x00
-	ld	c,6 (ix)
-	ld	b,7 (ix)
+	ld	e,6 (ix)
+	ld	d,7 (ix)
 	ld	l, 5 (ix)
 	ld	h, #0x00
 	add	hl, hl
@@ -255,24 +252,25 @@ _devkit_SMS_loadTileMap::
 	add	hl, hl
 	add	hl, hl
 	add	hl, hl
-	ld	-2 (ix), l
+	ld	c, l
 	ld	a, h
 	or	a, #0x78
-	ld	-1 (ix), a
+	ld	b, a
 	ld	l, 4 (ix)
 	ld	h, #0x00
 	add	hl, hl
-	ld	a, l
-	or	a, -2 (ix)
-	ld	l, a
-	ld	a, h
-	or	a, -1 (ix)
-	ld	h, a
+	ld	a, c
+	or	a, l
+	ld	c, a
+	ld	a, b
+	or	a, h
+	ld	b, a
+	ld	l,8 (ix)
+	ld	h,9 (ix)
+	push	hl
 	push	de
 	push	bc
-	push	hl
 	call	_SMS_VRAMmemcpy
-	pop	af
 	pop	af
 	pop	af
 	pop	af

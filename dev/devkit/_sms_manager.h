@@ -15,7 +15,7 @@ void devkit_SMS_setSpriteMode( unsigned char mode );
 void devkit_SMS_mapROMBank( unsigned char n );
 void devkit_SMS_VDPturnOnFeature( unsigned int feature );
 
-void devkit_SMS_loadTileMap( unsigned char x, unsigned char y, unsigned char* src, unsigned char size );
+void devkit_SMS_loadTileMap( unsigned char x, unsigned char y, unsigned char* src, unsigned int size );
 
 void devkit_SMS_loadPSGaidencompressedTiles( const void *src, unsigned int tilefrom );
 void devkit_SMS_loadSTMcompressedTileMap( unsigned char x, unsigned char y, unsigned char *src );

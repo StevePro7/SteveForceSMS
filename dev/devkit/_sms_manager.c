@@ -55,7 +55,7 @@ void devkit_SMS_VDPturnOnFeature( unsigned int feature )
 	SMS_VDPturnOnFeature( feature );
 }
 
-void devkit_SMS_loadTileMap( unsigned char x, unsigned char y, unsigned char* src, unsigned char size )
+void devkit_SMS_loadTileMap( unsigned char x, unsigned char y, unsigned char* src, unsigned int size )
 {
 	SMS_loadTileMap( x, y, src, size );
 }

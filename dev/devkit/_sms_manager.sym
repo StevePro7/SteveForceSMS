@@ -49,65 +49,65 @@ Symbol Table
   D ___SMS__SDSC_signature                                         7FE0 GR
   9 ___SMS__SEGA_signature                                         7FF0 GR
     ___sdcc_enter_ix                                               **** GX
-  0 __str_0                                                        0404 R
-  0 __str_1                                                        0412 R
-  0 __str_2                                                        041D R
-  0 _devkit_PORT_A_KEY_1                                           0355 GR
-  0 _devkit_PORT_A_KEY_2                                           0359 GR
-  0 _devkit_PORT_A_KEY_DOWN                                        0349 GR
-  0 _devkit_PORT_A_KEY_LEFT                                        034D GR
-  0 _devkit_PORT_A_KEY_RIGHT                                       0351 GR
-  0 _devkit_PORT_A_KEY_UP                                          0345 GR
+  0 __str_0                                                        03FB R
+  0 __str_1                                                        0409 R
+  0 __str_2                                                        0414 R
+  0 _devkit_PORT_A_KEY_1                                           034C GR
+  0 _devkit_PORT_A_KEY_2                                           0350 GR
+  0 _devkit_PORT_A_KEY_DOWN                                        0340 GR
+  0 _devkit_PORT_A_KEY_LEFT                                        0344 GR
+  0 _devkit_PORT_A_KEY_RIGHT                                       0348 GR
+  0 _devkit_PORT_A_KEY_UP                                          033C GR
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 2.
 Hexadecimal [16-Bits]
 
 Symbol Table
 
   0 _devkit_SMS_VDPturnOnFeature                                   0052 GR
-  0 _devkit_SMS_VRAMmemcpy                                         035D GR
-  0 _devkit_SMS_VRAMmemcpy_brief                                   037C GR
-  0 _devkit_SMS_VRAMmemset                                         039A GR
-  0 _devkit_SMS_VRAMmemsetW                                        03B8 GR
-  0 _devkit_SMS_addSprite                                          014B GR
-  0 _devkit_SMS_addSprite_bulk12                                   021C GR
-  0 _devkit_SMS_addSprite_bulk8                                    0166 GR
-  0 _devkit_SMS_copySpritestoSAT                                   032D GR
-  0 _devkit_SMS_disableLineInterrupt                               03F3 GR
+  0 _devkit_SMS_VRAMmemcpy                                         0354 GR
+  0 _devkit_SMS_VRAMmemcpy_brief                                   0373 GR
+  0 _devkit_SMS_VRAMmemset                                         0391 GR
+  0 _devkit_SMS_VRAMmemsetW                                        03AF GR
+  0 _devkit_SMS_addSprite                                          0142 GR
+  0 _devkit_SMS_addSprite_bulk12                                   0213 GR
+  0 _devkit_SMS_addSprite_bulk8                                    015D GR
+  0 _devkit_SMS_copySpritestoSAT                                   0324 GR
+  0 _devkit_SMS_disableLineInterrupt                               03EA GR
   0 _devkit_SMS_displayOff                                         0009 GR
   0 _devkit_SMS_displayOn                                          0003 GR
-  0 _devkit_SMS_enableLineInterrupt                                03ED GR
-  0 _devkit_SMS_finalizeSprites                                    0327 GR
-  0 _devkit_SMS_getKeysHeld                                        033F GR
-  0 _devkit_SMS_getKeysPressed                                     033C GR
-  0 _devkit_SMS_getKeysReleased                                    0342 GR
-  0 _devkit_SMS_getKeysStatus                                      0339 GR
+  0 _devkit_SMS_enableLineInterrupt                                03E4 GR
+  0 _devkit_SMS_finalizeSprites                                    031E GR
+  0 _devkit_SMS_getKeysHeld                                        0336 GR
+  0 _devkit_SMS_getKeysPressed                                     0333 GR
+  0 _devkit_SMS_getKeysReleased                                    0339 GR
+  0 _devkit_SMS_getKeysStatus                                      0330 GR
   0 _devkit_SMS_init                                               0000 GR
-  0 _devkit_SMS_initSprites                                        0324 GR
-  0 _devkit_SMS_loadBGPalette                                      010B GR
-  0 _devkit_SMS_loadPSGaidencompressedTiles                        0099 GR
-  0 _devkit_SMS_loadSTMcompressedTileMap                           00AF GR
-  0 _devkit_SMS_loadSpritePalette                                  0112 GR
+  0 _devkit_SMS_initSprites                                        031B GR
+  0 _devkit_SMS_loadBGPalette                                      0102 GR
+  0 _devkit_SMS_loadPSGaidencompressedTiles                        0090 GR
+  0 _devkit_SMS_loadSTMcompressedTileMap                           00A6 GR
+  0 _devkit_SMS_loadSpritePalette                                  0109 GR
   0 _devkit_SMS_loadTileMap                                        0059 GR
   0 _devkit_SMS_mapROMBank                                         0049 GR
-  0 _devkit_SMS_queryPauseRequested                                0333 GR
-  0 _devkit_SMS_resetPauseRequest                                  0336 GR
-  0 _devkit_SMS_setBGPaletteColor                                  00D0 GR
+  0 _devkit_SMS_queryPauseRequested                                032A GR
+  0 _devkit_SMS_resetPauseRequest                                  032D GR
+  0 _devkit_SMS_setBGPaletteColor                                  00C7 GR
   0 _devkit_SMS_setBGScrollX                                       000F GR
   0 _devkit_SMS_setBGScrollY                                       001B GR
   0 _devkit_SMS_setBackdropColor                                   0027 GR
-  0 _devkit_SMS_setLineCounter                                     03E1 GR
-  0 _devkit_SMS_setLineInterruptHandler                            03D7 GR
-  0 _devkit_SMS_setNextTileatXY                                    0119 GR
+  0 _devkit_SMS_setLineCounter                                     03D8 GR
+  0 _devkit_SMS_setLineInterruptHandler                            03CE GR
+  0 _devkit_SMS_setNextTileatXY                                    0110 GR
   0 _devkit_SMS_setSpriteMode                                      003D GR
-  0 _devkit_SMS_setSpritePaletteColor                              00E3 GR
-  0 _devkit_SMS_setTile                                            013D GR
+  0 _devkit_SMS_setSpritePaletteColor                              00DA GR
+  0 _devkit_SMS_setTile                                            0134 GR
   0 _devkit_SMS_useFirstHalfTilesforSprites_False                  0033 GR
   0 _devkit_SMS_useFirstHalfTilesforSprites_True                   0038 GR
-  0 _devkit_SMS_waitForVBlank                                      032A GR
-  0 _devkit_SPRITEMODE_NORMAL                                      0401 GR
-  0 _devkit_UNSAFE_SMS_copySpritestoSAT                            0330 GR
-  0 _devkit_VDPFEATURE_HIDEFIRSTCOL                                03F9 GR
-  0 _devkit_VDPFEATURE_LEFTCOLBLANK                                03FD GR
+  0 _devkit_SMS_waitForVBlank                                      0321 GR
+  0 _devkit_SPRITEMODE_NORMAL                                      03F8 GR
+  0 _devkit_UNSAFE_SMS_copySpritestoSAT                            0327 GR
+  0 _devkit_VDPFEATURE_HIDEFIRSTCOL                                03F0 GR
+  0 _devkit_VDPFEATURE_LEFTCOLBLANK                                03F4 GR
 
 
 ASxxxx Assembler V02.00 + NoICE + SDCC mods  (Zilog Z80 / Hitachi HD64180), page 3.
@@ -115,7 +115,7 @@ Hexadecimal [16-Bits]
 
 Area Table
 
-   0 _CODE                                      size  445   flags    0
+   0 _CODE                                      size  43C   flags    0
    1 _DATA                                      size    0   flags    0
    2 _INITIALIZED                               size    0   flags    0
    3 _DABS                                      size    0   flags    8
