@@ -25,3 +25,4 @@ extern const unsigned char	stage8tiles_psgcompr[];
 extern const unsigned char	vulcanstation_psgcompr[];
 #define				vulcanstation_psgcompr_size 546
 #define				vulcanstation_psgcompr_bank 14
+
