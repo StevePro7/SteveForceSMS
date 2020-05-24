@@ -10,6 +10,11 @@
 #include "Banks\fixedbank.h"
 #include "vars.h"
 #include "funcs.h"
+
+#include "General\timeredlabel.h"
+#include "General\explosion.h"
+#include "Enemies\enemy.h"
+#include "General\scripter.h"
 #include "General\mikgamesstage.h"
 #include "Intros\introstage.h"
 #include "Players\playstage.h"

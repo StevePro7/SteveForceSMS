@@ -40,9 +40,13 @@
     <ClInclude Include="defines.h" />
     <ClInclude Include="devkit\_sms_manager.h" />
     <ClInclude Include="devkit\_snd_manager.h" />
+    <ClInclude Include="Enemies\enemy.h" />
     <ClInclude Include="funcs.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="General\explosion.h" />
     <ClInclude Include="General\mikgamesstage.h" />
+    <ClInclude Include="General\scripter.h" />
+    <ClInclude Include="General\timeredlabel.h" />
     <ClInclude Include="Intros\introstage.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Players\playstage.h" />

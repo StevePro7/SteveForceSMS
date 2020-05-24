@@ -34,6 +34,9 @@
     <Filter Include="Header Files\Players">
       <UniqueIdentifier>{4e8b57b3-c217-437d-818f-8d63410ec183}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Enemies">
+      <UniqueIdentifier>{49d91109-52fa-4af7-9a30-6fd05d5cf834}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -174,6 +177,18 @@
     </ClInclude>
     <ClInclude Include="Intros\introstage.h">
       <Filter>Header Files\Intros</Filter>
+    </ClInclude>
+    <ClInclude Include="General\scripter.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemies\enemy.h">
+      <Filter>Header Files\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="General\explosion.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="General\timeredlabel.h">
+      <Filter>Header Files\General</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

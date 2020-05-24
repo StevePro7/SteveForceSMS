@@ -7,19 +7,19 @@
 void setIntroStageGraphics()
 {
 	// Load palette
-	LoadBGPalette( logopalette_bin, logopalette_bin_bank );
+	LoadBGPalette( ( unsigned char * ) logopalette_bin, logopalette_bin_bank );
 
-	//// Init script
-	//InitScripts();
+	// Init script
+	InitScripts();
 
-	//// Init enemies
-	//InitEnemies();
+	// Init enemies
+	InitEnemies();
 
-	//// Init explosions
-	//InitExplosions();
+	// Init explosions
+	InitExplosions();
 
-	//// Labels
-	//InitTimeredLabels();
+	// Labels
+	InitTimeredLabels();
 
 	// Scroll
 	devkit_SMS_setBGScrollY( 192 );

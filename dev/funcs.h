@@ -27,6 +27,19 @@ void changeBank( unsigned char b )
 	}
 }
 
+// Carga un sprite
+void LoadSprite( const unsigned char *psg, unsigned int base, unsigned char b )
+{
+	// Rom bank
+	changeBank( b );
+
+	// Sprite
+	devkit_SMS_loadPSGaidencompressedTiles( psg, base );
+
+	// Rom bank
+	changeBank( FIXEDBANKSLOT );
+}
+
 // Carga tiles
 void LoadTiles( unsigned char *psg, char b )
 {

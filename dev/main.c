@@ -8,7 +8,7 @@ void main()
 	gamestock = 3;
 
 	// Mikgames
-	InitMikGamesStage();
+	//InitMikGamesStage();
 
 	// Game intro
 	InitIntroStage( 1 );
