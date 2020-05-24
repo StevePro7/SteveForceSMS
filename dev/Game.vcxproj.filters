@@ -42,9 +42,6 @@
     <ClCompile Include="main.c">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="game.c">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="devkit\_snd_manager.c">
       <Filter>Source Files\devkit</Filter>
     </ClCompile>

@@ -77,7 +77,6 @@
     <ClCompile Include="banks\fixedbank.c" />
     <ClCompile Include="devkit\_sms_manager.c" />
     <ClCompile Include="devkit\_snd_manager.c" />
-    <ClCompile Include="game.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

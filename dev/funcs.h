@@ -8,6 +8,9 @@
 // Declarations needed
 void UpdatePlayStage();
 
+void PlaySound( char *sound, char priority );
+void PlayMusic( char *music, unsigned char mbank, unsigned char looped );
+
 
 // Fast random package
 unsigned long state = 777;
@@ -25,6 +28,15 @@ void changeBank( unsigned char b )
 		devkit_SMS_mapROMBank( b );
 		lastbank = b;
 	}
+}
+
+// Dibuja un array de sprites
+void DrawSpriteArray( unsigned int s, unsigned char px, unsigned char py, unsigned char tx, unsigned char ty )
+{
+	unsigned char x, y;
+	for( y = 0; y < ty; y += 8 )
+		for( x = 0; x < tx; x += 8 )
+			devkit_SMS_addSprite( px + x, py + y, s++ );
 }
 
 // Dibuja un sprite 16x16
@@ -79,7 +91,6 @@ void LoadBGPalette( char *p, char b )
 	devkit_SMS_loadBGPalette( p );
 }
 
-
 // Carga paleta por defecto
 void LoadSpritePalette()
 {
@@ -90,25 +101,26 @@ void LoadSpritePalette()
 	devkit_SMS_loadSpritePalette( (unsigned char *)palette_bin );
 }
 
-// Limpia las tiles
-void ClearTiles()
-{
-	devkit_SMS_VRAMmemset( 0, 0, 32 * 256 );
-}
-
-// Carga la fuente
-void LoadFont()
-{
-	// Rom bank
-	changeBank( font_psgcompr_bank );
-
-	// Font
-	devkit_SMS_loadPSGaidencompressedTiles( font_psgcompr, 192 );
-}
-
 void InterruptHandler( void )
 {
 	numinterrupts++;
+}
+
+void InitConsole()
+{
+	// La consola
+	devkit_SMS_init();
+
+	// We need this
+	devkit_SMS_getKeysStatus();
+
+	// Advanced frameskipping
+	devkit_SMS_setLineInterruptHandler( &InterruptHandler );
+	devkit_SMS_setLineCounter( 192 );
+	devkit_SMS_enableLineInterrupt();
+
+	// Kagesan asked for this ;)
+	devkit_SMS_VDPturnOnFeature( devkit_VDPFEATURE_LEFTCOLBLANK() );
 }
 
 // Clear background
@@ -136,23 +148,6 @@ void ClearScreen()
 	devkit_SMS_setBackdropColor( 0 );
 }
 
-void InitConsole()
-{
-	// La consola
-	devkit_SMS_init();
-
-	// We need this
-	devkit_SMS_getKeysStatus();
-
-	// Advanced frameskipping
-	devkit_SMS_setLineInterruptHandler( &InterruptHandler );
-	devkit_SMS_setLineCounter( 192 );
-	devkit_SMS_enableLineInterrupt();
-
-	// Kagesan asked for this ;)
-	devkit_SMS_VDPturnOnFeature( devkit_VDPFEATURE_LEFTCOLBLANK() );
-}
-
 // Update del scroll
 void UpdateScroll( signed int sx, signed int sy )
 {
@@ -173,6 +168,36 @@ void WriteText( const unsigned char *text, unsigned char x, unsigned char y )
 			devkit_SMS_setTile( text[ a++ ] + 159 );
 }
 
+// Dibujamos un texto
+void WriteNumber( unsigned int i, unsigned int d, unsigned char x, unsigned char y )
+{
+	// Añadimos a x
+	x += d;
+
+	// Ponemos todos los dígitos
+	while( d-- )
+	{
+		devkit_SMS_setNextTileatXY( x--, y );
+		devkit_SMS_setTile( ( i % 10 ) + 48 + 159 );
+		i = i / 10;
+	}
+}
+
+// Limpia las tiles
+void ClearTiles()
+{
+	devkit_SMS_VRAMmemset( 0, 0, 32 * 256 );
+}
+
+// Carga la fuente
+void LoadFont()
+{
+	// Rom bank
+	changeBank( font_psgcompr_bank );
+
+	// Font
+	devkit_SMS_loadPSGaidencompressedTiles( font_psgcompr, 192 );
+}
 
 // Inicia una stage
 void InitStage()
@@ -210,6 +235,19 @@ void InitStage()
 
 	// Init magic
 	numinterrupts = 0;
+}
+
+void checkgamepause()
+{
+	if( devkit_SMS_queryPauseRequested() )
+	{
+		devkit_SMS_resetPauseRequest();
+		gamepause = 1 - gamepause;
+		if( gamepause == 1 )
+			PlayMusic( ( unsigned char * ) pause_psg, pause_psg_bank, 0 );
+		else
+			PlayMusic( ( unsigned char * ) lastplayedmusic, lastplayedmusicbank, lastplayedmusiclooped );
+	}
 }
 
 // Update stage and frames
