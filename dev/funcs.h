@@ -27,6 +27,15 @@ void changeBank( unsigned char b )
 	}
 }
 
+// Dibuja un sprite 16x16
+void DrawQuadSprite( unsigned char x, unsigned char y, unsigned int b )
+{
+	devkit_SMS_addSprite( x, y, b );
+	devkit_SMS_addSprite( x + 8, y, b + 1 );
+	devkit_SMS_addSprite( x, y + 8, b + 2 );
+	devkit_SMS_addSprite( x + 8, y + 8, b + 3 );
+}
+
 // Carga un sprite
 void LoadSprite( const unsigned char *psg, unsigned int base, unsigned char b )
 {

@@ -1,8 +1,8 @@
-//void InitIntroScroll()
-//{
-//	introstageposx = 0;
-//	introstagevelx = 0;
-//}
+void InitIntroScroll()
+{
+	introstageposx = 0;
+	introstagevelx = 0;
+}
 
 void setIntroStageGraphics()
 {
@@ -46,6 +46,12 @@ void InitIntroStage( unsigned char intronum )
 	case 5:InitIntro4Stage(); break;
 	}
 
+	// Lo volvemos a encender
+	devkit_SMS_displayOn();
+	
+	// Scroller position
+	InitIntroScroll();
+
 	while( 1 )
 	{
 		// The stage
@@ -57,6 +63,20 @@ void InitIntroStage( unsigned char intronum )
 		// Script
 		if( ( stageframe % 8 ) == 0 )
 			UpdateScripts();
+
+		// Update stage, explosions, enemies
+		if( stageframe2mod == 0 )
+		{
+			UpdateExplosions();
+			UpdateEnemies();
+		}
+
+		// Only for stage 2 
+		if( intronum == 2 )DoIntro2Scroll();
+
+		// Play?
+		if( ( keystatus&devkit_PORT_A_KEY_1() ) || ( !devkit_PSGGetStatus() ) )
+			return;
 
 		// Update psg
 		UpdatePSG();
