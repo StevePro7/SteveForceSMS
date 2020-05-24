@@ -1,3 +1,8 @@
+#ifdef _CONSOLE
+#pragma warning(disable: 4090)
+#else
+#endif
+
 void InitIntro3Object( enemy *en )
 {
 	PlayMusic( ( unsigned char * ) intro3_psg, intro3_psg_bank, 0 );
@@ -25,7 +30,7 @@ void UpdateIntro3Object1( enemy *en )
 {
 	if( en->enemyframe == 16 )
 	{
-		DrawIntro3Object( ( unsigned int * ) persons_bin + 2, 7, 6 );
+		DrawIntro3Object( persons_bin + 2, 7, 6 );
 		en->enemyparama++;
 		en->enemyframe = 0;
 	}
@@ -35,7 +40,7 @@ void UpdateIntro3Object2( enemy *en )
 {
 	if( en->enemyframe == 160 )
 	{
-		DrawIntro3Object( ( unsigned int * ) persons_bin + 14, 19, 6 );
+		DrawIntro3Object( persons_bin + 14, 19, 6 );
 		en->enemyparama++;
 		en->enemyframe = 0;
 	}
@@ -45,7 +50,7 @@ void UpdateIntro3Object3( enemy *en )
 {
 	if( en->enemyframe == 160 )
 	{
-		DrawIntro3Object( ( unsigned int * ) persons_bin + 216, 7, 18 );
+		DrawIntro3Object( persons_bin + 216, 7, 18 );
 		en->enemyparama++;
 		en->enemyframe = 0;
 	}

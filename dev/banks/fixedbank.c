@@ -1,5 +1,4 @@
 #include "..\defines.h"
-//#include "bank15.c"
 
 #ifdef _CONSOLE
 #pragma warning(disable: 4047)
