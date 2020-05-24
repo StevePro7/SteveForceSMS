@@ -18,6 +18,7 @@
 #include "General\explosion.h"
 #include "General\warning.h"
 #include "Intros\introovni.h"
+#include "Intros\introsideplayer.h"
 #include "Intros\intro3object.h"
 #include "Enemies\enemy.h"
 #include "General\scripter.h"

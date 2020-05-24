@@ -14,6 +14,7 @@ void main()
 
 		// Game intro
 		//InitIntroStage( 1 );
-		InitIntroStage( 4 );
+		//InitIntroStage( 4 );
+		InitIntroStage( 2 );
 	}
 }

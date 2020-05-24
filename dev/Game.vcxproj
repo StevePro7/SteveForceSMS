@@ -57,6 +57,7 @@
     <ClInclude Include="Intros\intro3stage.h" />
     <ClInclude Include="Intros\intro4stage.h" />
     <ClInclude Include="Intros\introovni.h" />
+    <ClInclude Include="Intros\introsideplayer.h" />
     <ClInclude Include="Intros\introstage.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Players\playstage.h" />

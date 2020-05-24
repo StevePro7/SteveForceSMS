@@ -1956,7 +1956,7 @@ const unsigned char *spawners[]=
 // Function pointers
 
 extern void InitWarning(enemy *en);
-//extern void InitIntroSidePlayer(enemy *en);
+extern void InitIntroSidePlayer(enemy *en);
 //extern void InitIntroStar(enemy *en);
 //extern void InitWaveShip(enemy *en);
 //extern void InitTurnShip(enemy *en);
@@ -1997,7 +1997,7 @@ const MyInitEnemyFunction initenemyfunctions[]=
 	InitWarning,
 	0,
 	0,
-0,//	InitIntroSidePlayer,
+	InitIntroSidePlayer,
 0,//	InitIntroStar,
 0,//	InitWaveShip,
 	0,
@@ -2082,7 +2082,7 @@ const MyInitEnemyFunction initenemyfunctions[]=
 };
 
 extern unsigned char UpdateWarning(enemy *en);
-//extern unsigned char UpdateIntroSidePlayer(enemy *en);
+extern unsigned char UpdateIntroSidePlayer(enemy *en);
 extern unsigned char UpdateIntroOvni(enemy *en);
 //extern unsigned char UpdateIntroStar(enemy *en);
 //extern unsigned char UpdateWaveShip(enemy *en);
@@ -2150,7 +2150,7 @@ const MyUpdateEnemyFunction updateenemyfunctions[]=
 	UpdateWarning,
 	UpdateIntroOvni,
 	UpdateIntroOvni,
-0,//	UpdateIntroSidePlayer,
+	UpdateIntroSidePlayer,
 0,//	UpdateIntroStar,
 0,//	UpdateWaveShip,
 0,//	UpdateRectShip,
