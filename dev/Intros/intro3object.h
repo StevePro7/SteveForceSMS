@@ -5,6 +5,7 @@
 
 void InitIntro3Object( enemy *en )
 {
+	en = 0;
 	PlayMusic( ( unsigned char * ) intro3_psg, intro3_psg_bank, 0 );
 }
 
