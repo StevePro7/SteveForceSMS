@@ -1991,9 +1991,10 @@ const unsigned char *spawners[]=
 //extern void InitRSGThing(enemy *en);
 //extern void InitStage8Lateral(enemy *en);
 
-//const MyInitEnemyFunction initenemyfunctions[]=
-//{
-//	0,
+// TODO - implement functions
+const MyInitEnemyFunction initenemyfunctions[]=
+{
+	0,
 //	InitWarning,
 //	0,
 //	0,
@@ -2079,7 +2080,7 @@ const unsigned char *spawners[]=
 //	InitRSGThing,
 //	0,
 //	InitStage8Lateral,
-//};
+};
 //
 //extern unsigned char UpdateWarning(enemy *en);
 //extern unsigned char UpdateIntroSidePlayer(enemy *en);
@@ -2242,7 +2243,7 @@ const unsigned char *spawners[]=
 //extern void UpdateStage7();
 //extern void UpdateStage8();
 
-// TODO - implment update stage functions
+// TODO - implement functions
 const MyKillEnemyFunction updatestagefunctions[]=
 {
 	0,

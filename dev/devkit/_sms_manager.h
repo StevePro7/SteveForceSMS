@@ -20,9 +20,10 @@ void devkit_SMS_loadTileMap( unsigned char x, unsigned char y, unsigned char* sr
 void devkit_SMS_loadPSGaidencompressedTiles( const void *src, unsigned int tilefrom );
 void devkit_SMS_loadSTMcompressedTileMap( unsigned char x, unsigned char y, unsigned char *src );
 
+void devkit_SMS_setBGPaletteColor(unsigned char entry, unsigned char color);
+void devkit_SMS_setSpritePaletteColor( const unsigned char entry, const unsigned char r, const unsigned char g, const unsigned char b );
 void devkit_SMS_loadBGPalette( void *palette );
 void devkit_SMS_loadSpritePalette( void *palette );
-void devkit_SMS_setSpritePaletteColor( const unsigned char entry, const unsigned char r, const unsigned char g, const unsigned char b );
 
 void devkit_SMS_setNextTileatXY( unsigned char x, unsigned char y );
 void devkit_SMS_setTile( const unsigned char tile );

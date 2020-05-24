@@ -69,6 +69,15 @@ void devkit_SMS_loadSTMcompressedTileMap( unsigned char x, unsigned char y, unsi
 	SMS_loadSTMcompressedTileMap( x, y, src );
 }
 
+void devkit_SMS_setBGPaletteColor( unsigned char entry, unsigned char color )
+{
+	SMS_setBGPaletteColor( entry, color );
+}
+void devkit_SMS_setSpritePaletteColor( const unsigned char entry, const unsigned char r, const unsigned char g, const unsigned char b )
+{
+	const unsigned char color = RGB( r, g, b );
+	SMS_setSpritePaletteColor( entry, color );
+}
 void devkit_SMS_loadBGPalette( void *palette )
 {
 	SMS_loadBGPalette( palette );
@@ -76,11 +85,6 @@ void devkit_SMS_loadBGPalette( void *palette )
 void devkit_SMS_loadSpritePalette( void *palette )
 {
 	SMS_loadSpritePalette( palette );
-}
-void devkit_SMS_setSpritePaletteColor( const unsigned char entry, const unsigned char r, const unsigned char g, const unsigned char b )
-{
-	const unsigned char color = RGB( r, g, b );
-	SMS_setSpritePaletteColor( entry, color );
 }
 
 void devkit_SMS_setNextTileatXY( unsigned char x, unsigned char y )

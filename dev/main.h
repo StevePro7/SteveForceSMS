@@ -12,6 +12,8 @@
 #include "funcs.h"
 
 #include "General\timeredlabel.h"
+//#include "General\map.h"
+#include "General\scroller.h"
 #include "General\explosion.h"
 #include "Enemies\enemy.h"
 #include "General\scripter.h"

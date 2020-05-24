@@ -54,6 +54,10 @@ void InitIntroStage( unsigned char intronum )
 		// Timered labels
 		UpdateTimeredLabels();
 
+		// Script
+		if( ( stageframe % 8 ) == 0 )
+			UpdateScripts();
+
 		// Update psg
 		UpdatePSG();
 	}

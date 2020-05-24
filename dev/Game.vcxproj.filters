@@ -205,5 +205,8 @@
     <ClInclude Include="General\finishstage.h">
       <Filter>Header Files\General</Filter>
     </ClInclude>
+    <ClInclude Include="General\scroller.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

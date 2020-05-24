@@ -250,6 +250,16 @@ void UpdateStage()
 	keystatus = devkit_SMS_getKeysStatus();
 }
 
+void PlaySound( char *sound, char priority )
+{
+	if( ( priority == 1 ) || ( !devkit_PSGSFXGetStatus() ) )
+	{
+		changeBank( SOUNDBANK );
+		devkit_PSGSFXPlay( sound, devkit_SFX_CHANNEL3() );
+		changeBank( FIXEDBANKSLOT );
+	}
+}
+
 // Prepare stage for music!!!
 void PlayMusic( char *music, unsigned char mbank, unsigned char looped )
 {
