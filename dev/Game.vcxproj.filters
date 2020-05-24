@@ -214,5 +214,8 @@
     <ClInclude Include="Intros\introovni.h">
       <Filter>Header Files\Intros</Filter>
     </ClInclude>
+    <ClInclude Include="Intros\intro3object.h">
+      <Filter>Header Files\Intros</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

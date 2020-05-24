@@ -13,6 +13,7 @@ void main()
 		//InitMikGamesStage();
 
 		// Game intro
-		InitIntroStage( 1 );
+		//InitIntroStage( 1 );
+		InitIntroStage( 4 );
 	}
 }

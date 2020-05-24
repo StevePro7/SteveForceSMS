@@ -53,6 +53,7 @@
     <ClInclude Include="General\warning.h" />
     <ClInclude Include="Intros\intro1stage.h" />
     <ClInclude Include="Intros\intro2stage.h" />
+    <ClInclude Include="Intros\intro3object.h" />
     <ClInclude Include="Intros\intro3stage.h" />
     <ClInclude Include="Intros\intro4stage.h" />
     <ClInclude Include="Intros\introovni.h" />
