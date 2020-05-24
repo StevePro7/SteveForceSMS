@@ -8,17 +8,6 @@ Area                                    Addr        Size        Decimal Bytes (A
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
      00000000  .__.ABS.                           
-     00000000  _introstage1tilemap_bin         
-     00000000  _logopalette_bin                
-     00000000  _mikgamestilemap_bin            
-     00000000  _stage1palette_bin              
-     00000000  _stage2palette_bin              
-     00000000  _stage3palette_bin              
-     00000000  _stage4palette_bin              
-     00000000  _stage5palette_bin              
-     00000000  _stage6palette_bin              
-     00000000  _stage7palette_bin              
-     00000000  _stage8palette_bin              
      00000000  l__BSEG                         
      00000000  l__BSS                          
      00000000  l__CABS                         
@@ -57,6 +46,17 @@ Area                                    Addr        Size        Decimal Bytes (A
      00000252  l__DATA                         
      00000258  l__INITIALIZED                  
      00000258  l__INITIALIZER                  
+     00001F9D  l__CODE                         
+     0000219D  s__HOME                         
+     00002319  s__INITIALIZER                  
+     00002571  s__GSINIT                       
+     00002580  s__GSFINAL                      
+     000036D9  l__BANK15                       
+     00003C2B  l__BANK11                       
+     00003F51  l__BANK12                       
+     00003F7E  l__BANK9                        
+     00003FA9  l__BANK8                        
+     00003FB1  l__BANK6                        
 ASxxxx Linker V03.00 + NoICE + sdld,  page 2.
 Hexadecimal  [32-Bits]
 
@@ -66,25 +66,14 @@ Area                                    Addr        Size        Decimal Bytes (A
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00001F9D  l__CODE                         
-     0000219D  s__HOME                         
-     00002319  s__INITIALIZER                  
-     00002571  s__GSINIT                       
-     00002580  s__GSFINAL                      
-     000030EA  l__BANK13                       
-     000036D9  l__BANK15                       
-     00003A69  l__BANK8                        
-     00003B6E  l__BANK9                        
-     00003BC0  l__BANK7                        
-     00003C2B  l__BANK11                       
-     00003C51  l__BANK12                       
-     00003CD9  l__BANK10                       
-     00003CED  l__BANK4                        
-     00003D1D  l__BANK2                        
-     00003E91  l__BANK6                        
-     00003FA3  l__BANK14                       
-     00003FCD  l__BANK3                        
+     00003FB3  l__BANK14                       
+     00003FB5  l__BANK2                        
+     00003FBD  l__BANK4                        
+     00003FD0  l__BANK7                        
      00003FDB  l__BANK5                        
+     00003FE2  l__BANK10                       
+     00003FEA  l__BANK13                       
+     00003FED  l__BANK3                        
      00008000  _SMS_SRAM                          SMSlib_PSGaiden
      00008000  s__BANK10                       
      00008000  s__BANK11                       
@@ -648,7 +637,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_BANK2                              00008000    00003D1D =       15645. bytes (REL,CON)
+_BANK2                              00008000    00003FB5 =       16309. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -659,58 +648,68 @@ _BANK2                              00008000    00003D1D =       15645. bytes (R
      0000A821  _explosion_psg                     bank2
      0000A83A  _font_psgcompr                     bank2
      0000AA09  _fortressdoor_psgcompr             bank2
-     0000AA45  _mikgamestiles_psgcompr            bank2
-     0000AB43  _pause_psg                         bank2
-     0000AB66  _persons_psgcompr                  bank2
-     0000B5D1  _playershoot_psg                   bank2
-     0000B5D9  _powerup_psg                       bank2
-     0000B607  _ray_psg                           bank2
-     0000B62A  _selectortiles_psgcompr            bank2
-     0000BCEC  _silence_psg                       bank2
+     0000AA45  _mikgamestilemap_bin               bank2
+     0000AAC5  _mikgamestiles_psgcompr            bank2
+     0000ABC3  _pause_psg                         bank2
+     0000ABE6  _persons_bin                       bank2
+     0000ADDE  _persons_psgcompr                  bank2
+     0000B849  _personspalette_bin                bank2
+     0000B859  _playershoot_psg                   bank2
+     0000B861  _powerup_psg                       bank2
+     0000B88F  _ray_psg                           bank2
+     0000B8B2  _selectorpalette_bin               bank2
+     0000B8C2  _selectortiles_psgcompr            bank2
+     0000BF84  _silence_psg                       bank2
+
 ASxxxx Linker V03.00 + NoICE + sdld,  page 23.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_BANK3                              00008000    00003FCD =       16333. bytes (REL,CON)
+_BANK3                              00008000    00003FED =       16365. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
      00008000  _fortresssearch_psgcompr           bank3
-     000082CF  _logotilemap_l                     bank3
-     000082EB  _logotilemap_m                     bank3
-     0000866B  _logotiles_psgcompr                bank3
-     000090DD  _spacestation_psgcompr             bank3
-     00009198  _stage2tilemap_l                   bank3
-     00009398  _stage2tilemap_m                   bank3
-     0000B518  _stage2tiles_psgcompr              bank3
-     0000BF6D  _ww2ship_psgcompr                  bank3
+     000082CF  _logopalette_bin                   bank3
+     000082DF  _logotilemap_l                     bank3
+     000082FB  _logotilemap_m                     bank3
+     0000867B  _logotiles_psgcompr                bank3
+     000090ED  _spacestation_psgcompr             bank3
+     000091A8  _stage2palette_bin                 bank3
+     000091B8  _stage2tilemap_l                   bank3
+     000093B8  _stage2tilemap_m                   bank3
+     0000B538  _stage2tiles_psgcompr              bank3
+     0000BF8D  _ww2ship_psgcompr                  bank3
+
 ASxxxx Linker V03.00 + NoICE + sdld,  page 24.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_BANK4                              00008000    00003CED =       15597. bytes (REL,CON)
+_BANK4                              00008000    00003FBD =       16317. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00008000  _endingstagetiles_psgcompr         bank4
-     0000801C  _intro2_psg                        bank4
-     000088A9  _introovni_psgcompr                bank4
-     000089E2  _introsideplayer_psgcompr          bank4
-     00008A5A  _rectship_psgcompr                 bank4
-     00008AFF  _select_psg                        bank4
-     00008CA7  _stage3_psg                        bank4
-     0000A3C3  _stage4endboss_psgcompr            bank4
-     0000A534  _stage4endbossb_psgcompr           bank4
-     0000A564  _stage4endbossc_psgcompr           bank4
-     0000A6D5  _stage4middleboss_psgcompr         bank4
-     0000A930  _stage4tilemap_l                   bank4
-     0000A9ED  _stage4tilemap_m                   bank4
-     0000B22D  _stage4tiles_psgcompr              bank4
-     0000B993  _vulcantank_psgcompr               bank4
-     0000BB4B  _warning_psgcompr                  bank4
-     0000BBCC  _waveship_psgcompr                 bank4
+     00008000  _endingstagetilemap_bin            bank4
+     000082C0  _endingstagetiles_psgcompr         bank4
+     000082DC  _intro2_psg                        bank4
+     00008B69  _introovni_psgcompr                bank4
+     00008CA2  _introsideplayer_psgcompr          bank4
+     00008D1A  _rectship_psgcompr                 bank4
+     00008DBF  _select_psg                        bank4
+     00008F67  _stage3_psg                        bank4
+     0000A683  _stage4endboss_psgcompr            bank4
+     0000A7F4  _stage4endbossb_psgcompr           bank4
+     0000A824  _stage4endbossc_psgcompr           bank4
+     0000A995  _stage4middleboss_psgcompr         bank4
+     0000ABF0  _stage4palette_bin                 bank4
+     0000AC00  _stage4tilemap_l                   bank4
+     0000ACBD  _stage4tilemap_m                   bank4
+     0000B4FD  _stage4tiles_psgcompr              bank4
+     0000BC63  _vulcantank_psgcompr               bank4
+     0000BE1B  _warning_psgcompr                  bank4
+     0000BE9C  _waveship_psgcompr                 bank4
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 25.
 Hexadecimal  [32-Bits]
@@ -738,7 +737,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_BANK6                              00008000    00003E91 =       16017. bytes (REL,CON)
+_BANK6                              00008000    00003FB1 =       16305. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -746,20 +745,23 @@ _BANK6                              00008000    00003E91 =       16017. bytes (R
      00008118  _fortresscannon_psgcompr           bank6
      00008286  _logo_psg                          bank6
      00009B52  _spreadship_psgcompr               bank6
-     00009BE5  _stage5tilemap_l                   bank6
-     00009D9D  _stage5tilemap_m                   bank6
-     0000AF5D  _stage5tiles_psgcompr              bank6
-     0000B1FC  _stage6tilemap_l                   bank6
-     0000B22C  _stage6tilemap_m                   bank6
-     0000B52C  _stage6tiles_psgcompr              bank6
-     0000BCF6  _turnship_psgcompr                 bank6
-     0000BE54  _ww2cloud_psgcompr                 bank6
+     00009BE5  _stage5palette_bin                 bank6
+     00009BF5  _stage5tilemap_l                   bank6
+     00009DAD  _stage5tilemap_m                   bank6
+     0000AF6D  _stage5tiles_psgcompr              bank6
+     0000B20C  _stage6palette_bin                 bank6
+     0000B21C  _stage6tilemap_l                   bank6
+     0000B24C  _stage6tilemap_m                   bank6
+     0000B54C  _stage6tiles_psgcompr              bank6
+     0000BD16  _turnship_psgcompr                 bank6
+     0000BE74  _watertiles_bin                    bank6
+     0000BF74  _ww2cloud_psgcompr                 bank6
 ASxxxx Linker V03.00 + NoICE + sdld,  page 27.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_BANK7                              00008000    00003BC0 =       15296. bytes (REL,CON)
+_BANK7                              00008000    00003FD0 =       16336. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -767,70 +769,84 @@ _BANK7                              00008000    00003BC0 =       15296. bytes (R
      0000811A  _cursors_psgcompr                  bank7
      00008125  _enemyshoot_psgcompr               bank7
      0000817E  _fortresswave_psgcompr             bank7
-     000081EA  _stage3tilemap_l                   bank7
-     0000833E  _stage3tilemap_m                   bank7
-     0000A9BE  _stage3tiles_psgcompr              bank7
-     0000AC2D  _stage5endboss_psgcompr            bank7
-     0000AF14  _stage6_psg                        bank7
-     0000B750  _ww2plane_psgcompr                 bank7
-     0000BA6E  _ww2tank_psgcompr                  bank7
+     000081EA  _stage3palette_bin                 bank7
+     000081FA  _stage3tilemap_l                   bank7
+     0000834E  _stage3tilemap_m                   bank7
+     0000A9CE  _stage3tiles_psgcompr              bank7
+     0000AC3D  _stage5endboss_psgcompr            bank7
+     0000AF24  _stage6_psg                        bank7
+     0000B760  _stage7animtiles_bin               bank7
+     0000B860  _stage7animtilesc_bin              bank7
+     0000B960  _stage7animtilesd_bin              bank7
+     0000BA60  _stage7animtilese_bin              bank7
+     0000BB60  _ww2plane_psgcompr                 bank7
+     0000BE7E  _ww2tank_psgcompr                  bank7
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 28.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_BANK8                              00008000    00003A69 =       14953. bytes (REL,CON)
+_BANK8                              00008000    00003FA9 =       16297. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
      00008000  _gameover_psg                      bank8
-     00008240  _introstage1tiles_psgcompr         bank8
-     00008BA9  _introstage2tiles_psgcompr         bank8
-     00008CDB  _playershoot_psgcompr              bank8
-     00008D31  _stage4_psg                        bank8
-     0000B490  _stage7a_psg                       bank8
+     00008240  _introstage1tilemap_bin            bank8
+     000084C0  _introstage1tiles_psgcompr         bank8
+     00008E29  _introstage2tilemap_bin            bank8
+     000090E9  _introstage2tiles_psgcompr         bank8
+     0000921B  _playershoot_psgcompr              bank8
+     00009271  _stage4_psg                        bank8
+     0000B9D0  _stage7a_psg                       bank8
+
 ASxxxx Linker V03.00 + NoICE + sdld,  page 29.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_BANK9                              00008000    00003B6E =       15214. bytes (REL,CON)
+_BANK9                              00008000    00003F7E =       16254. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
      00008000  _afterboss_psg                     bank9
-     0000823B  _fortressphantom_psgcompr          bank9
-     000083BC  _norefuge_psg                      bank9
-     00008521  _stage1endboss_psgcompr            bank9
-     00008809  _stage1middleboss_psgcompr         bank9
-     00008A6B  _stage2endboss_psgcompr            bank9
-     00008D91  _stage7middleboss_psgcompr         bank9
-     00009245  _stage7tilemap_l                   bank9
-     00009425  _stage7tilemap_m                   bank9
-     0000B6E5  _stage7tiles_psgcompr              bank9
-
+     0000823B  _firetiles_bin                     bank9
+     0000863B  _fortressphantom_psgcompr          bank9
+     000087BC  _norefuge_psg                      bank9
+     00008921  _stage1endboss_psgcompr            bank9
+     00008C09  _stage1middleboss_psgcompr         bank9
+     00008E6B  _stage2endboss_psgcompr            bank9
+     00009191  _stage7middleboss_psgcompr         bank9
+     00009645  _stage7palette_bin                 bank9
+     00009655  _stage7tilemap_l                   bank9
+     00009835  _stage7tilemap_m                   bank9
+     0000BAF5  _stage7tiles_psgcompr              bank9
 ASxxxx Linker V03.00 + NoICE + sdld,  page 30.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_BANK10                             00008000    00003CD9 =       15577. bytes (REL,CON)
+_BANK10                             00008000    00003FE2 =       16354. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00008000  _introstar_psgcompr                bank10
-     0000800E  _powerup_psgcompr                  bank10
-     000080B3  _skull_psgcompr                    bank10
-     0000839B  _spaceasteroidbig_psgcompr         bank10
-     0000846D  _spaceasteroidlittle_psgcompr      bank10
-     00008489  _spaceasteroidmedium_psgcompr      bank10
-     000084F1  _stage1tilemap_l                   bank10
-     000086F1  _stage1tilemap_m                   bank10
-     000098F1  _stage1tiles_psgcompr              bank10
-     00009973  _stage2_psg                        bank10
-     0000B9FB  _stage3endboss_psgcompr            bank10
-     0000BBD7  _stage8lateral_psgcompr            bank10
+     00008000  _animtilestage1_bin                bank10
+     00008080  _introstar_psgcompr                bank10
+     0000808E  _powerup_psgcompr                  bank10
+     00008133  _scrolltilestage1_bin              bank10
+     000081F3  _skull_psgcompr                    bank10
+     000084DB  _spaceanimtiles_bin                bank10
+     0000869B  _spaceasteroidbig_psgcompr         bank10
+     0000876D  _spaceasteroidlittle_psgcompr      bank10
+     00008789  _spaceasteroidmedium_psgcompr      bank10
+     000087F1  _stage1palette_bin                 bank10
+     000087FA  _stage1tilemap_l                   bank10
+     000089FA  _stage1tilemap_m                   bank10
+     00009BFA  _stage1tiles_psgcompr              bank10
+     00009C7C  _stage2_psg                        bank10
+     0000BD04  _stage3endboss_psgcompr            bank10
+     0000BEE0  _stage8lateral_psgcompr            bank10
+
 ASxxxx Linker V03.00 + NoICE + sdld,  page 31.
 Hexadecimal  [32-Bits]
 
@@ -848,45 +864,51 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_BANK12                             00008000    00003C51 =       15441. bytes (REL,CON)
+_BANK12                             00008000    00003F51 =       16209. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
      00008000  _boss_psg                          bank12
      00009ABC  _escape_psg                        bank12
      0000A616  _flight_psg                        bank12
-     0000B99E  _introstage3tiles_psgcompr         bank12
+     0000B99E  _introstage3tilemap_bin            bank12
+     0000BC9E  _introstage3tiles_psgcompr         bank12
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 33.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_BANK13                             00008000    000030EA =       12522. bytes (REL,CON)
+_BANK13                             00008000    00003FEA =       16362. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
      00008000  _monsterblob_psgcompr              bank13
      00008120  _skullb_psgcompr                   bank13
      00008428  _stage8_psg                        bank13
-     0000A98C  _stage8bossb_psgcompr              bank13
-     0000AFCA  _stage8bossc_psgcompr              bank13
+     0000A98C  _stage8animtilesamov_bin           bank13
+     0000B08C  _stage8animtilesbmov_bin           bank13
+     0000B78C  _stage8animtilescloudsmov_bin      bank13
+     0000B88C  _stage8bossb_psgcompr              bank13
+     0000BECA  _stage8bossc_psgcompr              bank13
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 34.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_BANK14                             00008000    00003FA3 =       16291. bytes (REL,CON)
+_BANK14                             00008000    00003FB3 =       16307. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
      00008000  _boss2_psg                         bank14
      00009930  _player_psgcompr                   bank14
-     00009AA2  _stage8tilemap_l                   bank14
-     00009C96  _stage8tilemap_m                   bank14
-     0000B756  _stage8tiles_psgcompr              bank14
-     0000BD81  _vulcanstation_psgcompr            bank14
+     00009AA2  _stage8palette_bin                 bank14
+     00009AB2  _stage8tilemap_l                   bank14
+     00009CA6  _stage8tilemap_m                   bank14
+     0000B766  _stage8tiles_psgcompr              bank14
+     0000BD91  _vulcanstation_psgcompr            bank14
+
 ASxxxx Linker V03.00 + NoICE + sdld,  page 35.
 Hexadecimal  [32-Bits]
 
@@ -1158,24 +1180,3 @@ _BANK14=0x8000
 _BANK15=0x8000
 
 
-?ASlink-Warning-Undefined Global '_introstage1tilemap_bin' referenced by module 'main'
-
-?ASlink-Warning-Undefined Global '_logopalette_bin' referenced by module 'main'
-
-?ASlink-Warning-Undefined Global '_stage1palette_bin' referenced by module 'fixedbank'
-
-?ASlink-Warning-Undefined Global '_stage2palette_bin' referenced by module 'fixedbank'
-
-?ASlink-Warning-Undefined Global '_stage3palette_bin' referenced by module 'fixedbank'
-
-?ASlink-Warning-Undefined Global '_stage4palette_bin' referenced by module 'fixedbank'
-
-?ASlink-Warning-Undefined Global '_stage5palette_bin' referenced by module 'fixedbank'
-
-?ASlink-Warning-Undefined Global '_stage6palette_bin' referenced by module 'fixedbank'
-
-?ASlink-Warning-Undefined Global '_stage7palette_bin' referenced by module 'fixedbank'
-
-?ASlink-Warning-Undefined Global '_mikgamestilemap_bin' referenced by module 'main'
-
-?ASlink-Warning-Undefined Global '_stage8palette_bin' referenced by module 'fixedbank'
