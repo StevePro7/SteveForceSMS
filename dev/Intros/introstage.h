@@ -51,6 +51,9 @@ void InitIntroStage( unsigned char intronum )
 		// The stage
 		UpdateStage();
 
+		// Timered labels
+		UpdateTimeredLabels();
+
 		// Update psg
 		UpdatePSG();
 	}

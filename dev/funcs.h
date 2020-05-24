@@ -151,6 +151,19 @@ void UpdateScroll( signed int sx, signed int sy )
 	devkit_SMS_setBGScrollY( sy );
 }
 
+// Dibujamos un texto
+void WriteText( const unsigned char *text, unsigned char x, unsigned char y )
+{
+	int a;
+
+	// Cambiamos el caracter de las letras
+	devkit_SMS_setNextTileatXY( x, y );
+	a = 0;
+	while( text[ a ] != 0 )
+		if( ( text[ a ] >= 32 ) && ( text[ a ] < 96 ) )
+			devkit_SMS_setTile( text[ a++ ] + 159 );
+}
+
 
 // Inicia una stage
 void InitStage()
