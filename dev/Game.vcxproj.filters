@@ -220,5 +220,14 @@
     <ClInclude Include="Intros\introsideplayer.h">
       <Filter>Header Files\Intros</Filter>
     </ClInclude>
+    <ClInclude Include="General\logostage.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="General\map.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="General\jukeboxstage.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

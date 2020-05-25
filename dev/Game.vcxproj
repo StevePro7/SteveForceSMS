@@ -46,6 +46,9 @@
     <ClInclude Include="General\barrom.h" />
     <ClInclude Include="General\explosion.h" />
     <ClInclude Include="General\finishstage.h" />
+    <ClInclude Include="General\jukeboxstage.h" />
+    <ClInclude Include="General\logostage.h" />
+    <ClInclude Include="General\map.h" />
     <ClInclude Include="General\mikgamesstage.h" />
     <ClInclude Include="General\scripter.h" />
     <ClInclude Include="General\scroller.h" />

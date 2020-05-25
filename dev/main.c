@@ -18,6 +18,15 @@ void main()
 		//InitIntroStage( 2 );
 
 		// Logo
-		//InitLogoStage();		// TODO
+		InitLogoStage();
+
+		// If we have jukebox before play
+		if( dojukebox == 1 )
+			InitJukeboxStage();
+
+
+		//for( ;; )
+		//{
+		//}
 	}
 }
