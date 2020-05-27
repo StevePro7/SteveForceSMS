@@ -2269,7 +2269,7 @@ extern void InitStage5();
 const MyKillEnemyFunction initstagefunctions[]=
 {
 	0,
-	InitStage5,	//InitStage7,
+	InitStage5,	//InitStage7,	// TODO
 	InitStage5,
 //	InitStage4,
 //	InitStage2,

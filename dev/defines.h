@@ -47,7 +47,11 @@ typedef struct enemy
 
 typedef void( *MyInitEnemyFunction )( enemy * );
 typedef unsigned char( *MyUpdateEnemyFunction )( enemy * );
-typedef void( *MyKillEnemyFunction )( void );
+// IMPORTANT 
+// don't put the following here otherwise
+// warning C4113: 'void (__cdecl *)()' differs in parameter lists from
+// typedef void( *MyKillEnemyFunction )(void);
+typedef void( *MyKillEnemyFunction )( );
 typedef unsigned char( *MyCheckCollisionFunction )( unsigned char, unsigned char );
 
 // Sound bank
