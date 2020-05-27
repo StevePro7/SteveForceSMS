@@ -41,11 +41,13 @@
     <ClInclude Include="devkit\_sms_manager.h" />
     <ClInclude Include="devkit\_snd_manager.h" />
     <ClInclude Include="Enemies\enemy.h" />
+    <ClInclude Include="Enemies\enemyshoot.h" />
     <ClInclude Include="funcs.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="General\barrom.h" />
     <ClInclude Include="General\explosion.h" />
     <ClInclude Include="General\finishstage.h" />
+    <ClInclude Include="General\gameoverstage.h" />
     <ClInclude Include="General\jukeboxstage.h" />
     <ClInclude Include="General\logostage.h" />
     <ClInclude Include="General\map.h" />
@@ -64,6 +66,7 @@
     <ClInclude Include="Intros\introstage.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Players\playstage.h" />
+    <ClInclude Include="Stages\stage5.h" />
     <ClInclude Include="vars.h" />
   </ItemGroup>
   <ItemGroup>

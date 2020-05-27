@@ -37,6 +37,9 @@
     <Filter Include="Header Files\Enemies">
       <UniqueIdentifier>{49d91109-52fa-4af7-9a30-6fd05d5cf834}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Stages">
+      <UniqueIdentifier>{d216f103-5c86-45dd-83ee-d76ac4c02ea2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -228,6 +231,15 @@
     </ClInclude>
     <ClInclude Include="General\jukeboxstage.h">
       <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="General\gameoverstage.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemies\enemyshoot.h">
+      <Filter>Header Files\Enemies</Filter>
+    </ClInclude>
+    <ClInclude Include="Stages\stage5.h">
+      <Filter>Header Files\Stages</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

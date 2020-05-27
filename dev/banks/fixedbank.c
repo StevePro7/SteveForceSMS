@@ -2258,7 +2258,7 @@ const MyKillEnemyFunction updatestagefunctions[]=
 };
 //
 //extern void InitStage7();
-//extern void InitStage5();
+extern void InitStage5();
 //extern void InitStage4();
 //extern void InitStage2();
 //extern void InitStage8();
@@ -2266,18 +2266,18 @@ const MyKillEnemyFunction updatestagefunctions[]=
 //extern void InitStage1();
 //extern void InitStage6();
 //
-//const MyKillEnemyFunction initstagefunctions[]=
-//{
-//	0,
-//	InitStage7,
-//	InitStage5,
+const MyKillEnemyFunction initstagefunctions[]=
+{
+	0,
+	InitStage5,	//InitStage7,
+	InitStage5,
 //	InitStage4,
 //	InitStage2,
 //	InitStage8,
 //	InitStage3,
 //	InitStage1,
 //	InitStage6,
-//};
+};
 //
 //extern void FinishStage4MiddleBoss();
 //extern void InitAfterBossStage();
