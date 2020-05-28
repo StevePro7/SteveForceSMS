@@ -6,10 +6,37 @@
 
 
 // Declarations needed
+//void InitEnemyshoot( unsigned char x, unsigned char y, unsigned char forced );
+//void InitEnemyshootLaser( unsigned char x, unsigned char y );
+//void InitEnemyshootDirection( unsigned char x, unsigned char y, signed char vx, signed char vy );
+//void RemovePlayer();
+//void RemovePlayershoot( signed char a );
+//void InitEnemy( unsigned char x, unsigned char y, unsigned char t );
+//void InitScript( unsigned char *scripter, unsigned char **labels );
+//void InitAfterBossStage();
+//void GetEnemyDirection( enemy *en );
 void UpdatePlayStage();
-
+//void InitStageSprites( const unsigned char *spl, unsigned char num );
+//void DoSkullSinusMovement( enemy *en, unsigned char dv, unsigned char offset );
+//unsigned char TestSkullOut( enemy *en );
+//void SkullAccelX( enemy *en );
+//void SkullAccelY( enemy *en );
+//void SkullBoneCMove( enemy *en );
+//void KillEnemies( unsigned char force );
+//void DoCommonBossAppearingFunction( enemy *en );
+//void DoEnemyWait( enemy *en, unsigned char nxt );
+//void DoAracPatternMovement( enemy *en, const unsigned char *mx, const unsigned char *my, const unsigned int *mt );
+//void DoStage1BossDirectionShoots( enemy *en );
+//void DoSideShoot( enemy *en, unsigned char freq );
+//void KillEnemy( unsigned char a );
 void PlaySound( char *sound, char priority );
 void PlayMusic( char *music, unsigned char mbank, unsigned char looped );
+//void TestEnemyShoot( enemy *en, unsigned char freq );
+//void TestEnemyShootOne( enemy *en, unsigned char freq );
+//void TestEnemyShootComplex( enemy *en, unsigned char freq, unsigned char dx, unsigned char dy );
+//void InitPowerup( enemy *en );
+void InitPlayerConstants();
+//void SpreadEnemyshootDirection( unsigned char x, unsigned char y, const signed char *vx, const signed char *vy, unsigned char count );
 
 
 // Fast random package

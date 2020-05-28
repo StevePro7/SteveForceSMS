@@ -85,7 +85,7 @@
 #include "General\finishstage.h"
 #include "Intros\introstage.h"
 
-//#include "General\selectorstage.h"
+#include "General\selectorstage.h"
 #include "General\gameoverstage.h"
 //#include "Stages\stage1.h"
 //#include "Stages\stage2.h"
@@ -98,6 +98,6 @@
 #include "Enemies\enemyshoot.h"
 //#include "Players\playershoot.h"
 //#include "General\powerup.h"
-//#include "Players\player.h"
+#include "Players\player.h"
 
 #include "Players\playstage.h"

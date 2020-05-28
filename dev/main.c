@@ -7,7 +7,8 @@ void main()
 	gamelevel = 0;
 	gamestock = 3;
 
-	while( 1 )
+	//TODO uncomment next line
+	//while( 1 )
 	{
 		// Mikgames
 		//InitMikGamesStage();
@@ -28,19 +29,22 @@ void main()
 		stagenum = 1;
 		numplayers = gamestock;
 
-		// Stage looping
-		while( stagenum < 10 )
-		{
-			if( stagenum == 0 )
-				InitGameoverStage();
-			else if( stagenum == 9 )
-			{
-				InitIntroStage( 5 );
-				InitIntroStage( 3 );
-			}
-			else InitPlayStage();
+		// Selector
+		InitSelectorStage();
 
-		}
+		// Stage looping
+		//while( stagenum < 10 )
+		//{
+		//	if( stagenum == 0 )
+		//		InitGameoverStage();
+		//	else if( stagenum == 9 )
+		//	{
+		//		InitIntroStage( 5 );
+		//		InitIntroStage( 3 );
+		//	}
+		//	else InitPlayStage();
+		//}
+
 		//for( ;; )
 		//{
 		//}
