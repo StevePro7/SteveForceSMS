@@ -1,5 +1,5 @@
 XL2
-H A areas E9 global symbols
+H A areas EA global symbols
 M fixedbank
 O -mz80
 S _UpdateIntroSidePlayer Ref0000
@@ -108,8 +108,9 @@ S _ending_psg Ref0000
 S _boss_psg Ref0000
 A _CODE size 0 flags 0 addr 0
 A _DATA size 0 flags 0 addr 0
-A _INITIALIZED size 238 flags 0 addr 0
+A _INITIALIZED size 246 flags 0 addr 0
 S _stageinitdata Def00B0
+S _playerupdatefunctions Def0238
 S _jukebox_names Def002A
 S _difficultlabels Def0234
 S _spawners Def013C
@@ -243,7 +244,7 @@ S _enemiesheight Def292B
 S _aracmovingy Def007A
 S _stage2_statics Def121F
 S _stage8animpalette Def28C7
-A _INITIALIZER size 238 flags 0 addr 0
+A _INITIALIZER size 246 flags 0 addr 0
 A _CABS size 0 flags 8 addr 0
 T 00 00
 R 00 00 02 00
@@ -300,6 +301,10 @@ R 00 00 02 00
 T 34 02
 R 00 00 02 00
 T 34 02
+R 00 00 02 00
+T 38 02
+R 00 00 02 00
+T 38 02
 R 00 00 02 00
 T 00 00
 R 00 00 07 00
@@ -3041,3 +3046,7 @@ T 34 02
 R 00 00 08 00
 T 34 02 75 37 7A 37
 R 00 00 08 00 00 02 07 00 00 04 07 00
+T 38 02
+R 00 00 08 00
+T 38 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+R 00 00 08 00

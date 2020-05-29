@@ -2917,7 +2917,7 @@ const signed char stage8bosscshootspeedy[]={6,7,6,5,4,3,2,1,0,1,2,3,4,5,6};
 const signed char stage8bossbshootspeedx[]={-8,-6,-4,-2,0,2,4,6,8,6,4,2,0,-2,-4,-6};
 const signed char stage8bossbshootspeedy[]={0,1,3,5,7,5,3,1,0,1,3,5,7,5,3,1};
 
-//extern void UpdatePlayerState1();
+extern void UpdatePlayerState1();
 //extern void UpdatePlayerState2();
 //extern void UpdatePlayerState3();
 //extern void UpdatePlayerState4();
@@ -2925,16 +2925,16 @@ const signed char stage8bossbshootspeedy[]={0,1,3,5,7,5,3,1,0,1,3,5,7,5,3,1};
 //extern void UpdatePlayerState6();
 //
 //
-//MyKillEnemyFunction playerupdatefunctions[]=
-//{
-//	0,
-//	UpdatePlayerState1,
-//	UpdatePlayerState2,
-//	UpdatePlayerState3,
-//	UpdatePlayerState4,
-//	UpdatePlayerState5,
-//	UpdatePlayerState6
-//};
+MyKillEnemyFunction playerupdatefunctions[]=
+{
+	0,
+	UpdatePlayerState1,
+0, //	UpdatePlayerState2,
+0, //	UpdatePlayerState3,
+0, //	UpdatePlayerState4,
+0, //	UpdatePlayerState5,
+0, //	UpdatePlayerState6
+};
 
 
 //extern void UpdateStage7MiddleBoss0(enemy *en);

@@ -70,6 +70,7 @@
     <ClInclude Include="Players\player.h" />
     <ClInclude Include="Players\playershoot.h" />
     <ClInclude Include="Players\playstage.h" />
+    <ClInclude Include="Stages\stage3star.h" />
     <ClInclude Include="Stages\stage5.h" />
     <ClInclude Include="vars.h" />
   </ItemGroup>

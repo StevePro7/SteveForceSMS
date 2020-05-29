@@ -61,7 +61,7 @@
 //#include "Spaces\spaceshooter.h"
 //#include "Stages\stage3laser.h"
 //#include "Stages\stage3endboss.h"
-//#include "Stages\stage3star.h"
+#include "Stages\stage3star.h"
 //#include "Stages\stage6endboss.h"
 //#include "Stages\stage6endbossb.h"
 //#include "Stages\stage6object.h"

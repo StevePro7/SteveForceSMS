@@ -7,4 +7,18 @@ void InitStage5()
 
 	// Sprites
 	InitStageSprites( stage5spriteslist, 6 );
+
+	// Scripter
+	InitScript( stage5script, 0 );
+
+	// Scroller
+	AddScrollers( stage5_scrollers, stage5_scrollers_num );
+
+	// Clouds
+	LoadSprite( ww2cloud_psgcompr, STAGE5CLOUDBASE, ww2cloud_psgcompr_bank );
+	for( a = 0; a < MAXSTAGE5CLOUDS; a++ )
+		InitStage3Star( &stage3stars[ a ], 2 + a );
+
+	// Map static enemies
+	SetStaticEnemies( stage5_statics, stage5_statics_bank );
 }

@@ -25,6 +25,31 @@ void UpdateScroller()
 
 		// Get scroll
 		sc = &scrolls[ scrollact ];
+
+		// To get a sweet scroll...
+		if( stageframe4mod == 0 )
+		{
+			scrollactspeedx += ( scrollactspeedx < sc->scrollspeedx ) ? 1 : ( scrollactspeedx > sc->scrollspeedx ) ? -1 : 0;
+			scrollactspeedy += ( scrollactspeedy < sc->scrollspeedy ) ? 1 : ( scrollactspeedy > sc->scrollspeedy ) ? -1 : 0;
+		}
+
+		// Update map position
+		if( mappositiony - scrollactspeedy < sc->scrolllock )
+		{
+			mappositiony += sc->scrolljump;
+			oldmappositiony += sc->scrolljump;
+
+			scrolltimes++;
+			if( scrolltimes == sc->scrolltimes )
+			{
+				scrolltimes = 0;
+				scrollact++;
+				if( scrollact >= numscrolls )
+					disablescroll = 1;
+			}
+		}
+		// Map
+		MoveMap( scrollactspeedx, -scrollactspeedy );
 	}
 }
 

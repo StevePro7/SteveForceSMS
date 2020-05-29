@@ -253,5 +253,8 @@
     <ClInclude Include="General\powerup.h">
       <Filter>Header Files\General</Filter>
     </ClInclude>
+    <ClInclude Include="Stages\stage3star.h">
+      <Filter>Header Files\Stages</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

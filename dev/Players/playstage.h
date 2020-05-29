@@ -85,6 +85,35 @@ void InitStageData( unsigned int i )
 		PlayMusic( psg, psg_bank, loop_psg );
 }
 
+// Pass A
+void UpdateStagePassA()
+{
+	// Player indicators
+	UpdatePlayerIndicators();
+
+	// Update powerups
+	UpdatePowerup();
+
+	// Update player
+	UpdatePlayer();
+
+	// Update player shoots
+	UpdatePlayershoots();
+
+	// Enemy shoots
+	UpdateEnemyshoots();
+
+	// Update explosions
+	UpdateExplosions();
+}
+
+
+void UpdateStagePassB()
+{
+	// Enemies!!!
+	UpdateEnemies();
+}
+
 // Pantalla de juego
 void InitPlayStage()
 {
@@ -133,6 +162,12 @@ void InitPlayStage()
 	// Init powerup
 	InitPowerups();
 
+	// Init explosion sprite
+	InitExplosions();
+
+	// Do what we have to do
+	InitPlayer();
+
 	// Lo volvemos a encender
 	devkit_SMS_displayOn();
 
@@ -159,6 +194,20 @@ void InitPlayStage()
 			// Scroller... note this is processed ***ALWAYS*** to do a sweet effect
 			UpdateScroller();
 
+			// Barrom
+			UpdateBarrom();
+
+			// Alternamos
+			if( stageframe2mod == 0 )
+				UpdateStagePassA();
+			else
+				UpdateStagePassB();
+
+			// Hay que salirse?
+			if( exitplaystage == 1 )return;
+
+			// Update psg
+			UpdatePSG();
 		}
 		else
 		{
