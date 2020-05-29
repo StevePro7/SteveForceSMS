@@ -1,3 +1,25 @@
+void InitStageSprite( unsigned char b )
+{
+	const unsigned char *pointer;
+	int base;
+	char bank;
+
+	pointer = imagepointers[ b ];
+	base = imagebases[ b ];
+	bank = imagebanks[ b ];
+	LoadSprite( ( unsigned char * ) pointer, base, bank );
+}
+
+void InitStageSprites( const unsigned char *spl, unsigned char num )
+{
+	unsigned char a;
+	for( a = 0; a < num; a++ )
+	{
+		changeBank( FIXEDBANKSLOT );
+		InitStageSprite( spl[ a ] );
+	}
+}
+
 void UpdatePlayStage()
 {
 	// Change bank
@@ -101,4 +123,53 @@ void InitPlayStage()
 
 	// For the stage custom code 
 	InitCustomStageData();
+
+	// Init player
+	InitPlayerSprite();
+
+	// Init player shoots
+	InitPlayershoots();
+
+	// Init powerup
+	InitPowerups();
+
+	// Lo volvemos a encender
+	devkit_SMS_displayOn();
+
+	// Exit stage flag
+	exitplaystage = 0;
+
+	// To make update at init
+	updateplaystage = 1;
+
+	// We have not pause
+	gamepause = 0;
+
+	// Bucle
+	while( 1 )
+	{
+		// Check for game pause
+		checkgamepause();
+
+		if( gamepause == 0 )
+		{
+			// Update stage
+			UpdateStage();
+
+			// Scroller... note this is processed ***ALWAYS*** to do a sweet effect
+			UpdateScroller();
+
+		}
+		else
+		{
+			// Update psg
+			UpdatePSG();
+
+			// Wait
+			devkit_SMS_waitForVBlank();
+
+			// Reset
+			numinterrupts = 0;
+		}
+	}
 }

@@ -16,7 +16,7 @@
 //void InitAfterBossStage();
 //void GetEnemyDirection( enemy *en );
 void UpdatePlayStage();
-//void InitStageSprites( const unsigned char *spl, unsigned char num );
+void InitStageSprites( const unsigned char *spl, unsigned char num );
 //void DoSkullSinusMovement( enemy *en, unsigned char dv, unsigned char offset );
 //unsigned char TestSkullOut( enemy *en );
 //void SkullAccelX( enemy *en );

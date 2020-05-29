@@ -52,6 +52,7 @@
     <ClInclude Include="General\logostage.h" />
     <ClInclude Include="General\map.h" />
     <ClInclude Include="General\mikgamesstage.h" />
+    <ClInclude Include="General\powerup.h" />
     <ClInclude Include="General\scripter.h" />
     <ClInclude Include="General\scroller.h" />
     <ClInclude Include="General\selectorstage.h" />
@@ -67,6 +68,7 @@
     <ClInclude Include="Intros\introstage.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Players\player.h" />
+    <ClInclude Include="Players\playershoot.h" />
     <ClInclude Include="Players\playstage.h" />
     <ClInclude Include="Stages\stage5.h" />
     <ClInclude Include="vars.h" />

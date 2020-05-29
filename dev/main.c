@@ -30,20 +30,23 @@ void main()
 		numplayers = gamestock;
 
 		// Selector
-		InitSelectorStage();
+		//InitSelectorStage();
+
+		// stevepro
+		//basestage = 0;
 
 		// Stage looping
-		//while( stagenum < 10 )
-		//{
-		//	if( stagenum == 0 )
-		//		InitGameoverStage();
-		//	else if( stagenum == 9 )
-		//	{
-		//		InitIntroStage( 5 );
-		//		InitIntroStage( 3 );
-		//	}
-		//	else InitPlayStage();
-		//}
+		while( stagenum < 10 )
+		{
+			if( stagenum == 0 )
+				InitGameoverStage();
+			else if( stagenum == 9 )
+			{
+				InitIntroStage( 5 );
+				InitIntroStage( 3 );
+			}
+			else InitPlayStage();
+		}
 
 		//for( ;; )
 		//{

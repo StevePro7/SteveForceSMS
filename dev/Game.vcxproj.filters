@@ -247,5 +247,11 @@
     <ClInclude Include="Players\player.h">
       <Filter>Header Files\Players</Filter>
     </ClInclude>
+    <ClInclude Include="Players\playershoot.h">
+      <Filter>Header Files\Players</Filter>
+    </ClInclude>
+    <ClInclude Include="General\powerup.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

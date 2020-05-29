@@ -8,7 +8,25 @@ void InitScroller()
 	scrolltimes = 0;
 }
 
+void AddScrollers( signed int *scr, unsigned char num )
+{
+	scrolls = ( scroll * ) scr;
+	numscrolls = num;
+}
 
+void UpdateScroller()
+{
+	scroll *sc;
+
+	if( disablescroll == 0 )
+	{
+		// The bank
+		changeBank( FIXEDBANKSLOT );
+
+		// Get scroll
+		sc = &scrolls[ scrollact ];
+	}
+}
 
 void updatescrollact()
 {
