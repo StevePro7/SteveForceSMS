@@ -46,12 +46,12 @@ Area                                    Addr        Size        Decimal Bytes (A
      00000266  l__INITIALIZED                  
      00000266  l__INITIALIZER                  
      00000267  l__DATA                         
-     000031D3  l__CODE                         
-     000033D3  s__HOME                         
-     0000354F  s__INITIALIZER                  
+     00003205  l__CODE                         
+     00003405  s__HOME                         
+     00003581  s__INITIALIZER                  
      0000377F  l__BANK15                       
-     000037B5  s__GSINIT                       
-     000037C4  s__GSFINAL                      
+     000037E7  s__GSINIT                       
+     000037F6  s__GSFINAL                      
      00003C2B  l__BANK11                       
      00003F51  l__BANK12                       
      00003F7E  l__BANK9                        
@@ -102,7 +102,7 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_CODE                               00000200    000031D3 =       12755. bytes (REL,CON)
+_CODE                               00000200    00003205 =       12805. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -129,291 +129,292 @@ _CODE                               00000200    000031D3 =       12755. bytes (R
      000004EA  _InitStage                         main
      0000051F  _checkgamepause                    main
      00000557  _UpdateStage                       main
-     000005DA  _PlaySound                         main
-     00000609  _PlayMusic                         main
-     00000668  _UpdatePSG                         main
-     0000068B  _ClearTimeredLabelLine             main
-     000006AB  _RemoveTimeredLabel                main
-     000006FE  _UpdateTimeredLabel                main
-     00000723  _UpdateTimeredLabels               main
-     0000073E  _InitTimeredLabel                  main
-     00000792  _InitTimeredLabels                 main
-     00000798  _getTileAt                         main
-     000007EE  _SetMapLines                       main
-     00000813  _SetStaticEnemies                  main
-     0000082E  _DrawMap                           main
-     000008BB  _InitMap                           main
-     000008F6  _MoveMap                           main
-     000009CA  _InitScroller                      main
-     000009EA  _AddScrollers                      main
-     000009FF  _UpdateScroller                    main
-     00000B56  _updatescrollact                   main
-     00000B61  _UpdateBarrom                      main
-     00000BBB  _DoBarrom                          main
-     00000BC1  _InitBarrom                        main
-     00000BC7  _RemoveExplosion                   main
-     00000C24  _UpdateExplosion                   main
-     00000D23  _InitExplosion                     main
-     00000D71  _UpdateExplosions                  main
-     00000DDF  _InitExplosionSprite               main
+     000005CE  _PlaySound                         main
+     000005FD  _PlayMusic                         main
+     0000065C  _UpdatePSG                         main
+     0000067F  _ClearTimeredLabelLine             main
+     0000069F  _RemoveTimeredLabel                main
+     000006F2  _UpdateTimeredLabel                main
+     00000717  _UpdateTimeredLabels               main
+     00000732  _InitTimeredLabel                  main
+     00000786  _InitTimeredLabels                 main
+     0000078C  _getTileAt                         main
+     000007E2  _SetMapLines                       main
+     00000807  _SetStaticEnemies                  main
+     00000822  _DrawMap                           main
+     000008AF  _InitMap                           main
+     000008EA  _MoveMap                           main
+     000009BE  _InitScroller                      main
+     000009DE  _AddScrollers                      main
+     000009F3  _UpdateScroller                    main
+     00000B4A  _updatescrollact                   main
+     00000B55  _UpdateBarrom                      main
+     00000BAF  _DoBarrom                          main
+     00000BB5  _InitBarrom                        main
+     00000BBB  _RemoveExplosion                   main
+     00000C18  _UpdateExplosion                   main
+     00000D19  _InitExplosion                     main
+     00000D67  _UpdateExplosions                  main
+     00000DD5  _InitExplosionSprite               main
 ASxxxx Linker V03.00 + NoICE + sdld,  page 4.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_CODE                               00000200    000031D3 =       12755. bytes (REL,CON)
+_CODE                               00000200    00003205 =       12805. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00000E04  _InitExplosions                    main
-     00000E12  _InitSpawnedExplosion              main
-     00000E4C  _InitWarning                       main
-     00000E77  _UpdateWarning                     main
-     00000F0F  _UpdateIntroOvni                   main
-     00000F63  _InitIntroSidePlayer               main
-     00000F70  _UpdateIntroSidePlayer             main
-     00001032  _InitIntro3Object                  main
-     00001040  _DrawIntro3Object                  main
-     000010AE  _UpdateIntro3Object1               main
-     000010DE  _UpdateIntro3Object2               main
-     0000110E  _UpdateIntro3Object3               main
-     0000113E  _UpdateIntro3Object                main
-     00001167  _InitStage3Star                    main
-     0000119F  _RemoveEnemy                       main
-     00001262  _UpdateEnemy                       main
-     000012BD  _UpdateEnemies                     main
-     000012E0  _InitEnemy                         main
-     00001399  _InitEnemies                       main
-     0000139F  _InitScripts                       main
-     000013A5  _InitScript                        main
-     000013F2  _RemoveScript                      main
-     0000148F  _UpdateScript                      main
-     000016A1  _UpdateScripts                     main
-     000016C4  _InitMikGamesStage                 main
-     00001741  _InitLogoStage                     main
-     00001858  _UpdateJukeboxInfo                 main
-     00001A04  _InitJukeboxStage                  main
-     00001AAA  _InitIntro1Stage                   main
-     00001AEC  _DoIntro2Scroll                    main
-     00001B57  _InitIntro2Stage                   main
-     00001B99  _InitIntro3Stage                   main
-     00001BDE  _InitIntro4Stage                   main
-     00001BDF  _InitFinishStage                   main
-     00001BE0  _InitIntroScroll                   main
-     00001BEC  _setIntroStageGraphics             main
-     00001C0E  _InitIntroStage                    main
-     00001CBC  _UpdateSelectorMarks               main
-     00001DA4  _InitSelectorStage                 main
-     00001E99  _InitGameoverStage                 main
-     00001E9A  _InitStage5                        main
-     00001F0D  _InitEnemyshootSprites             main
-     00001F20  _UpdateEnemyshoot                  main
-     00001F21  _UpdateEnemyshoots                 main
-     00001F40  _InitEnemyshoots                   main
-     00001F49  _InitPlayershootSprites            main
-     00001F5C  _UpdatePlayershoot                 main
-     00001F5D  _UpdatePlayershoots                main
-     00001F7C  _InitPlayershoots                  main
-     00001F85  _InitPowerupSprites                main
-     00001F98  _InitPowerups                      main
+     00000DFA  _InitExplosions                    main
+     00000E08  _InitSpawnedExplosion              main
+     00000E42  _InitWarning                       main
+     00000E6D  _UpdateWarning                     main
+     00000F05  _UpdateIntroOvni                   main
+     00000F59  _InitIntroSidePlayer               main
+     00000F66  _UpdateIntroSidePlayer             main
+     00001028  _InitIntro3Object                  main
+     00001036  _DrawIntro3Object                  main
+     000010A4  _UpdateIntro3Object1               main
+     000010D4  _UpdateIntro3Object2               main
+     00001104  _UpdateIntro3Object3               main
+     00001134  _UpdateIntro3Object                main
+     0000115D  _InitStage3Star                    main
+     00001195  _RemoveEnemy                       main
+     00001258  _UpdateEnemy                       main
+     000012B3  _UpdateEnemies                     main
+     000012D6  _InitEnemy                         main
+     0000138F  _InitEnemies                       main
+     00001395  _InitScripts                       main
+     0000139B  _InitScript                        main
+     000013E8  _RemoveScript                      main
+     00001485  _UpdateScript                      main
+     00001697  _UpdateScripts                     main
+     000016BA  _InitMikGamesStage                 main
+     00001737  _InitLogoStage                     main
+     0000184E  _UpdateJukeboxInfo                 main
+     000019FA  _InitJukeboxStage                  main
+     00001AA0  _InitIntro1Stage                   main
+     00001AE2  _DoIntro2Scroll                    main
+     00001B4D  _InitIntro2Stage                   main
+     00001B8F  _InitIntro3Stage                   main
+     00001BD4  _InitIntro4Stage                   main
+     00001BD5  _InitFinishStage                   main
+     00001BD6  _InitIntroScroll                   main
+     00001BE2  _setIntroStageGraphics             main
+     00001C04  _InitIntroStage                    main
+     00001CB2  _UpdateSelectorMarks               main
+     00001D9A  _InitSelectorStage                 main
+     00001E8F  _InitGameoverStage                 main
+     00001E90  _InitStage5                        main
+     00001F03  _InitEnemyshootSprites             main
+     00001F16  _UpdateEnemyshoot                  main
+     00001F17  _UpdateEnemyshoots                 main
+     00001F36  _InitEnemyshoots                   main
+     00001F3F  _InitPlayershootSprites            main
+     00001F52  _UpdatePlayershoot                 main
+     00001F53  _UpdatePlayershoots                main
+     00001F72  _InitPlayershoots                  main
+     00001F7B  _InitPowerupSprites                main
+     00001F8E  _InitPowerups                      main
 ASxxxx Linker V03.00 + NoICE + sdld,  page 5.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_CODE                               00000200    000031D3 =       12755. bytes (REL,CON)
+_CODE                               00000200    00003205 =       12805. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00001F9B  _UpdatePowerup                     main
-     00002086  _UpdatePlayerIndicators            main
-     000020AC  _InitPlayer                        main
-     000020C1  _InitPlayerSprite                  main
-     000020D4  _DrawPlayer                        main
-     00002114  _UpdatePlayer                      main
-     0000213A  _InitPlayerConstants               main
-     00002154  _InitStageSprite                   main
-     00002185  _InitStageSprites                  main
-     000021AF  _UpdatePlayStage                   main
-     000021CC  _InitCustomStageData               main
-     000021F2  _InitStageData                     main
-     0000231C  _UpdateStagePassA                  main
-     0000232E  _UpdateStagePassB                  main
-     00002331  _InitPlayStage                     main
-     000023EB  _main                              main
-     00002435  _PSGStop                           PSGlib
-     0000245C  _PSGResume                         PSGlib
-     000024A8  _PSGPlay                           PSGlib
-     000024D5  _PSGCancelLoop                     PSGlib
-     000024DB  _PSGPlayNoRepeat                   PSGlib
-     000024EA  _PSGGetStatus                      PSGlib
-     000024F2  _PSGSilenceChannels                PSGlib
-     00002503  _PSGRestoreVolumes                 PSGlib
-     000025D4  _PSGSetMusicVolumeAttenuation      PSGlib
-     00002699  _PSGSFXStop                        PSGlib
-     00002752  _PSGSFXPlay                        PSGlib
-     0000279F  _PSGSFXCancelLoop                  PSGlib
-     000027A5  _PSGSFXGetStatus                   PSGlib
-     000027AD  _PSGSFXPlayLoop                    PSGlib
-     000027C7  _PSGFrame                          PSGlib
-     000028E0  _PSGSFXFrame                       PSGlib
-     00002966  _devkit_SMS_init                   _sms_manager
-     00002969  _devkit_SMS_displayOn              _sms_manager
-     0000296F  _devkit_SMS_displayOff             _sms_manager
-     00002975  _devkit_SMS_setBGScrollX           _sms_manager
-     00002981  _devkit_SMS_setBGScrollY           _sms_manager
-     0000298D  _devkit_SMS_setBackdropColor       _sms_manager
-     00002999  _devkit_SMS_useFirstHalfTilesfor   _sms_manager
-     0000299E  _devkit_SMS_useFirstHalfTilesfor   _sms_manager
-     000029A3  _devkit_SMS_setSpriteMode          _sms_manager
-     000029AF  _devkit_SMS_mapROMBank             _sms_manager
-     000029B8  _devkit_SMS_VDPturnOnFeature       _sms_manager
-     000029BF  _devkit_SMS_loadTileMap            _sms_manager
-     000029F6  _devkit_SMS_loadPSGaidencompress   _sms_manager
-     00002A0C  _devkit_SMS_loadSTMcompressedTil   _sms_manager
-     00002A2D  _devkit_SMS_setBGPaletteColor      _sms_manager
-     00002A40  _devkit_SMS_setSpritePaletteColo   _sms_manager
-     00002A68  _devkit_SMS_loadBGPalette          _sms_manager
-     00002A6F  _devkit_SMS_loadSpritePalette      _sms_manager
-     00002A76  _devkit_SMS_setNextTileatXY        _sms_manager
+     00001F91  _UpdatePowerup                     main
+     0000207C  _UpdatePlayerIndicators            main
+     000020A2  _InitPlayer                        main
+     000020B7  _InitPlayerSprite                  main
+     000020CA  _DrawPlayer                        main
+     0000210A  _UpdatePlayerState2                main
+     00002124  _UpdatePlayerState1                main
+     00002140  _UpdatePlayer                      main
+     00002169  _InitPlayerConstants               main
+     00002183  _InitStageSprite                   main
+     000021B4  _InitStageSprites                  main
+     000021DE  _UpdatePlayStage                   main
+     000021FB  _InitCustomStageData               main
+     00002221  _InitStageData                     main
+     0000234E  _UpdateStagePassA                  main
+     00002360  _UpdateStagePassB                  main
+     00002363  _InitPlayStage                     main
+     0000241D  _main                              main
+     00002467  _PSGStop                           PSGlib
+     0000248E  _PSGResume                         PSGlib
+     000024DA  _PSGPlay                           PSGlib
+     00002507  _PSGCancelLoop                     PSGlib
+     0000250D  _PSGPlayNoRepeat                   PSGlib
+     0000251C  _PSGGetStatus                      PSGlib
+     00002524  _PSGSilenceChannels                PSGlib
+     00002535  _PSGRestoreVolumes                 PSGlib
+     00002606  _PSGSetMusicVolumeAttenuation      PSGlib
+     000026CB  _PSGSFXStop                        PSGlib
+     00002784  _PSGSFXPlay                        PSGlib
+     000027D1  _PSGSFXCancelLoop                  PSGlib
+     000027D7  _PSGSFXGetStatus                   PSGlib
+     000027DF  _PSGSFXPlayLoop                    PSGlib
+     000027F9  _PSGFrame                          PSGlib
+     00002912  _PSGSFXFrame                       PSGlib
+     00002998  _devkit_SMS_init                   _sms_manager
+     0000299B  _devkit_SMS_displayOn              _sms_manager
+     000029A1  _devkit_SMS_displayOff             _sms_manager
+     000029A7  _devkit_SMS_setBGScrollX           _sms_manager
+     000029B3  _devkit_SMS_setBGScrollY           _sms_manager
+     000029BF  _devkit_SMS_setBackdropColor       _sms_manager
+     000029CB  _devkit_SMS_useFirstHalfTilesfor   _sms_manager
+     000029D0  _devkit_SMS_useFirstHalfTilesfor   _sms_manager
+     000029D5  _devkit_SMS_setSpriteMode          _sms_manager
+     000029E1  _devkit_SMS_mapROMBank             _sms_manager
+     000029EA  _devkit_SMS_VDPturnOnFeature       _sms_manager
+     000029F1  _devkit_SMS_loadTileMap            _sms_manager
+     00002A28  _devkit_SMS_loadPSGaidencompress   _sms_manager
+     00002A3E  _devkit_SMS_loadSTMcompressedTil   _sms_manager
+     00002A5F  _devkit_SMS_setBGPaletteColor      _sms_manager
+     00002A72  _devkit_SMS_setSpritePaletteColo   _sms_manager
+     00002A9A  _devkit_SMS_loadBGPalette          _sms_manager
 ASxxxx Linker V03.00 + NoICE + sdld,  page 6.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_CODE                               00000200    000031D3 =       12755. bytes (REL,CON)
+_CODE                               00000200    00003205 =       12805. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00002A9A  _devkit_SMS_setTile                _sms_manager
-     00002AA8  _devkit_SMS_addSprite              _sms_manager
-     00002AC3  _devkit_SMS_initSprites            _sms_manager
-     00002AC6  _devkit_SMS_finalizeSprites        _sms_manager
-     00002AC9  _devkit_SMS_waitForVBlank          _sms_manager
-     00002ACC  _devkit_SMS_copySpritestoSAT       _sms_manager
-     00002ACF  _devkit_UNSAFE_SMS_copySpritesto   _sms_manager
-     00002AD2  _devkit_SMS_queryPauseRequested    _sms_manager
-     00002AD5  _devkit_SMS_resetPauseRequest      _sms_manager
-     00002AD8  _devkit_SMS_getKeysStatus          _sms_manager
-     00002ADB  _devkit_SMS_getKeysPressed         _sms_manager
-     00002ADE  _devkit_SMS_getKeysHeld            _sms_manager
-     00002AE1  _devkit_SMS_getKeysReleased        _sms_manager
-     00002AE4  _devkit_PORT_A_KEY_UP              _sms_manager
-     00002AE8  _devkit_PORT_A_KEY_DOWN            _sms_manager
-     00002AEC  _devkit_PORT_A_KEY_LEFT            _sms_manager
-     00002AF0  _devkit_PORT_A_KEY_RIGHT           _sms_manager
-     00002AF4  _devkit_PORT_A_KEY_1               _sms_manager
-     00002AF8  _devkit_PORT_A_KEY_2               _sms_manager
-     00002AFC  _devkit_SMS_VRAMmemcpy             _sms_manager
-     00002B1B  _devkit_SMS_VRAMmemcpy_brief       _sms_manager
-     00002B39  _devkit_SMS_VRAMmemset             _sms_manager
-     00002B57  _devkit_SMS_VRAMmemsetW            _sms_manager
-     00002B76  _devkit_SMS_setLineInterruptHand   _sms_manager
-     00002B80  _devkit_SMS_setLineCounter         _sms_manager
-     00002B8C  _devkit_SMS_enableLineInterrupt    _sms_manager
-     00002B92  _devkit_SMS_disableLineInterrupt   _sms_manager
-     00002B98  _devkit_VDPFEATURE_HIDEFIRSTCOL    _sms_manager
-     00002B9C  _devkit_VDPFEATURE_LEFTCOLBLANK    _sms_manager
-     00002BA0  _devkit_SPRITEMODE_NORMAL          _sms_manager
-     00002BE4  _devkit_PSGPlay                    _snd_manager
-     00002BEE  _devkit_PSGCancelLoop              _snd_manager
-     00002BF1  _devkit_PSGPlayNoRepeat            _snd_manager
-     00002BFB  _devkit_PSGStop                    _snd_manager
-     00002BFE  _devkit_PSGResume                  _snd_manager
-     00002C01  _devkit_PSGGetStatus               _snd_manager
-     00002C04  _devkit_PSGSetMusicVolumeAttenua   _snd_manager
-     00002C10  _devkit_PSGSFXPlay                 _snd_manager
-     00002C25  _devkit_PSGSFXPlayLoop             _snd_manager
-     00002C3A  _devkit_PSGSFXCancelLoop           _snd_manager
-     00002C3D  _devkit_PSGSFXStop                 _snd_manager
-     00002C40  _devkit_PSGSFXGetStatus            _snd_manager
-     00002C43  _devkit_PSGSilenceChannels         _snd_manager
-     00002C46  _devkit_PSGRestoreVolumes          _snd_manager
-     00002C49  _devkit_PSGFrame                   _snd_manager
-     00002C4C  _devkit_PSGSFXFrame                _snd_manager
-     00002C4F  _devkit_SFX_CHANNEL2               _snd_manager
-     00002C52  _devkit_SFX_CHANNEL3               _snd_manager
-     00002C55  _devkit_SFX_CHANNELS2AND3          _snd_manager
-     00002C58  __divuint                          
-     00002C60  __divuchar                         
+     00002AA1  _devkit_SMS_loadSpritePalette      _sms_manager
+     00002AA8  _devkit_SMS_setNextTileatXY        _sms_manager
+     00002ACC  _devkit_SMS_setTile                _sms_manager
+     00002ADA  _devkit_SMS_addSprite              _sms_manager
+     00002AF5  _devkit_SMS_initSprites            _sms_manager
+     00002AF8  _devkit_SMS_finalizeSprites        _sms_manager
+     00002AFB  _devkit_SMS_waitForVBlank          _sms_manager
+     00002AFE  _devkit_SMS_copySpritestoSAT       _sms_manager
+     00002B01  _devkit_UNSAFE_SMS_copySpritesto   _sms_manager
+     00002B04  _devkit_SMS_queryPauseRequested    _sms_manager
+     00002B07  _devkit_SMS_resetPauseRequest      _sms_manager
+     00002B0A  _devkit_SMS_getKeysStatus          _sms_manager
+     00002B0D  _devkit_SMS_getKeysPressed         _sms_manager
+     00002B10  _devkit_SMS_getKeysHeld            _sms_manager
+     00002B13  _devkit_SMS_getKeysReleased        _sms_manager
+     00002B16  _devkit_PORT_A_KEY_UP              _sms_manager
+     00002B1A  _devkit_PORT_A_KEY_DOWN            _sms_manager
+     00002B1E  _devkit_PORT_A_KEY_LEFT            _sms_manager
+     00002B22  _devkit_PORT_A_KEY_RIGHT           _sms_manager
+     00002B26  _devkit_PORT_A_KEY_1               _sms_manager
+     00002B2A  _devkit_PORT_A_KEY_2               _sms_manager
+     00002B2E  _devkit_SMS_VRAMmemcpy             _sms_manager
+     00002B4D  _devkit_SMS_VRAMmemcpy_brief       _sms_manager
+     00002B6B  _devkit_SMS_VRAMmemset             _sms_manager
+     00002B89  _devkit_SMS_VRAMmemsetW            _sms_manager
+     00002BA8  _devkit_SMS_setLineInterruptHand   _sms_manager
+     00002BB2  _devkit_SMS_setLineCounter         _sms_manager
+     00002BBE  _devkit_SMS_enableLineInterrupt    _sms_manager
+     00002BC4  _devkit_SMS_disableLineInterrupt   _sms_manager
+     00002BCA  _devkit_VDPFEATURE_HIDEFIRSTCOL    _sms_manager
+     00002BCE  _devkit_VDPFEATURE_LEFTCOLBLANK    _sms_manager
+     00002BD2  _devkit_SPRITEMODE_NORMAL          _sms_manager
+     00002C16  _devkit_PSGPlay                    _snd_manager
+     00002C20  _devkit_PSGCancelLoop              _snd_manager
+     00002C23  _devkit_PSGPlayNoRepeat            _snd_manager
+     00002C2D  _devkit_PSGStop                    _snd_manager
+     00002C30  _devkit_PSGResume                  _snd_manager
+     00002C33  _devkit_PSGGetStatus               _snd_manager
+     00002C36  _devkit_PSGSetMusicVolumeAttenua   _snd_manager
+     00002C42  _devkit_PSGSFXPlay                 _snd_manager
+     00002C57  _devkit_PSGSFXPlayLoop             _snd_manager
+     00002C6C  _devkit_PSGSFXCancelLoop           _snd_manager
+     00002C6F  _devkit_PSGSFXStop                 _snd_manager
+     00002C72  _devkit_PSGSFXGetStatus            _snd_manager
+     00002C75  _devkit_PSGSilenceChannels         _snd_manager
+     00002C78  _devkit_PSGRestoreVolumes          _snd_manager
+     00002C7B  _devkit_PSGFrame                   _snd_manager
+     00002C7E  _devkit_PSGSFXFrame                _snd_manager
+     00002C81  _devkit_SFX_CHANNEL2               _snd_manager
+     00002C84  _devkit_SFX_CHANNEL3               _snd_manager
+     00002C87  _devkit_SFX_CHANNELS2AND3          _snd_manager
 ASxxxx Linker V03.00 + NoICE + sdld,  page 7.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_CODE                               00000200    000031D3 =       12755. bytes (REL,CON)
+_CODE                               00000200    00003205 =       12805. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00002C67  __divu8                            
-     00002C6A  __divu16                           
-     00002C99  _UNSAFE_SMS_copySpritestoSAT       SMSlib_UNSAFE
-     00002CB1  _UNSAFE_SMS_VRAMmemcpy32           SMSlib_UNSAFE
-     00002CCE  _UNSAFE_SMS_VRAMmemcpy64           SMSlib_UNSAFE
-     00002CEB  _UNSAFE_SMS_VRAMmemcpy128          SMSlib_UNSAFE
-     00002D08  _SMS_init                          SMSlib
-     00002D5C  _VDPReg_init                       SMSlib
-     00002D67  _SMS_VDPType                       SMSlib
-     00002D6F  _SMS_VDPturnOnFeature              SMSlib
-     00002D86  _SMS_VDPturnOffFeature             SMSlib
-     00002D9F  _SMS_setBGScrollX                  SMSlib
-     00002DA9  _SMS_setBGScrollY                  SMSlib
-     00002DB3  _SMS_setBackdropColor              SMSlib
-     00002DBD  _SMS_useFirstHalfTilesforSprites   SMSlib
-     00002DD1  _SMS_setSpriteMode                 SMSlib
-     00002E16  _SMS_setBGPaletteColor             SMSlib
-     00002E2A  _SMS_setSpritePaletteColor         SMSlib
-     00002E3E  _SMS_loadBGPalette                 SMSlib
-     00002E52  _SMS_loadSpritePalette             SMSlib
-     00002E66  _SMS_setColor                      SMSlib
-     00002E6A  _SMS_waitForVBlank                 SMSlib
-     00002E77  _SMS_getKeysStatus                 SMSlib
-     00002E7B  _SMS_getKeysPressed                SMSlib
-     00002E98  _SMS_getKeysHeld                   SMSlib
-     00002EAF  _SMS_getKeysReleased               SMSlib
-     00002ECC  _SMS_queryPauseRequested           SMSlib
-     00002ED4  _SMS_resetPauseRequest             SMSlib
-     00002EDA  _SMS_setLineInterruptHandler       SMSlib
-     00002EEB  _SMS_setLineCounter                SMSlib
-     00002EFA  _SMS_getVCount                     SMSlib
-     00002EFE  _SMS_getHCount                     SMSlib
-     00002F02  _SMS_isr                           SMSlib
-     00002F38  _SMS_nmi_isr                       SMSlib
-     00002F4B  _SMS_VRAMmemset                    SMSlib_VRAMmemset
-     00002F70  _SMS_VRAMmemsetW                   SMSlib_VRAMmemset
-     00002FA0  _SMS_initSprites                   SMSlib_sprite
-     00002FA6  _SMS_addSprite                     SMSlib_sprite
-     00002FD9  _SMS_finalizeSprites               SMSlib_sprite
-     00002FEB  _SMS_copySpritestoSAT              SMSlib_sprite
-     00003014  __moduchar                         
-     00003020  __moduint                          
-     0000302B  _SMS_VRAMmemcpy                    SMSlib_VRAMmemcpy
-     0000305A  _SMS_VRAMmemcpy_brief              SMSlib_VRAMmemcpy
-     0000307C  _SMS_loadSTMcompressedTileMapAre   SMSlib_STMcomp
-     0000325D  ___sdcc_call_hl                    
-     0000325E  _SMS_loadPSGaidencompressedTiles   SMSlib_PSGaiden
-     0000333F  _strlen                            
-     0000334E  ___sdcc_enter_ix                   
-     00003358  __modschar                         
-     00003365  __modsint                          
+     00002C8A  __divuint                          
+     00002C92  __divuchar                         
+     00002C99  __divu8                            
+     00002C9C  __divu16                           
+     00002CCB  _UNSAFE_SMS_copySpritestoSAT       SMSlib_UNSAFE
+     00002CE3  _UNSAFE_SMS_VRAMmemcpy32           SMSlib_UNSAFE
+     00002D00  _UNSAFE_SMS_VRAMmemcpy64           SMSlib_UNSAFE
+     00002D1D  _UNSAFE_SMS_VRAMmemcpy128          SMSlib_UNSAFE
+     00002D3A  _SMS_init                          SMSlib
+     00002D8E  _VDPReg_init                       SMSlib
+     00002D99  _SMS_VDPType                       SMSlib
+     00002DA1  _SMS_VDPturnOnFeature              SMSlib
+     00002DB8  _SMS_VDPturnOffFeature             SMSlib
+     00002DD1  _SMS_setBGScrollX                  SMSlib
+     00002DDB  _SMS_setBGScrollY                  SMSlib
+     00002DE5  _SMS_setBackdropColor              SMSlib
+     00002DEF  _SMS_useFirstHalfTilesforSprites   SMSlib
+     00002E03  _SMS_setSpriteMode                 SMSlib
+     00002E48  _SMS_setBGPaletteColor             SMSlib
+     00002E5C  _SMS_setSpritePaletteColor         SMSlib
+     00002E70  _SMS_loadBGPalette                 SMSlib
+     00002E84  _SMS_loadSpritePalette             SMSlib
+     00002E98  _SMS_setColor                      SMSlib
+     00002E9C  _SMS_waitForVBlank                 SMSlib
+     00002EA9  _SMS_getKeysStatus                 SMSlib
+     00002EAD  _SMS_getKeysPressed                SMSlib
+     00002ECA  _SMS_getKeysHeld                   SMSlib
+     00002EE1  _SMS_getKeysReleased               SMSlib
+     00002EFE  _SMS_queryPauseRequested           SMSlib
+     00002F06  _SMS_resetPauseRequest             SMSlib
+     00002F0C  _SMS_setLineInterruptHandler       SMSlib
+     00002F1D  _SMS_setLineCounter                SMSlib
+     00002F2C  _SMS_getVCount                     SMSlib
+     00002F30  _SMS_getHCount                     SMSlib
+     00002F34  _SMS_isr                           SMSlib
+     00002F6A  _SMS_nmi_isr                       SMSlib
+     00002F7D  _SMS_VRAMmemset                    SMSlib_VRAMmemset
+     00002FA2  _SMS_VRAMmemsetW                   SMSlib_VRAMmemset
+     00002FD2  _SMS_initSprites                   SMSlib_sprite
+     00002FD8  _SMS_addSprite                     SMSlib_sprite
+     0000300B  _SMS_finalizeSprites               SMSlib_sprite
+     0000301D  _SMS_copySpritestoSAT              SMSlib_sprite
+     00003046  __moduchar                         
+     00003052  __moduint                          
+     0000305D  _SMS_VRAMmemcpy                    SMSlib_VRAMmemcpy
+     0000308C  _SMS_VRAMmemcpy_brief              SMSlib_VRAMmemcpy
+     000030AE  _SMS_loadSTMcompressedTileMapAre   SMSlib_STMcomp
+     0000328F  ___sdcc_call_hl                    
+     00003290  _SMS_loadPSGaidencompressedTiles   SMSlib_PSGaiden
+     00003371  _strlen                            
+     00003380  ___sdcc_enter_ix                   
 ASxxxx Linker V03.00 + NoICE + sdld,  page 8.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_CODE                               00000200    000031D3 =       12755. bytes (REL,CON)
+_CODE                               00000200    00003205 =       12805. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     00003371  __divsint                          
-     0000337A  __divschar                         
-     00003381  __div8                             
-     00003385  __div_signexte                     
-     00003389  __div16                            
-     000033AF  __get_remainder                    
-     000033B9  __mulint                           
-     000033BF  __mul16                            
-
+     0000338A  __modschar                         
+     00003397  __modsint                          
+     000033A3  __divsint                          
+     000033AC  __divschar                         
+     000033B3  __div8                             
+     000033B7  __div_signexte                     
+     000033BB  __div16                            
+     000033E1  __get_remainder                    
+     000033EB  __mulint                           
+     000033F1  __mul16                            
 ASxxxx Linker V03.00 + NoICE + sdld,  page 9.
 Hexadecimal  [32-Bits]
 
@@ -482,18 +483,18 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_HOME                               000033D3    0000017C =         380. bytes (REL,CON)
+_HOME                               00003405    0000017C =         380. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     000033D3  __mullong                          _mullong
+     00003405  __mullong                          _mullong
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 16.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_INITIALIZER                        0000354F    00000266 =         614. bytes (REL,CON)
+_INITIALIZER                        00003581    00000266 =         614. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
@@ -502,18 +503,18 @@ Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_GSINIT                             000037B5    0000000F =          15. bytes (REL,CON)
+_GSINIT                             000037E7    0000000F =          15. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------
-     000037B5  gsinit                             crt0
+     000037E7  gsinit                             crt0
 
 ASxxxx Linker V03.00 + NoICE + sdld,  page 18.
 Hexadecimal  [32-Bits]
 
 Area                                    Addr        Size        Decimal Bytes (Attributes)
 --------------------------------        ----        ----        ------- ----- ------------
-_GSFINAL                            000037C4    00000001 =           1. bytes (REL,CON)
+_GSFINAL                            000037F6    00000001 =           1. bytes (REL,CON)
 
       Value  Global                              Global Defined In Module
       -----  --------------------------------   ------------------------

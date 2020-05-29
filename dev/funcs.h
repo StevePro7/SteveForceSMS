@@ -292,7 +292,7 @@ void UpdateStage()
 	sprite164anim = ( ( stageframe >> 3 ) % 4 ) << 2;
 	if( sprite164anim == 12 )sprite164anim = 4;
 
-	// Finally the most simple... better
+	// Finally the most simple... 
 	if( stageframe2mod == 0 )
 	{
 		// Wait

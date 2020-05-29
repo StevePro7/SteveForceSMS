@@ -34,6 +34,15 @@ void DrawPlayer()
 	devkit_SMS_addSprite( playerx + 4, playery + 16, PLAYERBASE + 12 + sprite82anim );
 }
 
+void UpdatePlayerState2()
+{
+	if( playercounter > 64 )playertype = 3;
+//	CheckShootPlayer();
+//	MovePlayer();
+	// Blitting!!!
+	if( ( playercounter >> 1 ) % 2 == 0 )DrawPlayer();
+}
+
 void UpdatePlayerState1()
 {
 	playery--;
@@ -56,7 +65,10 @@ void UpdatePlayer()
 
 	// State
 	changeBank( FIXEDBANKSLOT );
-	( *( playerupdatefunctions[ playertype ] ) )( );
+	if( 0 != playerupdatefunctions[ playertype ] )
+	{
+		( *( playerupdatefunctions[ playertype ] ) )( );
+	}
 }
 
 void InitPlayerConstants()
