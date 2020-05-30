@@ -1,7 +1,7 @@
 // warning 126: unreachable code
 #ifdef _CONSOLE
 #else
-	#pragma disable_warning 126
+#pragma disable_warning 126
 #endif
 
 void RemovePlayer()
@@ -22,6 +22,7 @@ void RemovePlayer()
 	KillEnemyshoots();
 	KillEnemies( 0 );
 }
+
 
 unsigned char CheckPlayerEnemyCollision()
 {
@@ -133,7 +134,6 @@ void MovePlayer()
 			playery += playerspeed;
 }
 
-// TODO stevepro write this so can press both fire buttons and shoot both ways!!
 // Check if player can shoot
 void CheckShootPlayer()
 {
@@ -243,8 +243,8 @@ void UpdatePlayerState3()
 void UpdatePlayerState2()
 {
 	if( playercounter > 64 )playertype = 3;
-//	CheckShootPlayer();
-//	MovePlayer();
+	CheckShootPlayer();
+	MovePlayer();
 	// Blitting!!!
 	if( ( playercounter >> 1 ) % 2 == 0 )DrawPlayer();
 }
@@ -272,9 +272,7 @@ void UpdatePlayer()
 	// State
 	changeBank( FIXEDBANKSLOT );
 	if( 0 != playerupdatefunctions[ playertype ] )
-	{
 		( *( playerupdatefunctions[ playertype ] ) )( );
-	}
 }
 
 void InitPlayerConstants()

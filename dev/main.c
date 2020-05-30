@@ -30,10 +30,7 @@ void main()
 		numplayers = gamestock;
 
 		// Selector
-		//InitSelectorStage();
-
-		// stevepro
-		//basestage = 0;
+		InitSelectorStage();
 
 		// Stage looping
 		while( stagenum < 10 )
