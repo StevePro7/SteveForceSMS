@@ -96,7 +96,7 @@
 #include "General\selectorstage.h"		// DONE
 #include "General\gameoverstage.h"		// DONE
 
-//#include "Stages\stage1.h"
+#include "Stages\stage1.h"				// DONE
 //#include "Stages\stage2.h"
 //#include "Stages\stage3.h"
 //#include "Stages\stage4.h"

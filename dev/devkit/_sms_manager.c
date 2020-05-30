@@ -115,11 +115,23 @@ void devkit_SMS_waitForVBlank()
 }
 void devkit_SMS_copySpritestoSAT()
 {
-	UNSAFE_SMS_copySpritestoSAT();
+	SMS_copySpritestoSAT();
 }
 void devkit_UNSAFE_SMS_copySpritestoSAT()
 {
 	UNSAFE_SMS_copySpritestoSAT();
+}
+void devkit_UNSAFE_SMS_VRAMmemcpy32( unsigned int dst, void *src )
+{
+	UNSAFE_SMS_VRAMmemcpy32( dst, src );
+}
+void devkit_UNSAFE_SMS_VRAMmemcpy64( unsigned int dst, void *src )
+{
+	UNSAFE_SMS_VRAMmemcpy64( dst, src );
+}
+void devkit_UNSAFE_SMS_VRAMmemcpy128( unsigned int dst, void *src )
+{
+	UNSAFE_SMS_VRAMmemcpy128( dst, src );
 }
 
 unsigned char devkit_SMS_queryPauseRequested()

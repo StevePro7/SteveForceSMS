@@ -358,5 +358,8 @@
     <ClInclude Include="Intros\introstar.h">
       <Filter>Header Files\Intros</Filter>
     </ClInclude>
+    <ClInclude Include="Stages\stage1.h">
+      <Filter>Header Files\Stages</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

@@ -89,6 +89,7 @@
     <ClInclude Include="Spaces\spaceasteroid.h" />
     <ClInclude Include="Spaces\spaceshooter.h" />
     <ClInclude Include="Spaces\spacestation.h" />
+    <ClInclude Include="Stages\stage1.h" />
     <ClInclude Include="Stages\stage3star.h" />
     <ClInclude Include="Stages\stage5.h" />
     <ClInclude Include="vars.h" />

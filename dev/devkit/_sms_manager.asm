@@ -13,6 +13,9 @@
 	.globl ___SMS__SDSC_name
 	.globl ___SMS__SDSC_author
 	.globl ___SMS__SEGA_signature
+	.globl _UNSAFE_SMS_VRAMmemcpy128
+	.globl _UNSAFE_SMS_VRAMmemcpy64
+	.globl _UNSAFE_SMS_VRAMmemcpy32
 	.globl _UNSAFE_SMS_copySpritestoSAT
 	.globl _SMS_VRAMmemsetW
 	.globl _SMS_VRAMmemset
@@ -30,6 +33,7 @@
 	.globl _SMS_loadBGPalette
 	.globl _SMS_setSpritePaletteColor
 	.globl _SMS_setBGPaletteColor
+	.globl _SMS_copySpritestoSAT
 	.globl _SMS_finalizeSprites
 	.globl _SMS_addSprite
 	.globl _SMS_initSprites
@@ -75,6 +79,9 @@
 	.globl _devkit_SMS_waitForVBlank
 	.globl _devkit_SMS_copySpritestoSAT
 	.globl _devkit_UNSAFE_SMS_copySpritestoSAT
+	.globl _devkit_UNSAFE_SMS_VRAMmemcpy32
+	.globl _devkit_UNSAFE_SMS_VRAMmemcpy64
+	.globl _devkit_UNSAFE_SMS_VRAMmemcpy128
 	.globl _devkit_SMS_queryPauseRequested
 	.globl _devkit_SMS_resetPauseRequest
 	.globl _devkit_SMS_getKeysStatus
@@ -495,8 +502,8 @@ _devkit_SMS_waitForVBlank::
 ; Function devkit_SMS_copySpritestoSAT
 ; ---------------------------------
 _devkit_SMS_copySpritestoSAT::
-;_sms_manager.c:118: UNSAFE_SMS_copySpritestoSAT();
-	jp  _UNSAFE_SMS_copySpritestoSAT
+;_sms_manager.c:118: SMS_copySpritestoSAT();
+	jp  _SMS_copySpritestoSAT
 ;_sms_manager.c:120: void devkit_UNSAFE_SMS_copySpritestoSAT()
 ;	---------------------------------
 ; Function devkit_UNSAFE_SMS_copySpritestoSAT
@@ -504,102 +511,168 @@ _devkit_SMS_copySpritestoSAT::
 _devkit_UNSAFE_SMS_copySpritestoSAT::
 ;_sms_manager.c:122: UNSAFE_SMS_copySpritestoSAT();
 	jp  _UNSAFE_SMS_copySpritestoSAT
-;_sms_manager.c:125: unsigned char devkit_SMS_queryPauseRequested()
+;_sms_manager.c:124: void devkit_UNSAFE_SMS_VRAMmemcpy32( unsigned int dst, void *src )
+;	---------------------------------
+; Function devkit_UNSAFE_SMS_VRAMmemcpy32
+; ---------------------------------
+_devkit_UNSAFE_SMS_VRAMmemcpy32::
+;_sms_manager.c:126: UNSAFE_SMS_VRAMmemcpy32( dst, src );
+	ld	hl, #4
+	add	hl, sp
+	ld	c, (hl)
+	inc	hl
+	ld	b, (hl)
+	push	bc
+	ld	hl, #4
+	add	hl, sp
+	ld	c, (hl)
+	inc	hl
+	ld	b, (hl)
+	push	bc
+	call	_UNSAFE_SMS_VRAMmemcpy32
+	pop	af
+	pop	af
+	ret
+;_sms_manager.c:128: void devkit_UNSAFE_SMS_VRAMmemcpy64( unsigned int dst, void *src )
+;	---------------------------------
+; Function devkit_UNSAFE_SMS_VRAMmemcpy64
+; ---------------------------------
+_devkit_UNSAFE_SMS_VRAMmemcpy64::
+;_sms_manager.c:130: UNSAFE_SMS_VRAMmemcpy64( dst, src );
+	ld	hl, #4
+	add	hl, sp
+	ld	c, (hl)
+	inc	hl
+	ld	b, (hl)
+	push	bc
+	ld	hl, #4
+	add	hl, sp
+	ld	c, (hl)
+	inc	hl
+	ld	b, (hl)
+	push	bc
+	call	_UNSAFE_SMS_VRAMmemcpy64
+	pop	af
+	pop	af
+	ret
+;_sms_manager.c:132: void devkit_UNSAFE_SMS_VRAMmemcpy128( unsigned int dst, void *src )
+;	---------------------------------
+; Function devkit_UNSAFE_SMS_VRAMmemcpy128
+; ---------------------------------
+_devkit_UNSAFE_SMS_VRAMmemcpy128::
+;_sms_manager.c:134: UNSAFE_SMS_VRAMmemcpy128( dst, src );
+	ld	hl, #4
+	add	hl, sp
+	ld	c, (hl)
+	inc	hl
+	ld	b, (hl)
+	push	bc
+	ld	hl, #4
+	add	hl, sp
+	ld	c, (hl)
+	inc	hl
+	ld	b, (hl)
+	push	bc
+	call	_UNSAFE_SMS_VRAMmemcpy128
+	pop	af
+	pop	af
+	ret
+;_sms_manager.c:137: unsigned char devkit_SMS_queryPauseRequested()
 ;	---------------------------------
 ; Function devkit_SMS_queryPauseRequested
 ; ---------------------------------
 _devkit_SMS_queryPauseRequested::
-;_sms_manager.c:127: return SMS_queryPauseRequested();
+;_sms_manager.c:139: return SMS_queryPauseRequested();
 	jp  _SMS_queryPauseRequested
-;_sms_manager.c:129: void devkit_SMS_resetPauseRequest()
+;_sms_manager.c:141: void devkit_SMS_resetPauseRequest()
 ;	---------------------------------
 ; Function devkit_SMS_resetPauseRequest
 ; ---------------------------------
 _devkit_SMS_resetPauseRequest::
-;_sms_manager.c:131: SMS_resetPauseRequest();
+;_sms_manager.c:143: SMS_resetPauseRequest();
 	jp  _SMS_resetPauseRequest
-;_sms_manager.c:135: unsigned int devkit_SMS_getKeysStatus()
+;_sms_manager.c:147: unsigned int devkit_SMS_getKeysStatus()
 ;	---------------------------------
 ; Function devkit_SMS_getKeysStatus
 ; ---------------------------------
 _devkit_SMS_getKeysStatus::
-;_sms_manager.c:137: return SMS_getKeysStatus();
+;_sms_manager.c:149: return SMS_getKeysStatus();
 	jp  _SMS_getKeysStatus
-;_sms_manager.c:139: unsigned int devkit_SMS_getKeysPressed()
+;_sms_manager.c:151: unsigned int devkit_SMS_getKeysPressed()
 ;	---------------------------------
 ; Function devkit_SMS_getKeysPressed
 ; ---------------------------------
 _devkit_SMS_getKeysPressed::
-;_sms_manager.c:141: return SMS_getKeysPressed();
+;_sms_manager.c:153: return SMS_getKeysPressed();
 	jp  _SMS_getKeysPressed
-;_sms_manager.c:143: unsigned int devkit_SMS_getKeysHeld()
+;_sms_manager.c:155: unsigned int devkit_SMS_getKeysHeld()
 ;	---------------------------------
 ; Function devkit_SMS_getKeysHeld
 ; ---------------------------------
 _devkit_SMS_getKeysHeld::
-;_sms_manager.c:145: return SMS_getKeysHeld();
+;_sms_manager.c:157: return SMS_getKeysHeld();
 	jp  _SMS_getKeysHeld
-;_sms_manager.c:147: unsigned int devkit_SMS_getKeysReleased()
+;_sms_manager.c:159: unsigned int devkit_SMS_getKeysReleased()
 ;	---------------------------------
 ; Function devkit_SMS_getKeysReleased
 ; ---------------------------------
 _devkit_SMS_getKeysReleased::
-;_sms_manager.c:149: return SMS_getKeysReleased();
+;_sms_manager.c:161: return SMS_getKeysReleased();
 	jp  _SMS_getKeysReleased
-;_sms_manager.c:152: unsigned int devkit_PORT_A_KEY_UP()
+;_sms_manager.c:164: unsigned int devkit_PORT_A_KEY_UP()
 ;	---------------------------------
 ; Function devkit_PORT_A_KEY_UP
 ; ---------------------------------
 _devkit_PORT_A_KEY_UP::
-;_sms_manager.c:154: return PORT_A_KEY_UP;
+;_sms_manager.c:166: return PORT_A_KEY_UP;
 	ld	hl, #0x0001
 	ret
-;_sms_manager.c:156: unsigned int devkit_PORT_A_KEY_DOWN()
+;_sms_manager.c:168: unsigned int devkit_PORT_A_KEY_DOWN()
 ;	---------------------------------
 ; Function devkit_PORT_A_KEY_DOWN
 ; ---------------------------------
 _devkit_PORT_A_KEY_DOWN::
-;_sms_manager.c:158: return PORT_A_KEY_DOWN;
+;_sms_manager.c:170: return PORT_A_KEY_DOWN;
 	ld	hl, #0x0002
 	ret
-;_sms_manager.c:160: unsigned int devkit_PORT_A_KEY_LEFT()
+;_sms_manager.c:172: unsigned int devkit_PORT_A_KEY_LEFT()
 ;	---------------------------------
 ; Function devkit_PORT_A_KEY_LEFT
 ; ---------------------------------
 _devkit_PORT_A_KEY_LEFT::
-;_sms_manager.c:162: return PORT_A_KEY_LEFT;
+;_sms_manager.c:174: return PORT_A_KEY_LEFT;
 	ld	hl, #0x0004
 	ret
-;_sms_manager.c:164: unsigned int devkit_PORT_A_KEY_RIGHT()
+;_sms_manager.c:176: unsigned int devkit_PORT_A_KEY_RIGHT()
 ;	---------------------------------
 ; Function devkit_PORT_A_KEY_RIGHT
 ; ---------------------------------
 _devkit_PORT_A_KEY_RIGHT::
-;_sms_manager.c:166: return PORT_A_KEY_RIGHT;
+;_sms_manager.c:178: return PORT_A_KEY_RIGHT;
 	ld	hl, #0x0008
 	ret
-;_sms_manager.c:168: unsigned int devkit_PORT_A_KEY_1()
+;_sms_manager.c:180: unsigned int devkit_PORT_A_KEY_1()
 ;	---------------------------------
 ; Function devkit_PORT_A_KEY_1
 ; ---------------------------------
 _devkit_PORT_A_KEY_1::
-;_sms_manager.c:170: return PORT_A_KEY_1;
+;_sms_manager.c:182: return PORT_A_KEY_1;
 	ld	hl, #0x0010
 	ret
-;_sms_manager.c:172: unsigned int devkit_PORT_A_KEY_2()
+;_sms_manager.c:184: unsigned int devkit_PORT_A_KEY_2()
 ;	---------------------------------
 ; Function devkit_PORT_A_KEY_2
 ; ---------------------------------
 _devkit_PORT_A_KEY_2::
-;_sms_manager.c:174: return PORT_A_KEY_2;
+;_sms_manager.c:186: return PORT_A_KEY_2;
 	ld	hl, #0x0020
 	ret
-;_sms_manager.c:178: void devkit_SMS_VRAMmemcpy( unsigned int dst, void *src, unsigned int size )
+;_sms_manager.c:190: void devkit_SMS_VRAMmemcpy( unsigned int dst, void *src, unsigned int size )
 ;	---------------------------------
 ; Function devkit_SMS_VRAMmemcpy
 ; ---------------------------------
 _devkit_SMS_VRAMmemcpy::
-;_sms_manager.c:180: SMS_VRAMmemcpy( dst, src, size );
+;_sms_manager.c:192: SMS_VRAMmemcpy( dst, src, size );
 	ld	hl, #6
 	add	hl, sp
 	ld	c, (hl)
@@ -623,12 +696,12 @@ _devkit_SMS_VRAMmemcpy::
 	pop	af
 	pop	af
 	ret
-;_sms_manager.c:182: void devkit_SMS_VRAMmemcpy_brief( unsigned int dst, void *src, unsigned char size )
+;_sms_manager.c:194: void devkit_SMS_VRAMmemcpy_brief( unsigned int dst, void *src, unsigned char size )
 ;	---------------------------------
 ; Function devkit_SMS_VRAMmemcpy_brief
 ; ---------------------------------
 _devkit_SMS_VRAMmemcpy_brief::
-;_sms_manager.c:184: SMS_VRAMmemcpy_brief( dst, src, size );
+;_sms_manager.c:196: SMS_VRAMmemcpy_brief( dst, src, size );
 	ld	hl, #6+0
 	add	hl, sp
 	ld	a, (hl)
@@ -651,12 +724,12 @@ _devkit_SMS_VRAMmemcpy_brief::
 	pop	af
 	inc	sp
 	ret
-;_sms_manager.c:186: void devkit_SMS_VRAMmemset( unsigned int dst, unsigned char value, unsigned int size )
+;_sms_manager.c:198: void devkit_SMS_VRAMmemset( unsigned int dst, unsigned char value, unsigned int size )
 ;	---------------------------------
 ; Function devkit_SMS_VRAMmemset
 ; ---------------------------------
 _devkit_SMS_VRAMmemset::
-;_sms_manager.c:188: SMS_VRAMmemset( dst, value, size );
+;_sms_manager.c:200: SMS_VRAMmemset( dst, value, size );
 	ld	hl, #5
 	add	hl, sp
 	ld	c, (hl)
@@ -679,12 +752,12 @@ _devkit_SMS_VRAMmemset::
 	pop	af
 	inc	sp
 	ret
-;_sms_manager.c:190: void devkit_SMS_VRAMmemsetW( unsigned int dst, unsigned int value, unsigned int size )
+;_sms_manager.c:202: void devkit_SMS_VRAMmemsetW( unsigned int dst, unsigned int value, unsigned int size )
 ;	---------------------------------
 ; Function devkit_SMS_VRAMmemsetW
 ; ---------------------------------
 _devkit_SMS_VRAMmemsetW::
-;_sms_manager.c:192: SMS_VRAMmemsetW( dst, value, size );
+;_sms_manager.c:204: SMS_VRAMmemsetW( dst, value, size );
 	ld	hl, #6
 	add	hl, sp
 	ld	c, (hl)
@@ -708,12 +781,12 @@ _devkit_SMS_VRAMmemsetW::
 	pop	af
 	pop	af
 	ret
-;_sms_manager.c:196: void devkit_SMS_setLineInterruptHandler( void( *theHandlerFunction )( void ) )
+;_sms_manager.c:208: void devkit_SMS_setLineInterruptHandler( void( *theHandlerFunction )( void ) )
 ;	---------------------------------
 ; Function devkit_SMS_setLineInterruptHandler
 ; ---------------------------------
 _devkit_SMS_setLineInterruptHandler::
-;_sms_manager.c:198: SMS_setLineInterruptHandler( theHandlerFunction );
+;_sms_manager.c:210: SMS_setLineInterruptHandler( theHandlerFunction );
 	pop	de
 	pop	bc
 	push	bc
@@ -722,12 +795,12 @@ _devkit_SMS_setLineInterruptHandler::
 	call	_SMS_setLineInterruptHandler
 	pop	af
 	ret
-;_sms_manager.c:200: void devkit_SMS_setLineCounter( unsigned char count )
+;_sms_manager.c:212: void devkit_SMS_setLineCounter( unsigned char count )
 ;	---------------------------------
 ; Function devkit_SMS_setLineCounter
 ; ---------------------------------
 _devkit_SMS_setLineCounter::
-;_sms_manager.c:202: SMS_setLineCounter( count );
+;_sms_manager.c:214: SMS_setLineCounter( count );
 	ld	hl, #2+0
 	add	hl, sp
 	ld	a, (hl)
@@ -736,44 +809,44 @@ _devkit_SMS_setLineCounter::
 	call	_SMS_setLineCounter
 	inc	sp
 	ret
-;_sms_manager.c:204: void devkit_SMS_enableLineInterrupt()
+;_sms_manager.c:216: void devkit_SMS_enableLineInterrupt()
 ;	---------------------------------
 ; Function devkit_SMS_enableLineInterrupt
 ; ---------------------------------
 _devkit_SMS_enableLineInterrupt::
-;_sms_manager.c:206: SMS_enableLineInterrupt();
+;_sms_manager.c:218: SMS_enableLineInterrupt();
 	ld	hl, #0x0010
 	jp  _SMS_VDPturnOnFeature
-;_sms_manager.c:208: void devkit_SMS_disableLineInterrupt()
+;_sms_manager.c:220: void devkit_SMS_disableLineInterrupt()
 ;	---------------------------------
 ; Function devkit_SMS_disableLineInterrupt
 ; ---------------------------------
 _devkit_SMS_disableLineInterrupt::
-;_sms_manager.c:210: SMS_disableLineInterrupt();
+;_sms_manager.c:222: SMS_disableLineInterrupt();
 	ld	hl, #0x0010
 	jp  _SMS_VDPturnOffFeature
-;_sms_manager.c:214: unsigned int devkit_VDPFEATURE_HIDEFIRSTCOL()
+;_sms_manager.c:226: unsigned int devkit_VDPFEATURE_HIDEFIRSTCOL()
 ;	---------------------------------
 ; Function devkit_VDPFEATURE_HIDEFIRSTCOL
 ; ---------------------------------
 _devkit_VDPFEATURE_HIDEFIRSTCOL::
-;_sms_manager.c:216: return VDPFEATURE_HIDEFIRSTCOL;
+;_sms_manager.c:228: return VDPFEATURE_HIDEFIRSTCOL;
 	ld	hl, #0x0020
 	ret
-;_sms_manager.c:218: unsigned int devkit_VDPFEATURE_LEFTCOLBLANK()
+;_sms_manager.c:230: unsigned int devkit_VDPFEATURE_LEFTCOLBLANK()
 ;	---------------------------------
 ; Function devkit_VDPFEATURE_LEFTCOLBLANK
 ; ---------------------------------
 _devkit_VDPFEATURE_LEFTCOLBLANK::
-;_sms_manager.c:220: return VDPFEATURE_LEFTCOLBLANK;
+;_sms_manager.c:232: return VDPFEATURE_LEFTCOLBLANK;
 	ld	hl, #0x0020
 	ret
-;_sms_manager.c:222: unsigned char devkit_SPRITEMODE_NORMAL()
+;_sms_manager.c:234: unsigned char devkit_SPRITEMODE_NORMAL()
 ;	---------------------------------
 ; Function devkit_SPRITEMODE_NORMAL
 ; ---------------------------------
 _devkit_SPRITEMODE_NORMAL::
-;_sms_manager.c:224: return SPRITEMODE_NORMAL;
+;_sms_manager.c:236: return SPRITEMODE_NORMAL;
 	ld	l, #0x00
 	ret
 	.area _CODE
