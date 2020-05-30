@@ -49,12 +49,12 @@
 #include "Monsters\monsterblob.h"		// DONE
 #include "Monsters\monstermissil.h"		// DONE
 #include "Monsters\monsterhead.h"		// DONE
-//#include "Vulcans\vulcanstation.h"
-//#include "Vulcans\vulcantank.h"
-//#include "Vulcans\vulcanvulcan.h"
-//#include "Vulcans\vulcanlava.h"
-//#include "Vulcans\vulcanbird.h"
-//#include "Vulcans\vulcanlaser.h"
+#include "Vulcans\vulcanstation.h"		// DONE
+#include "Vulcans\vulcantank.h"			// DONE
+#include "Vulcans\vulcanvulcan.h"		// DONE
+#include "Vulcans\vulcanlava.h"			// DONE
+#include "Vulcans\vulcanbird.h"			// DONE
+#include "Vulcans\vulcanlaser.h"		// DONE
 //#include "Stages\stage2endboss.h"
 #include "Spaces\spacestation.h"		// DONE
 #include "Spaces\spaceasteroid.h"		// DONE
@@ -109,7 +109,7 @@
 // Intros			// TODO
 // Monsters
 // Players
-// Spaces			// TODO
+// Spaces
 // Stages			// TODO
 // Vulcans			// TODO
 // Wars				// TODO

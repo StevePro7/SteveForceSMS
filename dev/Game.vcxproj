@@ -91,6 +91,12 @@
     <ClInclude Include="Stages\stage3star.h" />
     <ClInclude Include="Stages\stage5.h" />
     <ClInclude Include="vars.h" />
+    <ClInclude Include="Vulcans\vulcanbird.h" />
+    <ClInclude Include="Vulcans\vulcanlaser.h" />
+    <ClInclude Include="Vulcans\vulcanlava.h" />
+    <ClInclude Include="Vulcans\vulcanstation.h" />
+    <ClInclude Include="Vulcans\vulcantank.h" />
+    <ClInclude Include="Vulcans\vulcanvulcan.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="banks\bank10.c" />

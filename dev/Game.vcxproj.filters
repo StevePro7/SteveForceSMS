@@ -49,6 +49,9 @@
     <Filter Include="Header Files\Spaces">
       <UniqueIdentifier>{bb570aeb-dc20-4894-852e-05c90b7bf03a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Vulcans">
+      <UniqueIdentifier>{4579dad3-35d0-4d7d-826a-2a2c27eea163}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -318,6 +321,24 @@
     </ClInclude>
     <ClInclude Include="Spaces\spacestation.h">
       <Filter>Header Files\Spaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Vulcans\vulcanbird.h">
+      <Filter>Header Files\Vulcans</Filter>
+    </ClInclude>
+    <ClInclude Include="Vulcans\vulcanlaser.h">
+      <Filter>Header Files\Vulcans</Filter>
+    </ClInclude>
+    <ClInclude Include="Vulcans\vulcanlava.h">
+      <Filter>Header Files\Vulcans</Filter>
+    </ClInclude>
+    <ClInclude Include="Vulcans\vulcanstation.h">
+      <Filter>Header Files\Vulcans</Filter>
+    </ClInclude>
+    <ClInclude Include="Vulcans\vulcantank.h">
+      <Filter>Header Files\Vulcans</Filter>
+    </ClInclude>
+    <ClInclude Include="Vulcans\vulcanvulcan.h">
+      <Filter>Header Files\Vulcans</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
