@@ -102,18 +102,17 @@ void MoveMap( signed int mvx, signed int mvy )
 		//UNSAFE_SMS_VRAMmemcpy64 (SMS_PNTAddress|((unsigned int)((mpy2%224)>>3)<<6), maptiles+(maplines[a]<<6));
 
 		// Put enemies if needed
-		// TODO uncomment stevepro
-		//if( mapstatics != 0 )
-		//{
-		//	// Put all enemies
-		//	while( mapstatics[ mapstaticscount ] == a )
-		//	{
-		//		InitEnemy( mapstatics[ mapstaticscount + 2 ],
-		//			mapstatics[ mapstaticscount + 3 ],
-		//			mapstatics[ mapstaticscount + 1 ] );
-		//		mapstaticscount += 4;
-		//	}
-		//}
+		if( mapstatics != 0 )
+		{
+			// Put all enemies
+			while( mapstatics[ mapstaticscount ] == a )
+			{
+				InitEnemy( mapstatics[ mapstaticscount + 2 ],
+					mapstatics[ mapstaticscount + 3 ],
+					mapstatics[ mapstaticscount + 1 ] );
+				mapstaticscount += 4;
+			}
+		}
 	}
 
 	// Save last position

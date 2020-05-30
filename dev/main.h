@@ -6,16 +6,16 @@
 #include "devkit\_snd_manager.h"
 
 // LIBRARIES.
-#include "defines.h"
-#include "Banks\fixedbank.h"
-#include "vars.h"
-#include "funcs.h"
+#include "defines.h"			// DONE
+#include "Banks\fixedbank.h"	// DONE
+#include "vars.h"				// DONE
+#include "funcs.h"				// DONE
 
-#include "General\timeredlabel.h"
+#include "General\timeredlabel.h"	// DONE
 #include "General\map.h"
-#include "General\scroller.h"
-#include "General\barrom.h"
-#include "General\explosion.h"
+#include "General\scroller.h"	// DONE
+#include "General\barrom.h"		// DONE
+#include "General\explosion.h"	// DONE
 #include "General\warning.h"
 #include "Intros\introovni.h"
 #include "Intros\introsideplayer.h"
@@ -73,7 +73,7 @@
 //#include "Stages\stage8bossc.h"
 //#include "General\rsgthing.h"
 
-#include "Enemies\enemy.h"
+#include "Enemies\enemy.h"			// DONE
 #include "General\scripter.h"
 #include "General\mikgamesstage.h"
 #include "General\logostage.h"
@@ -97,7 +97,7 @@
 //#include "Stages\stage8.h"
 #include "Enemies\enemyshoot.h"
 #include "Players\playershoot.h"
-#include "General\powerup.h"
+#include "General\powerup.h"			// DONE
 #include "Players\player.h"
 
 #include "Players\playstage.h"

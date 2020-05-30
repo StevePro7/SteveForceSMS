@@ -34,7 +34,7 @@ void PlayMusic( char *music, unsigned char mbank, unsigned char looped );
 //void TestEnemyShoot( enemy *en, unsigned char freq );
 //void TestEnemyShootOne( enemy *en, unsigned char freq );
 //void TestEnemyShootComplex( enemy *en, unsigned char freq, unsigned char dx, unsigned char dy );
-//void InitPowerup( enemy *en );
+void InitPowerup( enemy *en );
 void InitPlayerConstants();
 //void SpreadEnemyshootDirection( unsigned char x, unsigned char y, const signed char *vx, const signed char *vy, unsigned char count );
 

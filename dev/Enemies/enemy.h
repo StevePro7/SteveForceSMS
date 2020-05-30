@@ -1,3 +1,32 @@
+// Check collision with playershoot
+unsigned char checkEnemyPlayerShoot( enemy *en, playershoot *ps )
+{
+	if( ( en->enemyposy < ps->playershooty + 12 )
+		&& ( en->enemyposy + en->enemyheight > ps->playershooty )
+		&& ( en->enemyposx < ps->playershootx + 16 )
+		&& ( en->enemyposx + en->enemywidth > ps->playershootx ) )
+		return 1;
+	return 0;
+}
+
+// Get direction to player
+void GetEnemyDirection( enemy *en )
+{
+	signed int dx, dy, dm;
+
+	// Better granularity although faster enemy shoots
+	dx = playerx - en->enemyposx;
+	dy = playery - en->enemyposy;
+	dm = abs( dx ) + abs( dy );
+	dx *= 3;
+	dy *= 3;
+	dx /= dm;
+	dy /= dm;
+
+	en->enemyparama = dx;
+	en->enemyparamb = dy;
+}
+
 // Remove enemy
 void RemoveEnemy( signed char a )
 {
@@ -21,6 +50,48 @@ void RemoveEnemy( signed char a )
 	}
 	// Bajamos el numero de enemys
 	if( numenemies > 0 )numenemies--;
+}
+
+void KillEnemy( unsigned char a )
+{
+	enemy *en;
+	unsigned char t;
+
+	// Security check
+	if( a >= numenemies )return;
+
+	// Get enemy
+	en = &enemies[ a ];
+
+	// Type of explosion
+	if( en->enemywidth <= 17 )
+	{
+		InitExplosion( en->enemyposx, en->enemyposy, 1 );
+		InitPowerup( en );
+	}
+	else
+		InitSpawnedExplosion( en->enemyposx, en->enemyposy, en->enemywidth, en->enemyheight );
+
+	// Get enemy type
+	t = en->enemytype;
+
+	// Remove
+	RemoveEnemy( a );
+
+	// Custom remove
+	changeBank( FIXEDBANKSLOT );
+	if( killenemyfunctions[ t ] != 0 )
+		( *( killenemyfunctions[ t ] ) )( );
+}
+
+void KillEnemies( unsigned char force )
+{
+	signed char a;
+
+	if( numenemies > 0 )
+		for( a = numenemies - 1; a >= 0; a-- )
+			if( ( force == 1 ) || ( enemies[ a ].enemywidth <= 16 ) )
+				KillEnemy( a );
 }
 
 // Update enemy

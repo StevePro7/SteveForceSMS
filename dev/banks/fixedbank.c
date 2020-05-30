@@ -2289,9 +2289,9 @@ const MyKillEnemyFunction initstagefunctions[]=
 //extern void FinishStage8BossC();
 //
 //
-//const MyKillEnemyFunction killenemyfunctions[]=
-//{
-//	0,
+const MyKillEnemyFunction killenemyfunctions[]=
+{
+	0,
 //	0,
 //	0,
 //	0,
@@ -2377,7 +2377,7 @@ const MyKillEnemyFunction initstagefunctions[]=
 //	0,
 //	0,
 //	0
-//};
+};
 
 // Scrollers
 
