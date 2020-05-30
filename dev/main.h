@@ -37,11 +37,11 @@
 //#include "Wars\ww2ship.h"
 //#include "Stages\stage5missile.h"
 //#include "Stages\stage5endboss.h"
-//#include "Fortresses\fortressphantom.h"
-//#include "Fortresses\fortresssearcher.h"
-//#include "Fortresses\fortresswave.h"
-//#include "Fortresses\fortresscannon.h"
-//#include "Fortresses\fortressdoor.h"
+#include "Fortresses\fortressphantom.h"	// DONE
+#include "Fortresses\fortresssearcher.h"// DONE
+#include "Fortresses\fortresswave.h"	// DONE
+#include "Fortresses\fortresscannon.h"	// DONE
+#include "Fortresses\fortressdoor.h"	// DONE
 //#include "Stages\stage1middlebossc.h"
 //#include "Stages\stage1middlebossb.h"
 //#include "Stages\stage1middleboss.h"
@@ -99,5 +99,17 @@
 #include "Players\playershoot.h"		// DONE
 #include "General\powerup.h"			// DONE
 #include "Players\player.h"				// DONE
-
 #include "Players\playstage.h"
+
+
+// FOLDERS complete
+// Enemies
+// Fortresses		// TODO
+// General
+// Intros			// TODO
+// Monsters			// TODO
+// Players
+// Spaces			// TODO
+// Stages			// TODO
+// Vulcans			// TODO
+// Wars				// TODO

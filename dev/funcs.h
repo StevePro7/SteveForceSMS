@@ -6,7 +6,7 @@
 
 
 // Declarations needed
-//void InitEnemyshoot( unsigned char x, unsigned char y, unsigned char forced );
+void InitEnemyshoot( unsigned char x, unsigned char y, unsigned char forced );
 //void InitEnemyshootLaser( unsigned char x, unsigned char y );
 //void InitEnemyshootDirection( unsigned char x, unsigned char y, signed char vx, signed char vy );
 //void RemovePlayer();
@@ -18,7 +18,7 @@ void GetEnemyDirection( enemy *en );
 void UpdatePlayStage();
 void InitStageSprites( const unsigned char *spl, unsigned char num );
 //void DoSkullSinusMovement( enemy *en, unsigned char dv, unsigned char offset );
-//unsigned char TestSkullOut( enemy *en );
+unsigned char TestSkullOut( enemy *en );
 //void SkullAccelX( enemy *en );
 //void SkullAccelY( enemy *en );
 //void SkullBoneCMove( enemy *en );

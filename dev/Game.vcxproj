@@ -42,6 +42,11 @@
     <ClInclude Include="devkit\_snd_manager.h" />
     <ClInclude Include="Enemies\enemy.h" />
     <ClInclude Include="Enemies\enemyshoot.h" />
+    <ClInclude Include="Fortresses\fortresscannon.h" />
+    <ClInclude Include="Fortresses\fortressdoor.h" />
+    <ClInclude Include="Fortresses\fortressphantom.h" />
+    <ClInclude Include="Fortresses\fortresssearcher.h" />
+    <ClInclude Include="Fortresses\fortresswave.h" />
     <ClInclude Include="funcs.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="General\barrom.h" />

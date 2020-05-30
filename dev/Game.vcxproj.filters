@@ -40,6 +40,9 @@
     <Filter Include="Header Files\Stages">
       <UniqueIdentifier>{d216f103-5c86-45dd-83ee-d76ac4c02ea2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Fortresses">
+      <UniqueIdentifier>{4d150e87-556c-4df3-85fe-968f6b62e087}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -276,6 +279,21 @@
     </ClInclude>
     <ClInclude Include="General\spreadship.h">
       <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="Fortresses\fortresscannon.h">
+      <Filter>Header Files\Fortresses</Filter>
+    </ClInclude>
+    <ClInclude Include="Fortresses\fortressdoor.h">
+      <Filter>Header Files\Fortresses</Filter>
+    </ClInclude>
+    <ClInclude Include="Fortresses\fortressphantom.h">
+      <Filter>Header Files\Fortresses</Filter>
+    </ClInclude>
+    <ClInclude Include="Fortresses\fortresssearcher.h">
+      <Filter>Header Files\Fortresses</Filter>
+    </ClInclude>
+    <ClInclude Include="Fortresses\fortresswave.h">
+      <Filter>Header Files\Fortresses</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
