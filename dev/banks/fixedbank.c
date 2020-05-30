@@ -2893,17 +2893,17 @@ const MyInitEnemyFunction updatestage3endbossfunctions[]=
 //extern void	UpdateStage4EndBoss6(enemy *en);
 //extern void	UpdateStage4EndBoss7(enemy *en);
 //
-//const MyInitEnemyFunction updatestage4endbossfunctions[]=
-//{
-//	DoCommonBossAppearingFunction,
-//	UpdateStage4EndBoss1,
-//	UpdateStage4EndBoss2,
-//	UpdateStage4EndBoss3,
-//	UpdateStage4EndBoss4,
-//	UpdateStage4EndBoss5,
-//	UpdateStage4EndBoss6,
-//	UpdateStage4EndBoss7
-//};
+const MyInitEnemyFunction updatestage4endbossfunctions[]=
+{
+0,//	DoCommonBossAppearingFunction,
+0,//	UpdateStage4EndBoss1,
+0,//	UpdateStage4EndBoss2,
+0,//	UpdateStage4EndBoss3,
+0,//	UpdateStage4EndBoss4,
+0,//	UpdateStage4EndBoss5,
+0,//	UpdateStage4EndBoss6,
+0,//	UpdateStage4EndBoss7
+};
 
 const signed char vulcantankshootspeedx[]={-DEFAULTENEMYSHOOTSPEED+2,0,DEFAULTENEMYSHOOTSPEED-2};
 const signed char vulcantankshootspeedy[]={DEFAULTENEMYSHOOTSPEED-2,DEFAULTENEMYSHOOTSPEED,DEFAULTENEMYSHOOTSPEED-2};

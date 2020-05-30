@@ -64,7 +64,7 @@
 #include "Spaces\spaceasteroid.h"		// DONE
 #include "Spaces\spaceshooter.h"		// DONE
 
-//#include "Stages\stage3laser.h"
+#include "Stages\stage3laser.h"			// DONE
 #include "Stages\stage3endboss.h"		// DONE
 #include "Stages\stage3star.h"			// DONE
 #include "Stages\stage6endboss.h"		// DONE
@@ -96,11 +96,11 @@
 #include "Stages\stage1.h"				// DONE
 #include "Stages\stage2.h"				// DONE
 #include "Stages\stage3.h"				// DONE
-//#include "Stages\stage4.h"
+#include "Stages\stage4.h"				// DONE
 #include "Stages\stage5.h"
 //#include "Stages\stage6.h"
 //#include "Stages\stage7.h"
-#include "Stages\stage7middleboss.h"
+#include "Stages\stage7middleboss.h"	// TODO
 //#include "Stages\stage8.h"
 
 #include "Enemies\enemyshoot.h"			// DONE

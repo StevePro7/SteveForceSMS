@@ -99,7 +99,9 @@
     <ClInclude Include="Stages\stage2object.h" />
     <ClInclude Include="Stages\stage3.h" />
     <ClInclude Include="Stages\stage3endboss.h" />
+    <ClInclude Include="Stages\stage3laser.h" />
     <ClInclude Include="Stages\stage3star.h" />
+    <ClInclude Include="Stages\stage4.h" />
     <ClInclude Include="Stages\stage4endboss.h" />
     <ClInclude Include="Stages\stage4middleboss.h" />
     <ClInclude Include="Stages\stage5.h" />
