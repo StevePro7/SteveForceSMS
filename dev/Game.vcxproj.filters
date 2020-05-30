@@ -430,5 +430,26 @@
     <ClInclude Include="Stages\stage7.h">
       <Filter>Header Files\Stages</Filter>
     </ClInclude>
+    <ClInclude Include="Stages\stage7endboss.h">
+      <Filter>Header Files\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="Stages\stage7object.h">
+      <Filter>Header Files\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="Stages\stage8.h">
+      <Filter>Header Files\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="Stages\stage8bossa.h">
+      <Filter>Header Files\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="Stages\stage8bossb.h">
+      <Filter>Header Files\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="Stages\stage8bossc.h">
+      <Filter>Header Files\Stages</Filter>
+    </ClInclude>
+    <ClInclude Include="Stages\stage8lateral.h">
+      <Filter>Header Files\Stages</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

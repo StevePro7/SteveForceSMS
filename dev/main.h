@@ -63,15 +63,12 @@
 #include "Stages\stage6endboss.h"		// DONE
 #include "Stages\stage6endbossb.h"		// DONE
 #include "Stages\stage6object.h"		// DONE
-
 #include "General\skullbone.h"			// DONE
 #include "General\turnship.h"			// DONE
-
-//#include "Stages\stage8lateral.h"
-//#include "Stages\stage8bossa.h"
-//#include "Stages\stage8bossb.h"
-//#include "Stages\stage8bossc.h"
-
+#include "Stages\stage8lateral.h"		// DONE
+#include "Stages\stage8bossa.h"			// DONE
+#include "Stages\stage8bossb.h"			// DONE
+#include "Stages\stage8bossc.h"			// DONE
 #include "General\rsgthing.h"			// DONE
 #include "Enemies\enemy.h"				// DONE
 #include "General\scripter.h"			// DONE
@@ -92,10 +89,12 @@
 #include "Stages\stage4.h"				// DONE
 #include "Stages\stage5.h"				// DONE
 #include "Stages\stage6.h"				// DONE
+#include "Stages\stage7middleboss.h"	// DONE
 #include "Stages\stage7.h"				// DONE
-#include "Stages\stage7middleboss.h"	// TODO
-//#include "Stages\stage8.h"
+#include "Stages\stage7endboss.h"		// DONE
 
+#include "Stages\stage7object.h"		// DONE
+#include "Stages\stage8.h"				// DONE
 #include "Enemies\enemyshoot.h"			// DONE
 #include "Players\playershoot.h"		// DONE
 #include "General\powerup.h"			// DONE

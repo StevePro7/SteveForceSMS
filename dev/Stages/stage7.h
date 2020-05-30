@@ -26,7 +26,6 @@ void CheckStage7PlayerMovement()
 
 }
 
-
 void UpdateStage7()
 {
 	unsigned int sf;

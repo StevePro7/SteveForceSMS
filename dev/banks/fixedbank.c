@@ -2256,8 +2256,8 @@ const MyKillEnemyFunction updatestagefunctions[]=
 //	UpdateStage1,
 //	UpdateStage6
 };
-//
-//extern void InitStage7();
+
+extern void InitStage7();
 extern void InitStage5();
 //extern void InitStage4();
 //extern void InitStage2();
@@ -2265,11 +2265,11 @@ extern void InitStage5();
 //extern void InitStage3();
 //extern void InitStage1();
 //extern void InitStage6();
-//
+
 const MyKillEnemyFunction initstagefunctions[]=
 {
 	0,
-	InitStage5,	//InitStage7,	// TODO
+	InitStage7,
 	InitStage5,
 //	InitStage4,
 //	InitStage2,
@@ -2941,12 +2941,12 @@ MyKillEnemyFunction playerupdatefunctions[]=
 //extern void UpdateStage7MiddleBoss1(enemy *en);
 //extern void UpdateStage7MiddleBoss2(enemy *en);
 
-//const MyInitEnemyFunction updatestage7middlebossfunctions[]=
-//{
-//	//UpdateStage7MiddleBoss0,
-//	//UpdateStage7MiddleBoss1,
-//	//UpdateStage7MiddleBoss2
-//};
+const MyInitEnemyFunction updatestage7middlebossfunctions[]=
+{
+0,//	//UpdateStage7MiddleBoss0,
+0,//	//UpdateStage7MiddleBoss1,
+0,//	//UpdateStage7MiddleBoss2
+};
 
 //extern void UpdateSpaceStation1(enemy *en);
 //extern void UpdateSpaceStation2(enemy *en);
@@ -3281,13 +3281,13 @@ const signed int stage8_scrollers[]=
 //extern void UpdateStage8BossB2(enemy *en);
 //extern void UpdateStage8BossB3(enemy *en);
 //
-//const MyInitEnemyFunction updatestage8bossbfunctions[]=
-//{
-//	DoCommonBossAppearingFunction,
-//	UpdateStage8BossB1,
-//	UpdateStage8BossB2,
-//	UpdateStage8BossB3
-//};
+const MyInitEnemyFunction updatestage8bossbfunctions[]=
+{
+0,//	DoCommonBossAppearingFunction,
+0,//	UpdateStage8BossB1,
+0,//	UpdateStage8BossB2,
+0,//	UpdateStage8BossB3
+};
 
 // Palette changes for stage 8
 const unsigned char stage8animpalette[]={0x3f,0x1f,0x0f,0x07,0x03,0x01,0x00,0x00,0x01,0x03,0x07,0x0f,0x1f,0x3f};

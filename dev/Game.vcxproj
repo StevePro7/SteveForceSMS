@@ -114,7 +114,14 @@
     <ClInclude Include="Stages\stage6endbossb.h" />
     <ClInclude Include="Stages\stage6object.h" />
     <ClInclude Include="Stages\stage7.h" />
+    <ClInclude Include="Stages\stage7endboss.h" />
     <ClInclude Include="Stages\stage7middleboss.h" />
+    <ClInclude Include="Stages\stage7object.h" />
+    <ClInclude Include="Stages\stage8.h" />
+    <ClInclude Include="Stages\stage8bossa.h" />
+    <ClInclude Include="Stages\stage8bossb.h" />
+    <ClInclude Include="Stages\stage8bossc.h" />
+    <ClInclude Include="Stages\stage8lateral.h" />
     <ClInclude Include="vars.h" />
     <ClInclude Include="Vulcans\vulcanbird.h" />
     <ClInclude Include="Vulcans\vulcanlaser.h" />
