@@ -6,16 +6,16 @@
 #include "devkit\_snd_manager.h"
 
 // LIBRARIES.
-#include "defines.h"			// DONE
-#include "Banks\fixedbank.h"	// DONE
-#include "vars.h"				// DONE
-#include "funcs.h"				// DONE
+#include "defines.h"					// DONE
+#include "Banks\fixedbank.h"			// DONE
+#include "vars.h"						// DONE
+#include "funcs.h"						// DONE
 
-#include "General\timeredlabel.h"	// DONE
-#include "General\map.h"
-#include "General\scroller.h"	// DONE
-#include "General\barrom.h"		// DONE
-#include "General\explosion.h"	// DONE
+#include "General\timeredlabel.h"		// DONE
+#include "General\map.h"				// DONE
+#include "General\scroller.h"			// DONE
+#include "General\barrom.h"				// DONE
+#include "General\explosion.h"			// DONE
 #include "General\warning.h"
 #include "Intros\introovni.h"
 #include "Intros\introsideplayer.h"
@@ -23,8 +23,8 @@
 #include "Intros\intro3object.h"
 
 //#include "General\waveship.h"
-//#include "General\rectship.h"
-//#include "General\bombship.h"
+#include "General\rectship.h"			// DONE
+#include "General\bombship.h"			// DONE
 //#include "General\spreadship.h"
 //#include "Stages\stage4middleboss.h"
 //#include "Stages\stage4endboss.h"
@@ -65,28 +65,28 @@
 //#include "Stages\stage6endboss.h"
 //#include "Stages\stage6endbossb.h"
 //#include "Stages\stage6object.h"
-//#include "General\skullbone.h"
+#include "General\skullbone.h"			// DONE
 //#include "General\turnship.h"
 //#include "Stages\stage8lateral.h"
 //#include "Stages\stage8bossa.h"
 //#include "Stages\stage8bossb.h"
 //#include "Stages\stage8bossc.h"
-//#include "General\rsgthing.h"
+#include "General\rsgthing.h"			// DONE
 
-#include "Enemies\enemy.h"			// DONE
-#include "General\scripter.h"
-#include "General\mikgamesstage.h"
-#include "General\logostage.h"
-#include "General\jukeboxstage.h"
+#include "Enemies\enemy.h"				// DONE
+#include "General\scripter.h"			// DONE
+#include "General\mikgamesstage.h"		// DONE
+#include "General\logostage.h"			// DONE
+#include "General\jukeboxstage.h"		// DONE
 #include "Intros\intro1stage.h"
 #include "Intros\intro2stage.h"
 #include "Intros\intro3stage.h"
 #include "Intros\intro4stage.h"
-#include "General\finishstage.h"
+#include "General\finishstage.h"		// DONE
 #include "Intros\introstage.h"
 
-#include "General\selectorstage.h"
-#include "General\gameoverstage.h"
+#include "General\selectorstage.h"		// DONE
+#include "General\gameoverstage.h"		// DONE
 //#include "Stages\stage1.h"
 //#include "Stages\stage2.h"
 //#include "Stages\stage3.h"

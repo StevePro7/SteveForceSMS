@@ -256,5 +256,17 @@
     <ClInclude Include="Stages\stage3star.h">
       <Filter>Header Files\Stages</Filter>
     </ClInclude>
+    <ClInclude Include="General\bombship.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="General\rectship.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="General\rsgthing.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="General\skullbone.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

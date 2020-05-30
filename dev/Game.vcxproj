@@ -45,6 +45,7 @@
     <ClInclude Include="funcs.h" />
     <ClInclude Include="game.h" />
     <ClInclude Include="General\barrom.h" />
+    <ClInclude Include="General\bombship.h" />
     <ClInclude Include="General\explosion.h" />
     <ClInclude Include="General\finishstage.h" />
     <ClInclude Include="General\gameoverstage.h" />
@@ -53,9 +54,12 @@
     <ClInclude Include="General\map.h" />
     <ClInclude Include="General\mikgamesstage.h" />
     <ClInclude Include="General\powerup.h" />
+    <ClInclude Include="General\rectship.h" />
+    <ClInclude Include="General\rsgthing.h" />
     <ClInclude Include="General\scripter.h" />
     <ClInclude Include="General\scroller.h" />
     <ClInclude Include="General\selectorstage.h" />
+    <ClInclude Include="General\skullbone.h" />
     <ClInclude Include="General\timeredlabel.h" />
     <ClInclude Include="General\warning.h" />
     <ClInclude Include="Intros\intro1stage.h" />
