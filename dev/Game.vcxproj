@@ -97,6 +97,10 @@
     <ClInclude Include="Vulcans\vulcanstation.h" />
     <ClInclude Include="Vulcans\vulcantank.h" />
     <ClInclude Include="Vulcans\vulcanvulcan.h" />
+    <ClInclude Include="Wars\ww2plane.h" />
+    <ClInclude Include="Wars\ww2planeb.h" />
+    <ClInclude Include="Wars\ww2ship.h" />
+    <ClInclude Include="Wars\ww2zeppelin.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="banks\bank10.c" />

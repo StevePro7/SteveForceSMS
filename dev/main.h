@@ -31,10 +31,10 @@
 //#include "Stages\stage4endbossb.h"
 //#include "Stages\stage4object.h"
 //#include "Stages\stage2object.h"
-//#include "Wars\ww2plane.h"
-//#include "Wars\ww2planeb.h"
-//#include "Wars\ww2zeppelin.h"
-//#include "Wars\ww2ship.h"
+#include "Wars\ww2plane.h"				// DONE
+#include "Wars\ww2planeb.h"				// DONE
+#include "Wars\ww2zeppelin.h"			// DONE
+#include "Wars\ww2ship.h"				// DONE
 //#include "Stages\stage5missile.h"
 //#include "Stages\stage5endboss.h"
 #include "Fortresses\fortressphantom.h"	// DONE
@@ -111,5 +111,5 @@
 // Players
 // Spaces
 // Stages			// TODO
-// Vulcans			// TODO
+// Vulcans
 // Wars				// TODO
