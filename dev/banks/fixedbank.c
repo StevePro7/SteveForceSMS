@@ -2875,14 +2875,14 @@ const MyInitEnemyFunction updatestage3endbossfunctions[]=
 //extern void	UpdateStage4MiddleBoss3(enemy *en);
 //extern void	UpdateStage4MiddleBoss4(enemy *en);
 //	
-//const MyInitEnemyFunction updatestage4middlebossfunctions[]=
-//{
-//	DoCommonBossAppearingFunction,
-//	UpdateStage4MiddleBoss1,
-//	UpdateStage4MiddleBoss2,
-//	UpdateStage4MiddleBoss3,
-//	UpdateStage4MiddleBoss4
-//};
+const MyInitEnemyFunction updatestage4middlebossfunctions[]=
+{
+0,//	DoCommonBossAppearingFunction,
+0,//	UpdateStage4MiddleBoss1,
+0,//	UpdateStage4MiddleBoss2,
+0,//	UpdateStage4MiddleBoss3,
+0,//	UpdateStage4MiddleBoss4
+};
 //
 //extern void	DoCommonBossAppearingFunction(enemy *en);
 //extern void	UpdateStage4EndBoss1(enemy *en);

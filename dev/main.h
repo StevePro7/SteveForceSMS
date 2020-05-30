@@ -25,9 +25,9 @@
 #include "General\bombship.h"			// DONE
 #include "General\spreadship.h"			// DONE
 
-#include "Stages\stage4middleboss.h"
+#include "Stages\stage4middleboss.h"	// DONE
 #include "Stages\stage4endboss.h"
-//#include "Stages\stage4endbossb.h"
+#include "Stages\stage4endbossb.h"		// DONE
 //#include "Stages\stage4object.h"
 #include "Stages\stage2object.h"		// DONE
 
