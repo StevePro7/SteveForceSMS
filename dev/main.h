@@ -95,9 +95,9 @@
 //#include "Stages\stage6.h"
 //#include "Stages\stage7.h"
 //#include "Stages\stage8.h"
-#include "Enemies\enemyshoot.h"
-#include "Players\playershoot.h"
+#include "Enemies\enemyshoot.h"			// DONE
+#include "Players\playershoot.h"		// DONE
 #include "General\powerup.h"			// DONE
-#include "Players\player.h"
+#include "Players\player.h"				// DONE
 
 #include "Players\playstage.h"

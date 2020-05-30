@@ -2975,9 +2975,9 @@ MyKillEnemyFunction playerupdatefunctions[]=
 //unsigned char CheckCollisionStage1(unsigned char x,unsigned char y);
 //
 //
-//const MyCheckCollisionFunction checkcollisionfunctions[]=
-//{
-//	0,
+const MyCheckCollisionFunction checkcollisionfunctions[]=
+{
+	0,
 //	CheckCollisionStage7,
 //	0,
 //	0,
@@ -2986,8 +2986,8 @@ MyKillEnemyFunction playerupdatefunctions[]=
 //	0,
 //	CheckCollisionStage1,
 //	0
-//};
-//
+};
+
 void UpdateIntro3Object1(enemy *en);
 void UpdateIntro3Object2(enemy *en);
 void UpdateIntro3Object3(enemy *en);
