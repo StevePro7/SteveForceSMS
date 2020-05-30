@@ -53,3 +53,4 @@ void InitPowerup( enemy *en )
 			}
 		}
 }
+
