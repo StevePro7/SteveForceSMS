@@ -22,3 +22,18 @@ void InitStage5()
 	// Map static enemies
 	SetStaticEnemies( stage5_statics, stage5_statics_bank );
 }
+
+void UpdateStage5()
+{
+	unsigned char a;
+
+	// The bank	
+	changeBank( watertiles_bin_bank );
+
+	// Water Parallax
+	devkit_UNSAFE_SMS_VRAMmemcpy32( 0, watertiles_bin + ( ( ( stageframe >> 1 ) % 8 ) << 5 ) );
+
+	// Clouds
+	for( a = 0; a < MAXSTAGE5CLOUDS; a++ )
+		UpdateStage5Cloud( &stage3stars[ a ] );
+}

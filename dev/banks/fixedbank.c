@@ -2844,14 +2844,14 @@ const MyInitEnemyFunction updatestage6endbossfunctions[]=
 //extern void UpdateStage5EndBoss3(enemy *en);
 //extern void UpdateStage5EndBoss4(enemy *en);
 //
-//const MyInitEnemyFunction updatestage5endbossfunctions[]=
-//{
-//	UpdateStage5EndBoss0,
-//	UpdateStage5EndBoss1,
-//	UpdateStage5EndBoss2,
-//	UpdateStage5EndBoss3,
-//	UpdateStage5EndBoss4
-//};
+const MyInitEnemyFunction updatestage5endbossfunctions[]=
+{
+0,//	UpdateStage5EndBoss0,
+0,//	UpdateStage5EndBoss1,
+0,//	UpdateStage5EndBoss2,
+0,//	UpdateStage5EndBoss3,
+0,//	UpdateStage5EndBoss4
+};
 //
 //
 //extern void	DoCommonBossAppearingFunction(enemy *en);

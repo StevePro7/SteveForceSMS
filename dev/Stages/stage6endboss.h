@@ -205,4 +205,3 @@ unsigned char UpdateStage6EndBoss( enemy *en )
 	// Exit
 	return 1;
 }
-

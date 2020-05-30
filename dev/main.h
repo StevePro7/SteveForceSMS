@@ -24,22 +24,17 @@
 #include "General\rectship.h"			// DONE
 #include "General\bombship.h"			// DONE
 #include "General\spreadship.h"			// DONE
-
 #include "Stages\stage4middleboss.h"	// DONE
-#include "Stages\stage4endboss.h"
+#include "Stages\stage4endboss.h"		// DONE
 #include "Stages\stage4endbossb.h"		// DONE
-//#include "Stages\stage4object.h"
+#include "Stages\stage4object.h"		// DONE
 #include "Stages\stage2object.h"		// DONE
-
-
 #include "Wars\ww2plane.h"				// DONE
 #include "Wars\ww2planeb.h"				// DONE
 #include "Wars\ww2zeppelin.h"			// DONE
 #include "Wars\ww2ship.h"				// DONE
-
-//#include "Stages\stage5missile.h"
-//#include "Stages\stage5endboss.h"
-
+#include "Stages\stage5missile.h"		// DONE
+#include "Stages\stage5endboss.h"		// DONE
 #include "Fortresses\fortressphantom.h"	// DONE
 #include "Fortresses\fortresssearcher.h"// DONE
 #include "Fortresses\fortresswave.h"	// DONE
@@ -49,7 +44,6 @@
 #include "Stages\stage1middlebossb.h"	// DONE
 #include "Stages\stage1middleboss.h"	// DONE
 #include "Stages\stage1endboss.h"		// DONE
-
 #include "Monsters\monsterblob.h"		// DONE
 #include "Monsters\monstermissil.h"		// DONE
 #include "Monsters\monsterhead.h"		// DONE
@@ -63,13 +57,12 @@
 #include "Spaces\spacestation.h"		// DONE
 #include "Spaces\spaceasteroid.h"		// DONE
 #include "Spaces\spaceshooter.h"		// DONE
-
 #include "Stages\stage3laser.h"			// DONE
 #include "Stages\stage3endboss.h"		// DONE
 #include "Stages\stage3star.h"			// DONE
 #include "Stages\stage6endboss.h"		// DONE
-//#include "Stages\stage6endbossb.h"
-//#include "Stages\stage6object.h"
+#include "Stages\stage6endbossb.h"		// DONE
+#include "Stages\stage6object.h"		// DONE
 
 #include "General\skullbone.h"			// DONE
 #include "General\turnship.h"			// DONE
@@ -97,9 +90,9 @@
 #include "Stages\stage2.h"				// DONE
 #include "Stages\stage3.h"				// DONE
 #include "Stages\stage4.h"				// DONE
-#include "Stages\stage5.h"
-//#include "Stages\stage6.h"
-//#include "Stages\stage7.h"
+#include "Stages\stage5.h"				// DONE
+#include "Stages\stage6.h"				// DONE
+#include "Stages\stage7.h"				// DONE
 #include "Stages\stage7middleboss.h"	// TODO
 //#include "Stages\stage8.h"
 
