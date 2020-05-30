@@ -25,7 +25,7 @@
 #include "General\bombship.h"			// DONE
 #include "General\spreadship.h"			// DONE
 
-//#include "Stages\stage4middleboss.h"
+#include "Stages\stage4middleboss.h"
 //#include "Stages\stage4endboss.h"
 //#include "Stages\stage4endbossb.h"
 //#include "Stages\stage4object.h"
@@ -44,11 +44,10 @@
 #include "Fortresses\fortresswave.h"	// DONE
 #include "Fortresses\fortresscannon.h"	// DONE
 #include "Fortresses\fortressdoor.h"	// DONE
-
-//#include "Stages\stage1middlebossc.h"
-//#include "Stages\stage1middlebossb.h"
-//#include "Stages\stage1middleboss.h"
-//#include "Stages\stage1endboss.h"
+#include "Stages\stage1middlebossc.h"	// DONE
+#include "Stages\stage1middlebossb.h"	// DONE
+#include "Stages\stage1middleboss.h"	// DONE
+#include "Stages\stage1endboss.h"		// DONE
 
 #include "Monsters\monsterblob.h"		// DONE
 #include "Monsters\monstermissil.h"		// DONE
@@ -69,7 +68,7 @@
 //#include "Stages\stage3laser.h"
 //#include "Stages\stage3endboss.h"
 #include "Stages\stage3star.h"
-//#include "Stages\stage6endboss.h"
+#include "Stages\stage6endboss.h"		// DONE
 //#include "Stages\stage6endbossb.h"
 //#include "Stages\stage6object.h"
 
@@ -97,7 +96,7 @@
 #include "General\gameoverstage.h"		// DONE
 
 #include "Stages\stage1.h"				// DONE
-//#include "Stages\stage2.h"
+#include "Stages\stage2.h"				// DONE
 //#include "Stages\stage3.h"
 //#include "Stages\stage4.h"
 #include "Stages\stage5.h"

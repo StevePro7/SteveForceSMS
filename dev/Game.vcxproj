@@ -90,8 +90,15 @@
     <ClInclude Include="Spaces\spaceshooter.h" />
     <ClInclude Include="Spaces\spacestation.h" />
     <ClInclude Include="Stages\stage1.h" />
+    <ClInclude Include="Stages\stage1endboss.h" />
+    <ClInclude Include="Stages\stage1middleboss.h" />
+    <ClInclude Include="Stages\stage1middlebossb.h" />
+    <ClInclude Include="Stages\stage1middlebossc.h" />
+    <ClInclude Include="Stages\stage2.h" />
     <ClInclude Include="Stages\stage3star.h" />
+    <ClInclude Include="Stages\stage4middleboss.h" />
     <ClInclude Include="Stages\stage5.h" />
+    <ClInclude Include="Stages\stage6endboss.h" />
     <ClInclude Include="vars.h" />
     <ClInclude Include="Vulcans\vulcanbird.h" />
     <ClInclude Include="Vulcans\vulcanlaser.h" />

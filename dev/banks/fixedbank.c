@@ -2285,7 +2285,7 @@ const MyKillEnemyFunction initstagefunctions[]=
 //extern void FinishStage1MiddleBoss();
 //extern void FinishVulcanStation();
 //extern void FinishSpaceStation();
-//extern void FinishStage6EndBoss();
+extern void FinishStage6EndBoss();
 //extern void FinishStage8BossC();
 //
 //
@@ -2827,17 +2827,17 @@ unsigned char *difficultlabels[]={"EASY","HARD"};
 //extern void UpdateStage6EndBoss5(enemy *en);
 //extern void UpdateStage6EndBoss3A(enemy *en);
 //
-//const MyInitEnemyFunction updatestage6endbossfunctions[]=
-//{
-//	UpdateStage6EndBoss0,
-//	UpdateStage6EndBoss1,
-//	UpdateStage6EndBoss2,
-//	UpdateStage6EndBoss3,
-//	UpdateStage6EndBoss4,
-//	UpdateStage6EndBoss5,
-//	UpdateStage6EndBoss3A
-//};
-//
+const MyInitEnemyFunction updatestage6endbossfunctions[]=
+{
+0, //	UpdateStage6EndBoss0,
+0, //	UpdateStage6EndBoss1,
+0, //	UpdateStage6EndBoss2,
+0, //	UpdateStage6EndBoss3,
+0, //	UpdateStage6EndBoss4,
+0, //	UpdateStage6EndBoss5,
+0, //	UpdateStage6EndBoss3A
+};
+
 //extern void UpdateStage5EndBoss0(enemy *en);
 //extern void UpdateStage5EndBoss1(enemy *en);
 //extern void UpdateStage5EndBoss2(enemy *en);
