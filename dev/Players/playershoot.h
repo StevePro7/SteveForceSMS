@@ -123,7 +123,6 @@ void UpdatePlayershoots()
 			UpdatePlayershoot( a );
 }
 
-
 // Create a player shoot
 void InitPlayershoot( unsigned char x, unsigned char y, unsigned char t )
 {
