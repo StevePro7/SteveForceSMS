@@ -124,7 +124,6 @@ void UpdateScript( unsigned char a )
 	}
 }
 
-
 // Update all scripts
 void UpdateScripts()
 {

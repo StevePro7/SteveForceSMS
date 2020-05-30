@@ -43,8 +43,7 @@ void InitCustomStageData()
 	changeBank( FIXEDBANKSLOT );
 
 	// Custom Init
-	if( 0 != initstagefunctions[ playstage ] )
-		( *( initstagefunctions[ playstage ] ) )( );
+	( *( initstagefunctions[ playstage ] ) )( );
 }
 
 void UpdatePlayStage()
@@ -53,8 +52,7 @@ void UpdatePlayStage()
 	changeBank( FIXEDBANKSLOT );
 
 	// Custom Update
-	if( 0 != updatestagefunctions[ playstage ] )
-		( *( updatestagefunctions[ playstage ] ) )( );
+	( *( updatestagefunctions[ playstage ] ) )( );
 }
 
 void InitStageData( unsigned int i )
@@ -83,6 +81,7 @@ void InitStageData( unsigned int i )
 	psg = ( unsigned char * ) stageinitdata[ i ]; i++;
 	psg_bank = ( unsigned int ) ( stageinitdata[ i++ ] );
 	loop_psg = ( unsigned int ) ( stageinitdata[ i ] );
+
 
 	// The bank
 	playstagebank = palette_bin_bank;
@@ -122,6 +121,7 @@ void UpdateStagePassA()
 	// Update explosions
 	UpdateExplosions();
 }
+
 
 void UpdateStagePassB()
 {
@@ -217,6 +217,10 @@ void InitPlayStage()
 				UpdateStagePassA();
 			else
 				UpdateStagePassB();
+
+			// Scripter
+			if( ( stageframe % 16 ) == 0 )
+				UpdateScripts();
 
 			// Hay que salirse?
 			if( exitplaystage == 1 )return;
