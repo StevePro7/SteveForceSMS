@@ -43,6 +43,12 @@
     <Filter Include="Header Files\Fortresses">
       <UniqueIdentifier>{4d150e87-556c-4df3-85fe-968f6b62e087}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Monsters">
+      <UniqueIdentifier>{9a783f66-9653-4508-8a40-5f0f1081c222}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Spaces">
+      <UniqueIdentifier>{bb570aeb-dc20-4894-852e-05c90b7bf03a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
@@ -294,6 +300,24 @@
     </ClInclude>
     <ClInclude Include="Fortresses\fortresswave.h">
       <Filter>Header Files\Fortresses</Filter>
+    </ClInclude>
+    <ClInclude Include="Monsters\monsterblob.h">
+      <Filter>Header Files\Monsters</Filter>
+    </ClInclude>
+    <ClInclude Include="Monsters\monsterhead.h">
+      <Filter>Header Files\Monsters</Filter>
+    </ClInclude>
+    <ClInclude Include="Monsters\monstermissil.h">
+      <Filter>Header Files\Monsters</Filter>
+    </ClInclude>
+    <ClInclude Include="Spaces\spaceasteroid.h">
+      <Filter>Header Files\Spaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Spaces\spaceshooter.h">
+      <Filter>Header Files\Spaces</Filter>
+    </ClInclude>
+    <ClInclude Include="Spaces\spacestation.h">
+      <Filter>Header Files\Spaces</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

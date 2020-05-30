@@ -46,9 +46,9 @@
 //#include "Stages\stage1middlebossb.h"
 //#include "Stages\stage1middleboss.h"
 //#include "Stages\stage1endboss.h"
-//#include "Monsters\monsterblob.h"
-//#include "Monsters\monstermissil.h"
-//#include "Monsters\monsterhead.h"
+#include "Monsters\monsterblob.h"		// DONE
+#include "Monsters\monstermissil.h"		// DONE
+#include "Monsters\monsterhead.h"		// DONE
 //#include "Vulcans\vulcanstation.h"
 //#include "Vulcans\vulcantank.h"
 //#include "Vulcans\vulcanvulcan.h"
@@ -56,9 +56,9 @@
 //#include "Vulcans\vulcanbird.h"
 //#include "Vulcans\vulcanlaser.h"
 //#include "Stages\stage2endboss.h"
-//#include "Spaces\spacestation.h"
-//#include "Spaces\spaceasteroid.h"
-//#include "Spaces\spaceshooter.h"
+#include "Spaces\spacestation.h"		// DONE
+#include "Spaces\spaceasteroid.h"		// DONE
+#include "Spaces\spaceshooter.h"		// DONE
 //#include "Stages\stage3laser.h"
 //#include "Stages\stage3endboss.h"
 #include "Stages\stage3star.h"
@@ -104,10 +104,10 @@
 
 // FOLDERS complete
 // Enemies
-// Fortresses		// TODO
+// Fortresses
 // General
 // Intros			// TODO
-// Monsters			// TODO
+// Monsters
 // Players
 // Spaces			// TODO
 // Stages			// TODO

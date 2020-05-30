@@ -79,9 +79,15 @@
     <ClInclude Include="Intros\introsideplayer.h" />
     <ClInclude Include="Intros\introstage.h" />
     <ClInclude Include="main.h" />
+    <ClInclude Include="Monsters\monsterblob.h" />
+    <ClInclude Include="Monsters\monsterhead.h" />
+    <ClInclude Include="Monsters\monstermissil.h" />
     <ClInclude Include="Players\player.h" />
     <ClInclude Include="Players\playershoot.h" />
     <ClInclude Include="Players\playstage.h" />
+    <ClInclude Include="Spaces\spaceasteroid.h" />
+    <ClInclude Include="Spaces\spaceshooter.h" />
+    <ClInclude Include="Spaces\spacestation.h" />
     <ClInclude Include="Stages\stage3star.h" />
     <ClInclude Include="Stages\stage5.h" />
     <ClInclude Include="vars.h" />

@@ -2951,12 +2951,13 @@ MyKillEnemyFunction playerupdatefunctions[]=
 //extern void UpdateSpaceStation1(enemy *en);
 //extern void UpdateSpaceStation2(enemy *en);
 //
-//const MyInitEnemyFunction updatespacestationfunctions[]=
-//{
-//	DoCommonBossAppearingFunction,
-//	UpdateSpaceStation1,
-//	UpdateSpaceStation2
-//};
+const MyInitEnemyFunction updatespacestationfunctions[]=
+{
+
+0, //	DoCommonBossAppearingFunction,
+0, //	UpdateSpaceStation1,
+0//	UpdateSpaceStation2
+};
 //
 //extern void UpdateStage2EndBoss1(enemy *en);
 //extern void UpdateStage2EndBoss2(enemy *en);
