@@ -95,10 +95,16 @@
     <ClInclude Include="Stages\stage1middlebossb.h" />
     <ClInclude Include="Stages\stage1middlebossc.h" />
     <ClInclude Include="Stages\stage2.h" />
+    <ClInclude Include="Stages\stage2endboss.h" />
+    <ClInclude Include="Stages\stage2object.h" />
+    <ClInclude Include="Stages\stage3.h" />
+    <ClInclude Include="Stages\stage3endboss.h" />
     <ClInclude Include="Stages\stage3star.h" />
+    <ClInclude Include="Stages\stage4endboss.h" />
     <ClInclude Include="Stages\stage4middleboss.h" />
     <ClInclude Include="Stages\stage5.h" />
     <ClInclude Include="Stages\stage6endboss.h" />
+    <ClInclude Include="Stages\stage7middleboss.h" />
     <ClInclude Include="vars.h" />
     <ClInclude Include="Vulcans\vulcanbird.h" />
     <ClInclude Include="Vulcans\vulcanlaser.h" />

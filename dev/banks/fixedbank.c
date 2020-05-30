@@ -2860,16 +2860,16 @@ const MyInitEnemyFunction updatestage6endbossfunctions[]=
 //extern void	UpdateStage3EndBoss1(enemy *en);
 //extern void	UpdateStage3EndBoss2(enemy *en);
 //
-//const MyInitEnemyFunction updatestage3endbossfunctions[]=
-//{
-//	DoCommonBossAppearingFunction,
-//	UpdateStage3EndBoss1,
-//	UpdateStage3EndBoss2,
-//	UpdateStage3EndBoss1,
-//	UpdateStage3EndBoss2
-//};
-//
-//
+const MyInitEnemyFunction updatestage3endbossfunctions[]=
+{
+0, //	DoCommonBossAppearingFunction,
+0, //	UpdateStage3EndBoss1,
+0, //	UpdateStage3EndBoss2,
+0, //	UpdateStage3EndBoss1,
+0, //	UpdateStage3EndBoss2
+};
+
+
 //extern void	UpdateStage4MiddleBoss1(enemy *en);
 //extern void	UpdateStage4MiddleBoss2(enemy *en);
 //extern void	UpdateStage4MiddleBoss3(enemy *en);
@@ -2963,13 +2963,13 @@ const MyInitEnemyFunction updatespacestationfunctions[]=
 //extern void UpdateStage2EndBoss2(enemy *en);
 //extern void UpdateStage2EndBoss3(enemy *en);
 //
-//const MyInitEnemyFunction updatestage2endbossfunctions[]=
-//{
-//	DoCommonBossAppearingFunction,
-//	UpdateStage2EndBoss1,
-//	UpdateStage2EndBoss2,
-//	UpdateStage2EndBoss3
-//};
+const MyInitEnemyFunction updatestage2endbossfunctions[]=
+{
+0, //	DoCommonBossAppearingFunction,
+0, //	UpdateStage2EndBoss1,
+0, //	UpdateStage2EndBoss2,
+0, //	UpdateStage2EndBoss3
+};
 
 //unsigned char CheckCollisionStage7(unsigned char x,unsigned char y);
 //unsigned char CheckCollisionStage2(unsigned char x,unsigned char y);

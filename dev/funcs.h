@@ -24,7 +24,7 @@ void SkullAccelX( enemy *en );
 void SkullBoneCMove( enemy *en );
 void KillEnemies( unsigned char force );
 //void DoCommonBossAppearingFunction( enemy *en );
-//void DoEnemyWait( enemy *en, unsigned char nxt );
+void DoEnemyWait( enemy *en, unsigned char nxt );
 //void DoAracPatternMovement( enemy *en, const unsigned char *mx, const unsigned char *my, const unsigned int *mt );
 void DoStage1BossDirectionShoots( enemy *en );
 //void DoSideShoot( enemy *en, unsigned char freq );
@@ -37,6 +37,7 @@ void TestEnemyShootComplex( enemy *en, unsigned char freq, unsigned char dx, uns
 void InitPowerup( enemy *en );
 void InitPlayerConstants();
 void SpreadEnemyshootDirection( unsigned char x, unsigned char y, const signed char *vx, const signed char *vy, unsigned char count );
+void DoAracPatternMovement( enemy *en, const unsigned char *mx, const unsigned char *my, const unsigned int *mt );
 
 
 // Fast random package
