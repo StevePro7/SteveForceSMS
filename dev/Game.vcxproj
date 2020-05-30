@@ -60,8 +60,11 @@
     <ClInclude Include="General\scroller.h" />
     <ClInclude Include="General\selectorstage.h" />
     <ClInclude Include="General\skullbone.h" />
+    <ClInclude Include="General\spreadship.h" />
     <ClInclude Include="General\timeredlabel.h" />
+    <ClInclude Include="General\turnship.h" />
     <ClInclude Include="General\warning.h" />
+    <ClInclude Include="General\waveship.h" />
     <ClInclude Include="Intros\intro1stage.h" />
     <ClInclude Include="Intros\intro2stage.h" />
     <ClInclude Include="Intros\intro3object.h" />

@@ -268,5 +268,14 @@
     <ClInclude Include="General\skullbone.h">
       <Filter>Header Files\General</Filter>
     </ClInclude>
+    <ClInclude Include="General\waveship.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="General\turnship.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
+    <ClInclude Include="General\spreadship.h">
+      <Filter>Header Files\General</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

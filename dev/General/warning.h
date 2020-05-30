@@ -1,24 +1,5 @@
 void InitWarning( enemy *en )
 {
-#ifdef _CONSOLE
-
-#else
-
-	__asm
-		ld a, #0x00
-		ld a, #0x00
-			ld a, #0x00
-			ld a, #0x00
-			ld a, #0x00
-			ld a, #0x00
-			ld a, #0x00
-			ld a, #0x00
-			ld a, #0x00
-			ld a, #0x00
-	__endasm;
-
-#endif
-
 	en->enemyframe = en->enemyframe;
 	PlayMusic( ( unsigned char * ) norefuge_psg, norefuge_psg_bank, 0 );
 }

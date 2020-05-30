@@ -16,16 +16,16 @@
 #include "General\scroller.h"			// DONE
 #include "General\barrom.h"				// DONE
 #include "General\explosion.h"			// DONE
-#include "General\warning.h"
+#include "General\warning.h"			// DONE
 #include "Intros\introovni.h"
 #include "Intros\introsideplayer.h"
 //#include "Intros\introstar.h"
 #include "Intros\intro3object.h"
 
-//#include "General\waveship.h"
+#include "General\waveship.h"			// DONE
 #include "General\rectship.h"			// DONE
 #include "General\bombship.h"			// DONE
-//#include "General\spreadship.h"
+#include "General\spreadship.h"			// DONE
 //#include "Stages\stage4middleboss.h"
 //#include "Stages\stage4endboss.h"
 //#include "Stages\stage4endbossb.h"
@@ -66,7 +66,7 @@
 //#include "Stages\stage6endbossb.h"
 //#include "Stages\stage6object.h"
 #include "General\skullbone.h"			// DONE
-//#include "General\turnship.h"
+#include "General\turnship.h"			// DONE
 //#include "Stages\stage8lateral.h"
 //#include "Stages\stage8bossa.h"
 //#include "Stages\stage8bossb.h"
