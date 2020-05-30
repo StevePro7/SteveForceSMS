@@ -20,13 +20,18 @@ void InitStageSprites( const unsigned char *spl, unsigned char num )
 	}
 }
 
-void UpdatePlayStage()
+void InitAfterBossStage()
 {
-	// Change bank
-	changeBank( FIXEDBANKSLOT );
+	// Destroy all enemies
+	KillEnemyshoots();
+	KillEnemies( 1 );
 
-	// Custom Update
-	( *( updatestagefunctions[ playstage ] ) )( );
+	// Music
+	devkit_PSGStop();
+
+	// Exit
+	playertype = 5;
+	playercounter = 0;
 }
 
 void InitCustomStageData()
@@ -38,7 +43,18 @@ void InitCustomStageData()
 	changeBank( FIXEDBANKSLOT );
 
 	// Custom Init
-	( *( initstagefunctions[ playstage ] ) )( );
+	if( 0 != initstagefunctions[ playstage ] )
+		( *( initstagefunctions[ playstage ] ) )( );
+}
+
+void UpdatePlayStage()
+{
+	// Change bank
+	changeBank( FIXEDBANKSLOT );
+
+	// Custom Update
+	if( 0 != updatestagefunctions[ playstage ] )
+		( *( updatestagefunctions[ playstage ] ) )( );
 }
 
 void InitStageData( unsigned int i )
@@ -106,7 +122,6 @@ void UpdateStagePassA()
 	// Update explosions
 	UpdateExplosions();
 }
-
 
 void UpdateStagePassB()
 {

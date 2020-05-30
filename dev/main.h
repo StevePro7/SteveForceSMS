@@ -92,14 +92,13 @@
 #include "Stages\stage7middleboss.h"	// DONE
 #include "Stages\stage7.h"				// DONE
 #include "Stages\stage7endboss.h"		// DONE
-
 #include "Stages\stage7object.h"		// DONE
 #include "Stages\stage8.h"				// DONE
 #include "Enemies\enemyshoot.h"			// DONE
 #include "Players\playershoot.h"		// DONE
 #include "General\powerup.h"			// DONE
 #include "Players\player.h"				// DONE
-#include "Players\playstage.h"
+#include "Players\playstage.h"			// DONE
 
 
 // FOLDERS complete
