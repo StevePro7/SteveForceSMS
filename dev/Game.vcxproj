@@ -78,6 +78,7 @@
     <ClInclude Include="Intros\introovni.h" />
     <ClInclude Include="Intros\introsideplayer.h" />
     <ClInclude Include="Intros\introstage.h" />
+    <ClInclude Include="Intros\introstar.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="Monsters\monsterblob.h" />
     <ClInclude Include="Monsters\monsterhead.h" />

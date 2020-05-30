@@ -355,5 +355,8 @@
     <ClInclude Include="Wars\ww2zeppelin.h">
       <Filter>Header Files\Wars</Filter>
     </ClInclude>
+    <ClInclude Include="Intros\introstar.h">
+      <Filter>Header Files\Intros</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
