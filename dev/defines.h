@@ -25,9 +25,6 @@
 #define DEFAULTENEMYSHOOTSPEED 5
 #define DEFAULTENEMYSHOOTLASERSPEED 7
 
-// Black magic
-extern unsigned char numinterrupts;
-
 typedef struct enemy
 {
 	unsigned char enemyposx;
@@ -40,7 +37,6 @@ typedef struct enemy
 	unsigned char enemywidth;
 	unsigned char enemyheight;
 }enemy;
-
 typedef void( *MyInitEnemyFunction )( enemy * );
 typedef unsigned char( *MyUpdateEnemyFunction )( enemy * );
 // IMPORTANT 
@@ -323,3 +319,4 @@ typedef unsigned char( *MyCheckCollisionFunction )( unsigned char, unsigned char
 #define STAGE8BOSSBBASE 447-128
 #define STAGE8BOSSCBASE 410+12
 #define STAGE8LATERALBASE 410+12+16
+

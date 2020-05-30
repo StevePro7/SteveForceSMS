@@ -7,8 +7,7 @@ void main()
 	gamelevel = 0;
 	gamestock = 3;
 
-	//TODO uncomment next line
-	//while( 1 )
+	while( 1 )
 	{
 		// Mikgames
 		//InitMikGamesStage();
@@ -44,9 +43,5 @@ void main()
 			}
 			else InitPlayStage();
 		}
-
-		//for( ;; )
-		//{
-		//}
 	}
 }

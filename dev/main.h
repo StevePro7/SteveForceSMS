@@ -109,6 +109,6 @@
 // Monsters
 // Players
 // Spaces
-// Stages			// TODO
+// Stages
 // Vulcans
 // Wars

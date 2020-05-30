@@ -9,8 +9,8 @@
 void InitEnemyshoot( unsigned char x, unsigned char y, unsigned char forced );
 void InitEnemyshootLaser( unsigned char x, unsigned char y );
 void InitEnemyshootDirection( unsigned char x, unsigned char y, signed char vx, signed char vy );
-//void RemovePlayer();
-//void RemovePlayershoot( signed char a );
+void RemovePlayer();
+void RemovePlayershoot( signed char a );
 void InitEnemy( unsigned char x, unsigned char y, unsigned char t );
 void InitScript( unsigned char *scripter, unsigned char **labels );
 void InitAfterBossStage();
@@ -20,15 +20,15 @@ void InitStageSprites( const unsigned char *spl, unsigned char num );
 void DoSkullSinusMovement( enemy *en, unsigned char dv, unsigned char offset );
 unsigned char TestSkullOut( enemy *en );
 void SkullAccelX( enemy *en );
-//void SkullAccelY( enemy *en );
+void SkullAccelY( enemy *en );
 void SkullBoneCMove( enemy *en );
 void KillEnemies( unsigned char force );
-//void DoCommonBossAppearingFunction( enemy *en );
+void DoCommonBossAppearingFunction( enemy *en );
 void DoEnemyWait( enemy *en, unsigned char nxt );
-//void DoAracPatternMovement( enemy *en, const unsigned char *mx, const unsigned char *my, const unsigned int *mt );
+void DoAracPatternMovement( enemy *en, const unsigned char *mx, const unsigned char *my, const unsigned int *mt );
 void DoStage1BossDirectionShoots( enemy *en );
-//void DoSideShoot( enemy *en, unsigned char freq );
-//void KillEnemy( unsigned char a );
+void DoSideShoot( enemy *en, unsigned char freq );
+void KillEnemy( unsigned char a );
 void PlaySound( char *sound, char priority );
 void PlayMusic( char *music, unsigned char mbank, unsigned char looped );
 void TestEnemyShoot( enemy *en, unsigned char freq );
@@ -37,8 +37,6 @@ void TestEnemyShootComplex( enemy *en, unsigned char freq, unsigned char dx, uns
 void InitPowerup( enemy *en );
 void InitPlayerConstants();
 void SpreadEnemyshootDirection( unsigned char x, unsigned char y, const signed char *vx, const signed char *vy, unsigned char count );
-void DoAracPatternMovement( enemy *en, const unsigned char *mx, const unsigned char *my, const unsigned int *mt );
-
 
 // Fast random package
 unsigned long state = 777;
@@ -57,6 +55,7 @@ void changeBank( unsigned char b )
 		lastbank = b;
 	}
 }
+
 
 // Dibuja un array de sprites
 void DrawSpriteArray( unsigned int s, unsigned char px, unsigned char py, unsigned char tx, unsigned char ty )
@@ -126,7 +125,7 @@ void LoadSpritePalette()
 	changeBank( FIXEDBANKSLOT );
 
 	// Palette
-	devkit_SMS_loadSpritePalette( (unsigned char *)palette_bin );
+	devkit_SMS_loadSpritePalette( ( unsigned char * ) palette_bin );
 }
 
 void InterruptHandler( void )
@@ -134,6 +133,7 @@ void InterruptHandler( void )
 	numinterrupts++;
 }
 
+// Inicia la consola
 void InitConsole()
 {
 	// La consola
@@ -293,7 +293,8 @@ void UpdateStage()
 	sprite164anim = ( ( stageframe >> 3 ) % 4 ) << 2;
 	if( sprite164anim == 12 )sprite164anim = 4;
 
-	// Finally the most simple... 
+	// Finally the most simple... better
+
 	if( stageframe2mod == 0 )
 	{
 		// Wait
@@ -321,6 +322,7 @@ void UpdateStage()
 		if( numinterrupts == 0 )
 			devkit_SMS_waitForVBlank();
 	}
+
 	// Keyboard... always
 	keystatus = devkit_SMS_getKeysStatus();
 }
@@ -362,6 +364,7 @@ void PlayMusic( char *music, unsigned char mbank, unsigned char looped )
 	changeBank( FIXEDBANKSLOT );
 }
 
+
 // Update sound
 void UpdatePSG()
 {
@@ -380,4 +383,3 @@ void UpdatePSG()
 	}
 }
 
-//#endif//_FUNCS_H_
